@@ -1,0 +1,57 @@
+%Master document for paper.
+%Created MS 1/30
+
+\documentclass[11pt]{article}
+\usepackage[text={6.5in,9in},centering]{geometry}               % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{cite}
+\usepackage{fancyheadings}
+
+
+\begin{document}
+
+\pagestyle{fancy}
+
+\begin{small}
+\lhead{\bfseries Maximilian Swiatlowski} 
+\chead{} 
+\rhead{\bfseries \today} 
+\renewcommand{\headrulewidth}{0.1pt} 
+\renewcommand{\footrulewidth}{0.1pt} 
+\end{small}
+
+\lstset{
+	language=Matlab,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\color{blue}\bfseries,
+	commentstyle=\color{green},
+	stringstyle=\ttfamily,
+	showstringspaces=false}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+
+\begin{center}
+\begin{LARGE}
+\bfseries Numerical Simulations of Charged Particles Inside a Penning Trap
+\end{LARGE}
+\end{center}
+
+\input{./introduction/introduction_body}
+
+
+\end{document}
+
+
+
+
+
+
+
