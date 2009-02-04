@@ -1,0 +1,6 @@
+canary ii dosimeter: http://www.fwt.com/hpi/hpi_4080ds.htm#top
+particle data booklet: http://pdg.lbl.gov/
+stopping range of ions in matter: http://www.srim.org/
+quad discriminator (Lecroy 821): http://www.lecroy.com/lrs/dsheets/623.htm
+quad discriminator (Lecroy 622): http://www.lecroy.com/lrs/dsheets/365al.htm
+Dual Gate and Delay Generator(Lecroy 222): http://www.lecroy.com/lrs/dsheets/222.htm
