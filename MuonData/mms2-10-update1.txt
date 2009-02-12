@@ -1,5 +1,3 @@
-Run started at:  2/10/2009 5:31:34 PM
-Event	Real Time (min)	Lifetime (microsec)
 1	     0.40	 0.6500
 2	     0.74	 0.7310
 3	     0.76	 9.5030
