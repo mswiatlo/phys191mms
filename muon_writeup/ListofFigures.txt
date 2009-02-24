@@ -1,0 +1,9 @@
+List of Figures
+
+1. muon lifetime with fit -SS
+	Appendix: more plots, with error and things
+2. autocorrelator - MB
+3. logic diagrams - MS
+4. mu-> e nu nu decay feynman diagram
+5. mu height with max
+6. e energy cutoff

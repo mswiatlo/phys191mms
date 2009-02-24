@@ -1,0 +1,38 @@
+Sections:
+
+Abstract
+Backround:  MB
+-muon creation
+-time of flight
+-muon decay
+-general dicsussion of weak force, reference appenidix
+-previous experiments
+- 
+
+Lab Setup: MS
+-scintillators, PMTs
+    - problems (basic introduction)
+-logic
+-labview
+-autocorrelator
+
+Procedure:MS
+-description of lifetime experiment
+-description of mass experiment
+-autocorrelator methods
+
+Results:SS
+-plots of data
+
+Discussion: SS
+-plots of data with fits
+ - ac plots
+-disccusion of methods and cutoffs
+-include lifetime error analysis
+- autocorrelation
+-mass measurement results, plots (fits)
+
+
+Appendices:
+- G_F derivation
+- error analysis for mass measurement
