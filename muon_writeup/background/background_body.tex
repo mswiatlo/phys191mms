@@ -69,8 +69,8 @@ becomes non-negligible. With muon speeds ranging from $.994c$ to
 $.998c$, the proper time experienced by the muon is between $3.2$ and
 $5.5\mu$s, less than $2$ lifetimes on average. 
 
-The time in flight is still on the same order, and even greater than,
-the lifetime of muon decay which our experiment seeks to
+The time in flight is still on the same order, even greater than, the
+lifetime of muon decay which our experiment seeks to
 measure. Nevertheless, the time the muons experience in the atmosphere
 prior to stopping in the detector has no effect on the decay rate
 measurement. While we do sample fewer short decay times and slow
@@ -79,7 +79,56 @@ affecting the parameters of the exponential.
 
 \subsection{Muon Mass}
 
+The experimental setup which records the time between a muon stopping
+event and a released electron or positron event needs to be only
+slightly modified in order to measure the mass of the muon.
 
+In order to measure muon mass, consider the $\mu^-$ decay
+\eqref{mudecay} (the antimatter decay analysis is equivalent to the
+following). For a muon that is stopped in the scintillator, the center
+of mass frame is the same as the lab frame. Then, since the electron
+mass is only $0.5\%$ of the muon mass and the neutrinos are
+essentially massless, to a good approximation we can assume that the
+rest energy of the muon is fully converted to the kinetic energy of
+the $e^-$ and neutrinos. Then, measuring the energy distribution of
+the emitted electrons will provide information regarding the initial
+muon mass. Specifically, due to conservation of momentum, the
+magnitude of the electron momentum, $p_e$, must equal the sum of the
+neutrino momenta. Fixing $p_e$ along the x-axis, the only possible
+scenario of the decay is pictured in Figure ~\ref, where $0 \leq
+\theta <\pi/2$ and is measured from the negative x-axis. 
+
+The total momentum of the neutrinos is minimized when there is no y
+component, that is $\theta = 0$. In this case, $p_e = p_e^{max} =
+\frac{1}{2}p_{tot}$. Again neglecting electron mass, we have $E_e =
+p_ec$, so the energy of the electron is maximized when the momentum is
+maximized, and so
+
+\begin{equation}E_e^{max} = \frac{1}{2}E_{\mu} = \frac{1}{2}m_{\mu}\end{equation}
+
+Then by measuring the electron energy spectrum, which is a $\beta$
+decay spectrum with a cutoff at $ \frac{1}{2}m_{\mu}$, we can find the
+maximum electron energy and thus measure the muon mass.
+
+\subsubsection{Energy Calibration}
+
+Our intruments enable us to measure the height of the pulse from the
+electron that registers on the PMT. In order to convert the pulse
+height distribution to an energy distribution, we have to calibrate
+the pulse height voltage in terms of energy left in the detector.
+
+To do so, we find the pulse height which corresponds to the minimum
+ionization energy (approximately $2$MeVg$^{-1}$cm$^{2}$) by finding
+the maximum in the peak height distribution of muons which pass
+through all three scintillators. Since the incoming muons have a
+relatively random distribution of momenta, the most common energy loss
+amount will be near a local extremum, which in this case is a minimum. 
+
+See Appendix for more details?
+
+Assuming the detector response is linear, and measuring the
+scintillator density and thickness, we find a convesion ratio between
+pulse voltage and electron energy.
 
 \subsection{Weak Force Coupling Constant}
 
