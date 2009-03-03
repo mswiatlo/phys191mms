@@ -9,19 +9,18 @@
 
 \section{Background}
 
-\subsection{}
 Muons ($\mu^-$) and antimuons($\mu^+$) are the most numerous charged
-particles at sea level\cite{pdg}, most of them produced at a height of
-about $15$ km from decays of charged kaons and pions that are formed
-from the interaction of cosmic ray particles with the Earth's upper
-atmosphere \cite{amsler}. The muon is produced in a weak decays as
-shown for example in Figure and at sea level forms $80\%$ of cosmic
+particles at sea level\cite{pdg}. Most of them are produced at a
+height of about $15$ km in decays of charged kaons and pions which are
+formed via the interaction of cosmic ray particles with the Earth's
+upper atmosphere \cite{amsler}. The muon is produced in a weak decays
+as shown for example in Figure and at sea level forms $80\%$ of cosmic
 ray flux.
 
+\subsection{Muon Decay}
 
-In free space, negatively charged muons decay weakly into an
-electron, muon neutrino, and electron antineutrino \cite{easwar}
-(Figure):
+In free space, negatively charged muons decay weakly into an electron,
+muon neutrino, and electron antineutrino \cite{easwar} (Figure):
 
 \begin{equation}\mu^- \rightarrow e^- \nu_{\mu}\overline{\nu_e}\label{mudecay}\end{equation}
 
@@ -35,26 +34,60 @@ possible for $\mu^-$ via nucleus capture:
 
 \begin{equation}\mu^-p^+ \rightarrow n \nu_{\mu} \label{pcap} \end{equation}
 
-The lifetime asssociated with nuclear capture is typically shorter
-than the free muon lifetime. However, the products released in process
-\eqref{pcap} are neutral, and therefore not detected in our
-apparatus (????). Thus, the lifetime measurement desribed in this report is
-only relevant to muon decays \eqref{mudecay} and \eqref{antimudecay}.
-
-Due to relativistic time dilation, the flux of muons at sea level
-remains large at $10^{-2}$ cm$^-2$s$^-1$sr$^-1$. Since the particles are travelling close to the 
-
+(**insert stuff about the muon capture lifetime here**)
 
 The decay of the muon is desribed by an exponential function
 
-\begin{equation} N(t) = N_0 e^{-\Gamma_{\mu} t} \end{equation} 
+\begin{equation} N(t) = N_0 e^{-\Gamma_{\mu} t} \label{expdecay}\end{equation} 
 here $\Gamma_{\mu}$ is the decay rate, which gives the decay lifetime
 $\tau_{\mu} = 1/\Gamma_{\mu}$.
+
+In this experiment, we measure the time between the start event, when
+a $\mu^- (\mu^+)$ comes to rest in a scintillator in the lab and the
+stop event, which signals the emission of $e^- (e^+)$ in the muon
+decay. The histogram of the recorded times is then fit to \eqref{expdecay} to
+give the lifetime of the muon.
+
+\subsection{Effects of Relativistic Time Dilation}
+
+Even with velocities within a percent of the speed of light, the
+travel time of the muon from the point of creation in the atmosphere
+takes approximately $50\mu$s - over 20 decay lifetimes - to reach the
+ground. According to Newtonian physics, the flux would be reduced by a
+factor of over $10^{10}$. However, the flux of muons at sea level,
+where the lab is located, remains large at $10^{-2}$
+cm$^-2$s$^-1$sr$^-1$, only reduced by a factor of $5$ from the peak
+flux at $15$km \cite{rossi}.
+
+This effect is due to the relativistic time dilation predicted by
+Special Relativity. While in the frame of the laboratory, the time of
+flight of the muons is $50\mu$s, the muon itself experiences a proper
+time reduced by a factor of $\gamma$: $t_{\mu} = \gamma t_{lab}$,
+where $\gamma = 1/\sqrt{1 - \frac{v^2}{c^2}}$. Since the particles are
+travelling close to the speed of light, the relativistic correction
+becomes non-negligible. With muon speeds ranging from $.994c$ to
+$.998c$, the proper time experienced by the muon is between $3.2$ and
+$5.5\mu$s, less than $2$ lifetimes on average. 
+
+The time in flight is still on the same order, and even greater than,
+the lifetime of muon decay which our experiment seeks to
+measure. Nevertheless, the time the muons experience in the atmosphere
+prior to stopping in the detector has no effect on the decay rate
+measurement. While we do sample fewer short decay times and slow
+moving muons, this fact simply decreases the amount of data without
+affecting the parameters of the exponential.
+
+\subsection{Muon Mass}
+
+
+
+\subsection{Weak Force Coupling Constant}
 
 The decay rate $\Gamma_{\mu}$ is proportional to the square of the
 amplitude of the decay diagram (Figure ~\ref), which depends on the
 product of the couplings at each vertex. In this case, the coupling at
-each of the two vertices is proportional to $\sqrt{G_F}$, so we have
+each of the two vertices is proportional to $\sqrt{G_F}$, the Fermi
+constant, so we have
 
 \begin{equation}\Gamma_{\mu} \propto G_F^2 \end{equation}
 
@@ -62,7 +95,10 @@ A more involved calculation gives that the lifetime of the muon is
 
 \begin{equation}\tau_{\mu} = \dfrac{192\pi^3\hbar^7}{G_F^2m_{\mu}^5c^4}\end{equation}
 where $c$ is the speed of light, $\hbar$ is Planck's constant, and
-$m_{\mu}$ is the rest mass of the muon.
+$m_{\mu}$ is the rest mass of the muon. 
+
+Once we establish the value of $m_{\mu}$, we can find the Fermi
+constant $G_F$ and the 
 
 The weak decay of the muon is the clearest of all weak interaction
 phenomena in both its experimental and theoretical aspects. Thus, the
