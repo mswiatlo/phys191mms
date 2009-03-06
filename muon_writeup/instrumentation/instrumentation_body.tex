@@ -4,4 +4,12 @@ In order to detect muon and electron events, signals from scintillators are corr
 
 \subsection{Scintillators}
 
-The scintillator consists of polystyrene ($\mathrm{C}_{8}\mathrm{H}_{9}$) doped with a phosphorous material, p-terphenyl. When ionizing radiation passes through the material a light pulse is emitted. The light flash is detected by the photomultiplier tubes placed at the ends of the 
+The scintillator consists of polystyrene ($\mathrm{C}_{8}\mathrm{H}_{9}$, with density $1.08 \pm .09 \frac{\mathrm{g}}{\mathrm{cm}^{3}}$) doped with a phosphorous material, p-terphenyl. When ionizing radiation passes through the material a light pulse is emitted. The light flash is detected by the photomultiplier tubes placed at the ends of the scintillator. The photomultiplier uses a high voltage (on the order of 1000 V) to convert the light pulses into a cascade of electrons more or less linearly (i.e., the amplitude of the electrical signal from the photomultiplier is linearly correlated to the energy of the ionizing radiation). The signals from the photomultiplier is then fed into a bank of discriminators, which output a fixed width voltage pulse after detecting a voltage pulse above a given threshold. These signals are then fed into the logic which determines events.
+
+\subsubsection{Efficiency Optimization}
+
+Many different factors come into the consideration for choosing the settings at which the run the scintillators. The most obvious is the drive to maximize efficiency of the detectors so as to maximize muon count; this would require setting the voltages as high and the threshold levels as low. The other primary concern is noise, which increases at higher voltages and lower thresholds; this concern keeps voltages lower and thresholds higher.
+
+The optimization technique relies on the very high number of muons that go straight through all detectors. As most muons are very high energy when they reach the surface of the earth, nearly the entire flux from the atmosphere passes through all the detectors without stopping. Thus, by taking the ratio of the number of events detected by all three detectors as compared to the number detected by just two of the detectors, we can get an approximation of the efficiency of the excluded detector. The ratio should be near 1 for something perfectly efficient, as losses from solid angles and muons which stop in the detectors are incredibly small as compared to the total muon flux.
+
+Initial data runs were taken with higher efficiency (as high $99\%$ efficiency for the middle detector, 
