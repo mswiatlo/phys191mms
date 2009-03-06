@@ -17,6 +17,29 @@ upper atmosphere \cite{amsler}. The muon is produced in a weak decays
 as shown for example in Figure and at sea level forms $80\%$ of cosmic
 ray flux.
 
+
+\begin{center}
+\fcolorbox{white}{white}{
+  \begin{picture}(352,118) (131,-75)
+%    \caption{blahblahblah}
+    \SetWidth{1.0}
+    \SetColor{Black}
+    \Line[arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](160,22)(256,-26)
+    \Line[arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](256,-26)(160,-74)
+    \Line[dash,dashsize=10,arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](256,-26)(352,-26)
+    \Line[arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](352,-26)(432,22)
+    \Line[arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](432,-74)(352,-26)
+    \Text(144,22)[lb]{\large{\Black{$d$}}}
+    \Text(144,-74)[lb]{\large{\Black{$u$}}}
+    \Text(128,-26)[lb]{\large{\Black{$\pi^{-}$}}}
+    \Text(448,22)[lb]{\large{\Black{$\mu^{-}$}}}
+    \Text(448,-74)[lb]{\large{\Black{$\nu_{\mu}$}}}
+    \Text(304,-10)[lb]{\large{\Black{$W^{-}$}}}
+  \end{picture}
+}
+\end{center}
+
+
 \subsection{Muon Decay}
 
 In free space, negatively charged muons decay weakly into an electron,
@@ -27,6 +50,39 @@ muon neutrino, and electron antineutrino \cite{easwar} (Figure):
 with a corresponding antimatter process of
 
 \begin{equation}\mu^+ \rightarrow e^+ \overline{\nu_{\mu}}{\nu_e}\label{antimudecay}\end{equation}
+
+
+\begin{center}
+\fcolorbox{white}{white}{
+  \begin{picture}(336,166) (131,-75)
+    \SetWidth{1.0}
+    \SetColor{Black}
+    \Line[arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](160,6)(304,6)
+    \Line[arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](304,6)(416,70)
+    \Line[dash,dashsize=10,arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](304,6)(368,-42)
+    \Line[arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](368,-42)(416,-10)
+    \Line[arrow,arrowpos=0.5,arrowlength=5,arrowwidth=2,arrowinset=0.2](416,-74)(368,-42)
+    \Text(128,6)[lb]{\large{\Black{$\mu^{-}$}}}
+    \Text(432,-10)[lb]{\large{\Black{$e^{-}$}}}
+    \Text(432,-74)[lb]{\large{\Black{$\nu_{e}$}}}
+    \Text(432,70)[lb]{\large{\Black{$\nu_{\mu}$}}}
+    \Text(304,-42)[lb]{\large{\Black{$W^{-}$}}}
+  \end{picture}
+}
+\end{center}
+
+
+The decay of the muon is desribed by an exponential function
+
+\begin{equation} N(t) = N_0 e^{-\Gamma_{\mu} t} \label{expdecay}\end{equation} 
+here $\Gamma_{\mu}$ is the decay rate, which gives the decay lifetime
+$\tau_{\mu} = 1/\Gamma_{\mu}$.
+
+In this experiment, we measure the time between the start event, when
+a $\mu^- (\mu^+)$ comes to rest in a scintillator in the lab and the
+stop event, which signals the emission of $e^- (e^+)$ in the muon
+decay. The histogram of the recorded times is then fit to
+\eqref{expdecay} to give the lifetime of the muon.
 
 \subsubsection{Decay in Matter}
 
@@ -42,25 +98,15 @@ material. The likelyhood of the capture is proportional to $Z^4$,
 where $Z$ is the atomic number of the material; for light elements,
 the effect of this process is minimal \cite[p.172]{rossi}. For carbon,
 for instance, $Z=6$ and the mean lifetime of the muon is theoretically
-predicted to be between $1.5$ and $1.9\mu$s \cite[p.~170]{rossi}.
+predicted to be between $1.5$ and $1.9\mu$s \cite[p.~170]{rossi}. 
 
 In addition, the products of the decay\eqref{pcap} are a neutron and a
 neutrino. In our experiment, the efficiency of the scintillator in
 detecting neutrons is lower than the electrons and positrons which are
 results of \eqref{mudecay} and \eqref{antimudecay}, because neutrons
-carry no charge. Thus, we expect that the effect of 
-
-The decay of the muon is desribed by an exponential function
-
-\begin{equation} N(t) = N_0 e^{-\Gamma_{\mu} t} \label{expdecay}\end{equation} 
-here $\Gamma_{\mu}$ is the decay rate, which gives the decay lifetime
-$\tau_{\mu} = 1/\Gamma_{\mu}$.
-
-In this experiment, we measure the time between the start event, when
-a $\mu^- (\mu^+)$ comes to rest in a scintillator in the lab and the
-stop event, which signals the emission of $e^- (e^+)$ in the muon
-decay. The histogram of the recorded times is then fit to
-\eqref{expdecay} to give the lifetime of the muon.
+carry no charge. Thus, we expect that the effect of muon capture to be
+small, although it may lower the measured lifetime from the
+experimentally established value in free space.
 
 \subsection{Effects of Relativistic Time Dilation}
 
@@ -76,8 +122,8 @@ flux at $15$km \cite{rossi}.
 This effect is due to the relativistic time dilation predicted by
 Special Relativity. While in the frame of the laboratory, the time of
 flight of the muons is $50\mu$s, the muon itself experiences a proper
-time reduced by a factor of $\gamma$: $t_{\mu} = \gamma t_{lab}$,
-where $\gamma = 1/\sqrt{1 - \frac{v^2}{c^2}}$. Since the particles are
+time reduced by a factor of $\gamma$: $ \gamma t_{\mu} = t_{lab}$,
+where $\gamma = 1/\sqrt{1 - \frac{v_{\mu}^2}{c^2}}$. Since the particles are
 travelling close to the speed of light, the relativistic correction
 becomes non-negligible. With muon speeds ranging from $.994c$ to
 $.998c$, the proper time experienced by the muon is between $3.2$ and
@@ -132,7 +178,7 @@ height distribution to an energy distribution, we have to calibrate
 the pulse height voltage in terms of energy left in the detector.
 
 To do so, we find the pulse height which corresponds to the minimum
-ionization energy (approximately $2$MeVg$^{-1}$cm$^{2}$) by finding
+ionization energy (approximately $2$ MeVg$^{-1}$cm$^{2}$) by finding
 the maximum in the peak height distribution of muons which pass
 through all three scintillators. Since the incoming muons have a
 relatively random distribution of momenta, the most common energy loss
