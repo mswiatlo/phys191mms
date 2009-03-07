@@ -51,6 +51,14 @@ By measuring the heights of pulses produced by PMT flashes, we are able to ultim
 
 By observing the pulse heights produced by PMT flashes from the middle scintillator that correspond to STOP pulses, we then measured the energy deposited by electrons produced from muon decay.  This data was recorded for roughly five days and included nearly $7000$ events.  The distribution of binned electron pulse heights, $V_{e}$, is shown in Fig Blah.  As noted in section blah, the shape of this energy distribution is determined by the kinematics of the muon decay.  Most importantly, the energy cutoff (the point at which the distribution decays to zero) occurs at roughly one-half the mass of the decayed muon.
 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[height=50mm]{./figures/Electron_Energy_Cutoff.eps}
+\caption{Blah}
+\label{figure:logic}
+\end{center}
+\end{figure}
+
 To determine the energy cutoff of the distribution in Fig Blah, we used a fitting algorithm.  First we assumed that after some pulse height, the distribution could be approximately modeled by an exponential decay.  To determine this value we did an $r^{2}$ analysis of multiple fits to using 2-parameter nonlinear regression in which we excluded an increasingly large range of low pulse heights points beginning at $V_{e}=0$.  In these fits we weighted each data point by $\sqrt{N_{e}}$, where $N_{e}$ is the number of electrons in some pulse height bin.  We determined that the smallest exclusion range to produce a fit with $r^{2}\geq.99$ was the exclusion range $0 MeV \leq V_{e}\leq .1 MeV$.  We were then able to compute the model for the decay distributions decay as $V_{e}$ approached the cutoff energy.  This model approximated the number of electrons one would expect to see (relative to the number of events observed, which was nearly 7000) for some $V_{e}$ .  
 
 The model for the distribution's decay was then used to determine $E_{e}^{max}$ by finding the scope voltage at which the interval $N_{e}\pm \delta N_{e}$ ($1-\sigma$ error bars) was completely below $1$.  Because $N_{e}$ is a discrete value being modeled by exponential decay, we claim that an $N_{e} \leq 1$ essentially corresponds to no events.  Therefore we take this $V_{e}$, found to be $1.18\pm.10 mV$, to be $V_{e}^{max}$. We take all subsequent nonzero values of $N_{e}$ to be background noise produced by PMT false flashes.  Converting from $V_{e}^{max}$, we find that $E_{e}^{max}=Blah \pm blah MeV$.  Based on the kinematics of the muon decay we determined that this cutoff energy implies a muon mass of $m_{\mu} = blah \pm blam MeV/c^{2}$.  This value deviates from the accepted value, $blah MeV/c^{2}$, by $blah\%$.  However our $blah\%$ error includes the accepted value.
@@ -59,4 +67,4 @@ The model for the distribution's decay was then used to determine $E_{e}^{max}$ 
 
 Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using equation (7). Ultimately, from our results we calculate that $G_{F}=blah \pm blah$.  This value deviates from the accepted value, $blah$, by $\%$. However our $blah\%$ error includes this accepted value.
 
-Our calculation of $G_F$ is by no means a precision measurement.  Although certain aspects of this experiment have relatively low error ($\< 5\%$), such as the measurement of $\tau_{\mu}$, ultimately the overwhelming error associated with the energy calibration prevented a more precise measurement of $G_F$.
+Our calculation of $G_F$ is by no means a precision measurement.  Although certain aspects of this experiment have relatively low error ($< 5\%$), such as the measurement of $\tau_{\mu}$, ultimately the overwhelming error associated with the energy calibration prevented a more precise measurement of $G_F$.
