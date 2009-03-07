@@ -1,11 +1,5 @@
 %Background body
 %Created MB 03-01
-%\usepackage{graphicx}
-%\usepackage{setspace}
-%\usepackage{color}
-%\usepackage{amssymb}
-%\usepackage{listings}
-%\usepackage{epstopdf}
 
 \section{Background}
 
@@ -144,8 +138,8 @@ event and a released electron or positron event needs to be only
 slightly modified in order to measure the mass of the muon.
 
 In order to measure muon mass, consider the $\mu^-$ decay
-\eqref{mudecay} (the antimatter decay analysis is equivalent to the
-following). For a muon that is stopped in the scintillator, the center
+\eqref{mudecay}; the antimatter decay analysis is equivalent to the
+following. For a muon that is stopped in the scintillator, the center
 of mass frame is the same as the lab frame. Then, since the electron
 mass is only $0.5\%$ of the muon mass and the neutrinos are
 essentially massless, to a good approximation we can assume that the
@@ -165,8 +159,12 @@ scenario of the decay is pictured in Figure ~\ref, where $0 \leq
  
 \input{./figures/electron_neutrino.pstex_t}
  
-\caption{Your figure}
-\label{figure:example}
+\caption{\small{Decay products of the muon. Due to conservation of
+energy and momentum, the momenta of the two neutrinos but be at equal
+angles, $\theta$ and $-\theta$, from the direction of the electron
+momentum. Maximizing the electron momentum (and therefore energy) is
+the configuration with $\theta = 0$.}}
+\label{e_nu}
 \end{center}
 \end{figure}
 
@@ -190,18 +188,18 @@ electron that registers on the PMT. In order to convert the pulse
 height distribution to an energy distribution, we have to calibrate
 the pulse height voltage in terms of energy left in the detector.
 
-To do so, we find the pulse height which corresponds to the minimum
-ionization energy (approximately $2$ MeVg$^{-1}$cm$^{2}$) by finding
-the maximum in the peak height distribution of muons which pass
-through all three scintillators. Since the incoming muons have a
-relatively random distribution of momenta, the most common energy loss
-amount will be near a local extremum, which in this case is a minimum. 
+To do so, we find the pulse height voltage which corresponds to the
+minimum ionization energy (approximately $2$ MeVg$^{-1}$cm$^{2}$) by
+finding the maximum in the peak height distribution of muons which
+pass through all three scintillators. Since the incoming muons have a
+relatively random distribution of momenta, the most frequent rate of
+energy loss will be near a local extremum, which in this case is a
+minimum (see appendix blah for more details).
 
-See Appendix for more details?
-
-Assuming the detector response is linear, and measuring the
-scintillator density and thickness, we find a convesion ratio between
-pulse voltage and electron energy.
+Assuming the scintillator light output varies linearly with the amount
+of energy deposited, and measuring the scintillator density and
+thickness, we find a conversion ratio between pulse voltage and
+electron energy.
 
 \subsection{Weak Force Coupling Constant}
 
@@ -232,7 +230,4 @@ weak interaction formulas\cite[p.~313]{griffiths}}.
 The weak decay of the muon is the clearest of all weak interaction
 phenomena in both its experimental and theoretical aspects. Thus, the
 muon decay is an effective means of studying the weak force, and
-specifically finding the weak coupling constant $g_w$.
-
-
-\begin{equation}\end{equation}
+specifically finding the Fermi coupling constant $G_F$.

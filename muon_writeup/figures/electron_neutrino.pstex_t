@@ -1,5 +1,5 @@
 \begin{picture}(0,0)%
-\includegraphics{./figures/electron_neutrino.pstex}%
+\includegraphics{/home/Maria/phys191mms/muon_writeup/figures/electron_neutrino.pstex}%
 \end{picture}%
 \setlength{\unitlength}{3947sp}%
 %
@@ -9,13 +9,13 @@
   \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
   \selectfont}%
 \fi\endgroup%
-\begin{picture}(3270,2097)(2614,-2842)
-\put(3151,-1711){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\theta$}%
+\begin{picture}(3270,2322)(2614,-3067)
+\put(3526,-1711){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\theta$}%
 }}}}
 \put(5476,-1636){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}e}%
 }}}}
 \put(3076,-961){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\nu_e$}%
 }}}}
-\put(2776,-2761){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\nu_{\mu}}$}%
+\put(2926,-2986){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\nu_{\mu}}$}%
 }}}}
 \end{picture}%
