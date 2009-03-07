@@ -1,9 +1,9 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: /home/Maria/phys191mms/muon_writeup/figures/electron_neutrino.fig
 %%Creator: fig2dev Version 3.2 Patchlevel 4
-%%CreationDate: Fri Mar  6 17:08:56 2009
+%%CreationDate: Sat Mar  7 14:59:06 2009
 %%For: Maria@mashabaryakhtar (U-MASHABARYAKHTAR\Maria,S-1-5-21-2346866336-1339078084-567176395-1005)
-%%BoundingBox: 0 0 197 114
+%%BoundingBox: 0 0 197 126
 %%Magnification: 1.0000
 %%EndComments
 /$F2psDict 200 dict def
@@ -45,8 +45,8 @@ $F2psDict /mtrx matrix put
 
 end
 save
-newpath 0 114 moveto 0 0 lineto 197 0 lineto 197 114 lineto closepath clip newpath
--156.8 208.3 translate
+newpath 0 126 moveto 0 0 lineto 197 0 lineto 197 126 lineto closepath clip newpath
+-156.8 220.9 translate
 1 -1 scale
 
 /cp {closepath} bind def

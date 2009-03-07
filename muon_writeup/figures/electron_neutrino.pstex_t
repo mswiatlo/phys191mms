@@ -9,9 +9,13 @@
   \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
   \selectfont}%
 \fi\endgroup%
-\begin{picture}(3270,1888)(2614,-2633)
-\put(3076,-961){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\nu_e$}%
+\begin{picture}(3270,2097)(2614,-2842)
+\put(3151,-1711){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\theta$}%
 }}}}
 \put(5476,-1636){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}e}%
+}}}}
+\put(3076,-961){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\nu_e$}%
+}}}}
+\put(2776,-2761){\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\nu_{\mu}}$}%
 }}}}
 \end{picture}%
