@@ -32,6 +32,9 @@ Similarly, the muon lifetime measurement also requires a stop signal. The stop w
 
 However, this allows for START and STOP events to happen simultaneously: note that STOP is actually defined by a START event or'ed with a different event. Moreover, consider the scenario in which a muon stops in the middle detector, but the resulting electron actually comes out the side; instead of admitting that there was no STOP detected, the next START event would be recorded as a STOP. Thus, we should redefine STOP to occur only after a valid START, within some acceptable timeframe. The following logic diagram illustrates the solution: STOP as it is currently defined is anded with a delayed gate signal (that is, a delayed signal set constantly high, set to expire after a given amount of time) that is triggered by a START event. The delay to the start of the gate is set to 100 ns, twice as long as the 50 ns pulses outputted by the logic units, guaranteeing that simultaneous events will not trigger a measurement; the gate length is set to $20 \mu s$, 10 times the expected lifetime: waiting any longer is likely waiting for an electron which went out in an undetected fashion.
 
+\subsection{Autocorrelator}
+In order to better study the effects of the photomultiplier false flashes, we used an to track the autocorrelation of the signal coming from each photomultiplier. The autocorrelator simply looks at an input line for a signal, and records when another signal comes onto the same channel. We set it to record bins of $.1 \mu s$
+
 \subsection{Measurements}
 To make measurements, a LabView program takes data from an oscilloscope over a GPIB connection. For the lifetime experiment, the oscilloscope is set to trigger on a stop event, and the program measures the difference in time between the beginnings of the start and stop pulses, on channel 1 and 2 of the oscilloscope respectively. For the mass experiment, 
 %insert logic diagram for STOP event here
