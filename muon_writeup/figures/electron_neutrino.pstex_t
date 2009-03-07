@@ -1,5 +1,5 @@
 \begin{picture}(0,0)%
-\includegraphics{/home/Maria/phys191mms/muon_writeup/figures/electron_neutrino.pstex}%
+\includegraphics{./figures/electron_neutrino.pstex}%
 \end{picture}%
 \setlength{\unitlength}{3947sp}%
 %
