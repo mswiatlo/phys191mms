@@ -29,16 +29,26 @@ Paragraph about linear and nonlinear regression tests. Include weighting.
 
 To determine the noise background, a linear regression test was used.  We created an algorithm which iteratively tested increasingly large portions of the tail end data from Fig (blah) until we detected a slight correlation ($p$-value $\leq .1$) between the points.  We took this portion of noncorrelated tail end data to be the result of background noise measured by the scintillator.  Accordingly, the mean value of this subset was taken to be the background noise level, $b$. From our data we determined the background noise level to be 10 events. 
 
-Determining the range over which we would fit the data to our model was a crucial step in determining the mean lifetime of muons.  We determined that the chance of data corruption increased for smaller time values due to several uncontrollable systematic limitations.\footnote{These limitations will be discussed in the Blah.3.1}  Likewise, we found that the goodness of our fit worsened as we excluded an increasing amount of front end data points (most likely due to the exclusion emphasizing the background noise dominating the tail end data).  Resultantly, we determined that there existed an optimal range over which to fit.  This range included data with time values $t \geq t_{c}$, where $t_{c}$ is the cutoff time.  All data points before and including $t_{c}$ were excluded from the fitting process.  To determine $t_{c}$, we created an algorithm which iteratively fit the data with increasing $t_{c}$ using a 2-parameter nonlinear regression test.  For each fit, the $\tau_{\mu}$ and the associated $r^{2}$ value were computed for $t_{c}\leq 5\mu s$.  These results are shown in Figs Blah and Blah.  We chose $t_{c}$ to be a value which corresponded to $r^{2} \geq .995$ and a $\tau_{\mu}$ which was in a region of low volatility.  Observing the Figs, we decided that ${.4\mu s \leq t_{c}\leq1.6}$ was an adequate range for $t_{c}$.  Because data for smaller time values were more likely to be corrupted, we ultimately chose our cutoff time to be 1.6 \mu s.  
+Determining the range over which we would fit the data to our model was a crucial step in determining the mean lifetime of muons.  We determined that the chance of data corruption increased for smaller time values due to several uncontrollable systematic limitations.\footnote{These limitations will be discussed in the Blah.3.1}  Likewise, we found that the goodness of our fit worsened as we excluded an increasing amount of front end data points (most likely due to the exclusion emphasizing the background noise dominating the tail end data).  Resultantly, we determined that there existed an optimal range over which to fit.  This range included data with time values $t \geq t_{c}$, where $t_{c}$ is the cutoff time.  All data points before and including $t_{c}$ were excluded from the fitting process.  To determine $t_{c}$, we created an algorithm which iteratively fit the data with increasing $t_{c}$ using a 2-parameter nonlinear regression test.  For each fit, the $\tau_{\mu}$ and the associated $r^{2}$ value were computed for $t_{c}\leq 5\mu s$.  These results are shown in Figs Blah and Blah.  We wanted $t_{c}$ to be a value which corresponded to an $r^{2} \geq .995$ and a region of minimally fluctuating $\tau_{\mu}$.  Observing the Figs, we decided that ${.4\mu s \leq t_{c}\leq1.6}$ was an adequate range for $t_{c}$.  Because data for smaller time values were more likely to be corrupted, we ultimately chose our cutoff time to be $1.6 \mu s$.  
 
-Excluding all points prior to and including $t_{c}$, we were able to determine $\tau_{\mu}$ to be $2.11 \pm .10 \mu s$ with 95\% confidence.  These error bars include the accepted value for $\tau_\{mu}$ ($2.20\mu s$) .  Our precent error is 
+Excluding all points prior to and including $t_{c}$, we were able to determine $\tau_{\mu}$ to be $2.11 \pm .10 \mu s$ with 95\% confidence.  These error bars include the accepted value for $\tau_{\mu}$ ($2.20\mu s$) with a $4.1\%$ error.
 
 \subsubsection{Error Analysis}
 
+Statistical
 
+Systematic
 
+Autocorrelation
+
+Background Noise
 
 \subsection{Determination of Muon Mass}
+
+By measuring the heights of pulses produced by PMT flashes, we are able to ultimately determine the muon mass.  As discussed in section blah, we can determine this mass by observing the electron cutoff energy, $E_{e}^{max}$. In order to measure electron energy in general we first calibrated the PMT pulse height to the energy deposited in the scintillator as discussed in section blah blah. This calibration was done by measuring the pulse heights of muon which passed through all three scintillator panels.  Nearly 4000 events were observed in roughly three hours of data aquisition.  The distribution of binned pulse heights is shown in Fig blah.  As previously stated, the maximum, or the mode, of this distribution corresponds to a minimum of the BB equation (see Appendix).  From this we determined that a value of $SOME NUMBER mV$ corresponds to a $\frac{dE}{dx}= MeV g^{-1} cm^{2}$.  KNowing thta the  
+
+we take this scaling to be approximately linear 
+
 
 \subsubsection{Error Analysis}
 
