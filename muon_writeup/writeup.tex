@@ -1,7 +1,7 @@
 %Master document for paper.
 %Created MS 1/30
 
-\documentclass[psfig,12pt]{article}
+\documentclass[psfig,12pt,notitlepage]{article}
 \usepackage{axodraw4j}
 \usepackage[text={6.5in,9in},centering]{geometry}               % See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
@@ -19,26 +19,22 @@
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \usepackage{cite}
-\usepackage{fancyheadings}
 
 
 \begin{document}
 
-\pagestyle{fancy}
+\title{Measurement of Weak Coupling Constant Using Mass and Lifetime of $\mu$ Leptons}
+\author{Maria Baryakhtar \and Steven Schowalter \and Maximilian Swiatlowski}
 
-\begin{small}
-\lhead{\bfseries Maximilian Swiatlowski} 
-\chead{} 
-\rhead{\bfseries \today} 
-\renewcommand{\headrulewidth}{0.1pt} 
-\renewcommand{\footrulewidth}{0.1pt} 
-\end{small}
+\maketitle
 
-\begin{center}
-\begin{LARGE}
-\bfseries Measurement of Weak Coupling Constant Using Mass and Lifetime of $\mu$ Leptons
-\end{LARGE}
-\end{center}
+\input{./abstract/abstract_body}
+
+\tableofcontents
+\setcounter{tocdepth}{2}
+\listoffigures
+
+\clearpage
 
 \input{./introduction/introduction_body}
 
@@ -49,8 +45,20 @@
 \input{./procedure/procedure_body}
 
 \input{./results_and_discussion/results_and_discussion_body}
+
+\newpage
+
+\appendix
+
+\begin{center}
+\begin{Large}
+\bfseries{Appendices}
+\end{Large}
+\end{center}
+
 \input{./appendix/muonmass_explanation}
 
+\addcontentsline{toc}{section}{References}
 \bibliography{writeup}
 \bibliographystyle{plain}
 \end{document}
