@@ -84,6 +84,8 @@ that ${.4\mu s \leq t_{c}\leq1.6}$ was an adequate range for $t_{c}$.
 Because data for smaller time values were more likely to be corrupted,
 we ultimately chose our cutoff time to be $1.6 \mu s$.
 
+Excluding all points prior to and including $t_{c}$, we were able to determine $\tau_{\mu}$ to be $2.11 \pm .10 \mu s$ with 95\% confidence.  This value deviates from the accepted value, $2.20\mu s$, by $4.1\%$.  However our $4.7\%$ error includes the accepted value.
+
 Excluding all points prior to and including $t_{c}$, we were able to
 determine $\tau_{\mu}$ to be $2.11 \pm .10 \mu s$ with $95\%$
 confidence.  This value deviates from the accepted value, $2.20\mu s$,
@@ -137,6 +139,17 @@ this scale to be approximately linear in this regime, we found that
 $1mV$ produced by the PMTs as measured by an oscilloscope, maps to an
 energy of $MeV$.
 
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[height=70mm]{./figures/Muon_Pulse_Height.eps}
+\caption{Blah}
+\label{figure:logic}
+\end{center}
+\end{figure}
+
+By observing the pulse heights produced by PMT flashes from the middle scintillator that correspond to STOP pulses, we then measured the energy deposited by electrons produced from muon decay.  This data was recorded for roughly five days and included nearly $7000$ events.  The distribution of binned electron pulse heights, $V_{e}$, is shown in Fig Blah.  As noted in section blah, the shape of this energy distribution is determined by the kinematics of the muon decay.  Most importantly, the energy cutoff (the point at which the distribution decays to zero) occurs at roughly one-half the mass of the decayed muon.
+
 By observing the pulse heights produced by PMT flashes from the middle
 scintillator that correspond to STOP pulses, we then measured the
 energy deposited by electrons produced from muon decay.  This data was
@@ -148,9 +161,10 @@ importantly, the energy cutoff (the point at which the distribution
 decays to zero) occurs at roughly one-half the mass of the decayed
 muon.
 
+
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[height=50mm]{./figures/Electron_Energy_Cutoff.eps}
+\includegraphics[height=70mm]{./figures/Electron_Energy_Cutoff.eps}
 \caption{Blah}
 \label{figure:logic}
 \end{center}
