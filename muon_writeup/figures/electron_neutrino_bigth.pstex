@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
-%%Title: /home/Maria/phys191mms/muon_writeup/figures/electron_neutrino_bigth.fig
+%%Title: electron_neutrino_bigth.fig
 %%Creator: fig2dev Version 3.2 Patchlevel 4
-%%CreationDate: Sat Mar  7 23:06:25 2009
+%%CreationDate: Sat Mar  7 23:10:06 2009
 %%For: Maria@mashabaryakhtar (U-MASHABARYAKHTAR\Maria,S-1-5-21-2346866336-1339078084-567176395-1005)
 %%BoundingBox: 0 0 215 241
 %%Magnification: 1.0000
@@ -93,8 +93,8 @@ $F2psBegin
 % 
 % here starts figure with depth 50
 /Times-Roman ff 225.00 scf sf
-4950 6450 m
-gs 1 -1 sc ($\\overline{\\nu_{\\mu}}$) col0 sh gr
+5100 3300 m
+gs 1 -1 sc ($\\nu_e$) col0 sh gr
 % Arc
 7.500 slw
 n 5587.5 5062.5 118.6 -108.4 108.4 arcn
@@ -152,8 +152,8 @@ gs 1 -1 sc (e) col0 sh gr
 5175 4650 m
 gs 1 -1 sc ($\\theta$) col0 sh gr
 /Times-Roman ff 225.00 scf sf
-5100 3300 m
-gs 1 -1 sc ($\\nu_e$) col0 sh gr
+4950 6450 m
+gs 1 -1 sc ($\\overline{\\nu_{\\mu}}$) col0 sh gr
 % Arc
 7.500 slw
 n 5587.5 4837.5 118.6 108.4 -108.4 arc
