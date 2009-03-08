@@ -1,5 +1,5 @@
 \begin{picture}(0,0)%
-\includegraphics{electron_neutrino_bigth.pstex}%
+\includegraphics{./figures/electron_neutrino_bigth.pstex}%
 \end{picture}%
 \setlength{\unitlength}{3947sp}%
 %

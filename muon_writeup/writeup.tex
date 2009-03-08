@@ -17,9 +17,10 @@
 \usepackage{epstopdf}
 \usepackage{epsfig}
 \usepackage{psfig}
-
-\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \usepackage{cite}
+\usepackage[dvips, bookmarks, colorlinks=true, pdftitle={Measurement of Weak Coupling Constant Using Mass and Lifetime of mu Leptons}, pdfauthor={Baryakhtar, Schowalter, Swiatlowski}, pdfsubject={Physics 191 Lab Report}, pdfkeywords={muon, physics, 191}]{hyperref}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
 
 
 \begin{document}
@@ -62,6 +63,7 @@
 \end{center}
 
 \input{./appendix/muonmass_explanation}
+\input{./appendix/timeofflight}
 
 \addcontentsline{toc}{section}{References}
 \bibliography{writeup}
