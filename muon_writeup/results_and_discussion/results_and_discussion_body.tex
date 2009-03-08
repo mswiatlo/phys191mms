@@ -22,14 +22,15 @@ This time data was measured and recorded over roughly a six day period
 during which nearly $15000$ events were measured.  To analyze this
 data, we binned the time data to create a histogram (shown in Figure
 Blah) which measures number of events versus lifetime (interval?).
-The binwidths used were determined by the following equation
+The binwidths were chosen to be $200 ns$. 
 
-\begin{equation}
-Bin Width EQN
-\end{equation}
-
-where blah is blah, bah is bah, and banana is banana.  (plot of muon
-lifetime histogram)
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[height=70mm]{./figures/muon_decay.eps}
+\caption{Blah}
+\label{figure:logic}
+\end{center}
+\end{figure}
 
  As a decay process with some time time constant, $\tau_{\mu}$, we
 would expect Figure blah to be modeled by the exponential decay of Eq
@@ -93,41 +94,12 @@ we ultimately chose our cutoff time to be $2.0 \mu s$.
 \end{center}
 \end{figure}
 
-Excluding all points prior to and including $t_{c}$, we were able to determine $\tau_{\mu}$ to be $2.11 \pm .10 \mu s$ with 95\% confidence.  This value deviates from the accepted value, $2.20\mu s$, by $4.1\%$.  However our $4.7\%$ error includes the accepted value.
-
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[height=70mm]{./figures/muon_decay.eps}
-\caption{Blah}
-\label{figure:logic}
-\end{center}
-\end{figure}
+Excluding all points prior to and including $t_{c}$, we were able to determine $\tau_{\mu}$ to be $2.12 \pm .10 \mu s$ with 95\% confidence.  This value deviates from the accepted value, $2.20\mu s$, by $3.6\%$.  However our $4.7\%$ error includes the accepted value.
 
 
-\subsubsection{Error Analysis}
-
-Statistical
-
-Systematic
-
-Autocorrelation
-
-\begin{figure}[h]
-\begin{center}
-\subfigure[Bottom detector]{\label{fig:edge-a}\includegraphics[width=0.5\textwidth]{figures/Bcorr.eps}}
-\hspace{-7mm}
-\vspace{-2mm}
-\subfigure[Middle detector]{\label{fig:edge-b}\includegraphics[width=0.5\textwidth]{figures/Mcorr.eps}}
-\vspace{-2mm}
-\subfigure[Top detector]{\label{fig:edge-c}\includegraphics[width=0.5\textwidth]{figures/Tcorr.eps}}
-\vspace{-2mm}
-\caption{test}
-\label{autocorr}
-\end{center}
-\end{figure}
 
 
-Background Noise
+
 
 \subsection{Determination of Muon Mass}
 
@@ -151,15 +123,21 @@ $1mV$ produced by the PMTs as measured by an oscilloscope, maps to an
 energy of $MeV$.
 
 
+
+By observing the pulse heights produced by PMT flashes from the middle scintillator that correspond to STOP pulses, we then measured the energy deposited by electrons produced from muon decay.  This data was recorded for roughly five days and included nearly $7000$ events.  The distribution of binned electron pulse heights, $V_{e}$, is shown in Fig Blah.  As noted in section blah, the shape of this energy distribution is determined by the kinematics of the muon decay.  Most importantly, the energy cutoff (the point at which the distribution decays to zero) occurs at roughly one-half the mass of the decayed muon.
+
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[height=70mm]{./figures/Muon_Pulse_Height.eps}
-\caption{Blah}
-\label{figure:logic}
+\subfigure[muons]{\label{fig:edge-a}\includegraphics[height=52mm]{figures/Muon_Pulse_Height.eps}}
+\hspace{-1mm}
+\vspace{-2mm}
+\subfigure[electrons]{\label{fig:edge-b}\includegraphics[height=52mm]{figures/Electron_Energy_Cutoff.eps}}
+\vspace{-2mm}
+\caption{test}
+\label{plots}
 \end{center}
 \end{figure}
 
-By observing the pulse heights produced by PMT flashes from the middle scintillator that correspond to STOP pulses, we then measured the energy deposited by electrons produced from muon decay.  This data was recorded for roughly five days and included nearly $7000$ events.  The distribution of binned electron pulse heights, $V_{e}$, is shown in Fig Blah.  As noted in section blah, the shape of this energy distribution is determined by the kinematics of the muon decay.  Most importantly, the energy cutoff (the point at which the distribution decays to zero) occurs at roughly one-half the mass of the decayed muon.
 
 By observing the pulse heights produced by PMT flashes from the middle
 scintillator that correspond to STOP pulses, we then measured the
@@ -173,13 +151,7 @@ decays to zero) occurs at roughly one-half the mass of the decayed
 muon.
 
 
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[height=70mm]{./figures/Electron_Energy_Cutoff.eps}
-\caption{Blah}
-\label{figure:logic}
-\end{center}
-\end{figure}
+
 
 To determine the energy cutoff of the distribution in Fig Blah, we
 used a fitting algorithm.  First we assumed that after some pulse
@@ -216,3 +188,29 @@ However our $blah\%$ error includes the accepted value.
 Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using equation (7). Ultimately, from our results we calculate that $G_{F}=blah \pm blah$.  This value deviates from the accepted value, $blah$, by $\%$. However our $blah\%$ error includes this accepted value.
 
 Our calculation of $G_F$ is by no means a precision measurement.  Although certain aspects of this experiment have relatively low error ($< 5\%$), such as the measurement of $\tau_{\mu}$, ultimately the overwhelming error associated with the energy calibration prevented a more precise measurement of $G_F$.
+
+
+section{Error Analysis}
+
+Statistical
+
+Systematic
+
+Autocorrelation
+
+\begin{figure}[h]
+\begin{center}
+\subfigure[Bottom detector]{\label{fig:edge-a}\includegraphics[width=0.5\textwidth]{figures/Bcorr.eps}}
+\hspace{-7mm}
+\vspace{-2mm}
+\subfigure[Middle detector]{\label{fig:edge-b}\includegraphics[width=0.5\textwidth]{figures/Mcorr.eps}}
+\vspace{-2mm}
+\subfigure[Top detector]{\label{fig:edge-c}\includegraphics[width=0.5\textwidth]{figures/Tcorr.eps}}
+\vspace{-2mm}
+\caption{test}
+\label{autocorr}
+\end{center}
+\end{figure}
+
+
+Background Noise
