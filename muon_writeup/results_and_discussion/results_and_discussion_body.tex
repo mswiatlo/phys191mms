@@ -5,56 +5,61 @@
 
 \subsection{Determination of Muon Lifetime}
 
-By constructing the logic (system) discussed in the previous section,
+By constructing the logic pathway discussed in the previous section,
 we can determine when a muon comes to rest in the middle scintillator
-and correspondingly produce a signal denoted the START signal.
-Likewise, we can determine when the stopped muon decays by observing
-the production of an electron with downward velocity.  The signal that
-is produced is denoted the STOP signal.  These signals can then be
-passed from a scope to a LabView program via GPIB.  By observing the
-duration between START and STOP pulses the time we are able to measure
+and correspondingly produce a START signal. Likewise, we can determine when the stopped muon decays by observing
+the production of an electron with downward velocity, producing a STOP signal.  By observing the
+duration between START and STOP signals, we are able to measure
 the time it takes for a stopped muon to decay.  Essentially this time
 is the lifetime of an individual muon.\footnote{The proper time
 experienced during its time of flight before being stopped in the
 scintillator blah bah}
 
 This time data was measured and recorded over roughly a six day period
-during which nearly $15000$ events were measured.  To analyze this
-data, we binned the time data to create a histogram (shown in Figure
-Blah) which measures number of events versus lifetime (interval?).
-The binwidths were chosen to be $200 ns$. 
+during which nearly $15000$ events were recorded.  To analyze this
+data, we binned the time data to create a histogram shown in Figure~\ref{fig:muondecay} which measures number of events versus lifetime.
+The binwidths were chosen to be $200 ns$. A good binwidth for data is given by the Freedman-Diaconis' choice,\footnote{ref}
+
+\begin{equation}
+\label{eq:binwidth}
+h=2\frac{IQR}{N^{1/3}}
+\end{equation}
+
+where $h$ is the number of bins, $IQR$ is the interquartile range, and $N$ is the number data points in the set.  According to this formula, the optimal binwidth for our data is $227 ns$.  Because there does not exist a formula for optimal binwidth (the goodness of a specific binwidth is dependent upon the distribution of the data), the comparable binwidth of $200 ns$ is a valid, much more convenient choice. 
+
+
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/muon_decay.eps}
-\caption{Blah}
-\label{figure:logic}
+\caption{A histogram of muon lifetimes. The lifetimes follow exponential decay to some background noise level.  The data was fit using 2-parameter nonlinear regression using $\sqrt{N}$ weighting and excluding the first $2.0 \mu s$.  The fit has an $r^{2}$ value of $.996$ and produces a $\tau_{\mu}$ of $2.12 \pm .10 \mu s$.}
+\label{fig:muondecay}
 \end{center}
 \end{figure}
 
  As a decay process with some time time constant, $\tau_{\mu}$, we
-would expect Figure blah to be modeled by the exponential decay of Eq
+would expect the data to be modeled by the exponential decay of Equation
 (4).  However because there is background noise recorded by our
 scintillator the data is modeled by
 
 \begin{equation}
+\label{eq:fitdecay}
 N(t) = N_{0} e^{-t/\tau_{\mu}}+b
 \end{equation}
 
 where $b$ is the constant background noise level measured by the scintillator. 
 
 To determine the muon mean lifetime, $\tau_{\mu}$, we then fit the
-data to the above model.  Fitting involved three major processes: the
+data to Equation~\eqref{eq:fitdecay}.  Fitting involved three major processes: the
 determination of the background noise level, $b$, determination of the
 fitting range, and finally the determination of the muon mean lifetime
-through using a 2-parameter nonlinear regression test based on Eq
-(blah).
+through using a 2-parameter nonlinear regression test based on Equation~\eqref{eq:fitdecay}.
 
 Paragraph about linear and nonlinear regression tests. Include weighting.
 
 To determine the noise background, a linear regression test was used.
 We created an algorithm which iteratively tested increasingly large
-portions of the tail end data from Fig (blah) until we detected a
+portions of the tail end data from Figure~\ref{fig:muondecay} until we detected a
 slight correlation ($p$-value $\leq .1$) between the points.  We took
 this portion of noncorrelated tail end data to be the result of
 background noise measured by the scintillator.  Accordingly, the mean
@@ -78,7 +83,7 @@ process.  To determine $t_{c}$, we created an algorithm which
 iteratively fit the data with increasing $t_{c}$ using a 2-parameter
 nonlinear regression test.  For each fit, the $\tau_{\mu}$ and the
 associated $r^{2}$ value were computed for $t_{c}\leq 5\mu s$.  These
-results are shown in Figs Blah and Blah.  We wanted $t_{c}$ to be a
+results are shown in Figure~\ref{fig:rsq}.  We wanted $t_{c}$ to be a
 value which corresponded to an $r^{2} \geq .995$ and a region of
 minimally fluctuating $\tau_{\mu}$.  Observing the Figs, we decided
 that ${.4\mu s \leq t_{c}\leq 2.0}$ was an adequate range for $t_{c}$.
@@ -89,8 +94,8 @@ we ultimately chose our cutoff time to be $2.0 \mu s$.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=60mm]{./figures/lifetime_fit_param.eps}
-\caption{Blah}
-\label{figure:logic}
+\caption{This plot shows the effect of excluding data up to some cutoff time $t_{c}$ from the fitting process.  We chose $t_{c}$ to be $2.0 \mu s$ because it produced a value for $\tau{\mu}$ that was in a range of relative stability and because it produced a fit with an $r^{2}$ value $> .995$ as seen above.}
+\label{fig:rsq}
 \end{center}
 \end{figure}
 
@@ -114,27 +119,27 @@ roughly four hours of data aquisition.  The distribution of binned
 pulse heights is shown in Fig blah.  As previously stated, the
 maximum, or the mode, of this distribution corresponds to a minimum of
 the BB equation (see Appendix).  From this we determined that a pulse
-height $V_{\mu} = SOME NUMBER mV$ corresponds to a $\frac{dE}{dx}= MeV
+height $V_{\mu} = 9.8\pm.5 \times 10^{-2} mV$ corresponds to a $\frac{dE}{dx}= 1.85\pm.10 MeV
 g^{-1} cm^{2}$.  Knowing both the density and the thickness of the
 scintillator panels to be blah and blah respectively, we can determine
 the actual scale between pulse height and deposited energy.  Taking
 this scale to be approximately linear in this regime, we found that
 $1mV$ produced by the PMTs as measured by an oscilloscope, maps to an
-energy of $MeV$.
+energy of $51.3 \pm 8.3 MeV$.
 
 
 
-By observing the pulse heights produced by PMT flashes from the middle scintillator that correspond to STOP pulses, we then measured the energy deposited by electrons produced from muon decay.  This data was recorded for roughly five days and included nearly $7000$ events.  The distribution of binned electron pulse heights, $V_{e}$, is shown in Fig Blah.  As noted in section blah, the shape of this energy distribution is determined by the kinematics of the muon decay.  Most importantly, the energy cutoff (the point at which the distribution decays to zero) occurs at roughly one-half the mass of the decayed muon.
+By observing the pulse heights produced by PMT flashes from the middle scintillator that correspond to STOP pulses, we then measured the energy deposited by electrons produced from muon decay.  This data was recorded for roughly five days and included nearly $7000$ events.  The distribution of binned electron pulse heights, $V_{e}$, is shown in Figure~\ref{fig:pulseheights}(a).  As noted in Section $2.3$, the shape of this energy distribution is determined by the kinematics of the muon decay.  Most importantly, the energy cutoff (the point at which the distribution decays to zero) occurs at roughly one-half the mass of the decayed muon.
 
 \begin{figure}[htbp]
 \begin{center}
-\subfigure[muons]{\label{fig:edge-a}\includegraphics[height=52mm]{figures/Muon_Pulse_Height.eps}}
+\subfigure[Histogram of muon pulse heights]{\label{fig:edge-a}\includegraphics[height=52mm]{figures/Muon_Pulse_Height.eps}}
 \hspace{-1mm}
 \vspace{-2mm}
-\subfigure[electrons]{\label{fig:edge-b}\includegraphics[height=52mm]{figures/Electron_Energy_Cutoff.eps}}
+\subfigure[Histogram of electron pulse heights]{\label{fig:edge-b}\includegraphics[height=52mm]{figures/Electron_Energy_Cutoff.eps}}
 \vspace{-2mm}
-\caption{test}
-\label{plots}
+\caption{These raw pulse heights produced by the PMTs correspond to muon and electron energies deposited in the scintillators.  Data from (a) is used to calibrate a scale from pulse height (measured in $mV$) to energy (measured in MeV).  Data from (b) was used to determine the electron cutoff energy.  Together information from both plots were used to calculate the muon mass.}
+\label{fig:pulseheights}
 \end{center}
 \end{figure}
 
@@ -144,7 +149,7 @@ scintillator that correspond to STOP pulses, we then measured the
 energy deposited by electrons produced from muon decay.  This data was
 recorded for roughly five days and included nearly $7000$ events.  The
 distribution of binned electron pulse heights, $V_{e}$, is shown in
-Fig Blah.  As noted in section blah, the shape of this energy
+Figure~\ref{fig:pulseheights}(b).  As noted in section blah, the shape of this energy
 distribution is determined by the kinematics of the muon decay.  Most
 importantly, the energy cutoff (the point at which the distribution
 decays to zero) occurs at roughly one-half the mass of the decayed
@@ -162,8 +167,8 @@ excluded an increasingly large range of low pulse heights points
 beginning at $V_{e}=0$.  In these fits we weighted each data point by
 $\sqrt{N_{e}}$, where $N_{e}$ is the number of electrons in some pulse
 height bin.  We determined that the smallest exclusion range to
-produce a fit with $r^{2}\geq.99$ was the exclusion range $0 MeV \leq
-V_{e}\leq .1 MeV$.  We were then able to compute the model for the
+produce a fit with $r^{2}\geq.99$ was the exclusion range $0 mV \leq
+V_{e}\leq .1 mV$.  We were then able to compute the model for the
 decay distributions decay as $V_{e}$ approached the cutoff energy.
 This model approximated the number of electrons one would expect to
 see (relative to the number of events observed, which was nearly 7000)
@@ -177,15 +182,15 @@ decay, we claim that an $N_{e} \leq 1$ essentially corresponds to no
 events.  Therefore we take this $V_{e}$, found to be $1.18\pm.10 mV$,
 to be $V_{e}^{max}$. We take all subsequent nonzero values of $N_{e}$
 to be background noise produced by PMT false flashes.  Converting from
-$V_{e}^{max}$, we find that $E_{e}^{max}=Blah \pm blah MeV$.  Based on
+$V_{e}^{max}$, we find that $E_{e}^{max}=60.8 \pm 11.1 MeV$.  Based on
 the kinematics of the muon decay we determined that this cutoff energy
-implies a muon mass of $m_{\mu} = blah \pm blam MeV/c^{2}$.  This
-value deviates from the accepted value, $blah MeV/c^{2}$, by $blah\%$.
-However our $blah\%$ error includes the accepted value.
+implies a muon mass of $m_{\mu} = 122 \pm 22 MeV/c^{2}$.  This
+value deviates from the accepted value, $105.66 MeV/c^{2}$, by $13.1\%$.
+However our $18.2\%$ error includes the accepted value.
 
 \subsection{Determination of Weak Force Coupling Constant}
 
-Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using equation (7). Ultimately, from our results we calculate that $G_{F}=blah \pm blah$.  This value deviates from the accepted value, $blah$, by $\%$. However our $blah\%$ error includes this accepted value.
+Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using Equation (7). Ultimately, from our results we calculate that $G_{F}=blah \pm blah$.  This value deviates from the accepted value, $blah$, by $\%$. However our $blah\%$ error includes this accepted value.
 
 Our calculation of $G_F$ is by no means a precision measurement.  Although certain aspects of this experiment have relatively low error ($< 5\%$), such as the measurement of $\tau_{\mu}$, ultimately the overwhelming error associated with the energy calibration prevented a more precise measurement of $G_F$.
 
