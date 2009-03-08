@@ -9,7 +9,13 @@ large portion of which were imprecise due to equipment limitations.
 To find the conversion ratio between pulse height in volts and energy
 deposited in $MeV$, 
 
-\begin{equation} VtoMeV = E_{min}h\rho\cdot\frac{1}{V_peak}\end{equation}   
+\begin{equation} VtoMeV = E_{min}\cdot h\cdot\rho\cdot\frac{1}{V_{peak}}\end{equation}   
+
+where $E_{min}$ is the minimum ionization energy of the muon, per
+density of the material and propagation depth; $\rho$ is the density
+and $h$ is the height of the scintillator, and $V_{peak}$ is the most
+frequent peak voltage of through going muons, corresponding to the
+minimum ionization energy.
 
 \subsection{Minimum Ionization Energy}
 
@@ -19,7 +25,7 @@ momentum of the particle. The relationship is given by the Bethe-Block
 equation \cite{yao}:
 
 \begin{equation}
--\frac{dE}{dx} = Kz^2\frac{Z}{A}\frac{1}{\beta^2}\left[\frac{1}{2}ln\frac{2m_ec^2\beta^2\gamma^2T_max}{I} - \beta^2 - \frac{\delta(\beta\gamma)}{2}\right]
+-\frac{dE}{dx} = Kz^2\frac{Z}{A}\frac{1}{\beta^2}\left[\frac{1}{2}ln\frac{2m_ec^2\beta^2\gamma^2T_{max}}{I} - \beta^2 - \frac{\delta(\beta\gamma)}{2}\right]
 \end{equation}
 
 where $\beta = v/c$ and $\gamma = 1/\sqrt{1 - \frac{v_{\mu}^2}{c^2}}$
@@ -48,5 +54,11 @@ scintillator material.
 
 \subsection{Mass Error Analysis}
 
-The density of the scintillator material was found to be $1.08 \pm $
+The density of the scintillator material was found to be $1.08 \pm
+0.09$ g/cm$^3$. The height was $2.5 \pm 0.2$ cm, the large errors due
+to the tape around the scintillator making it difficult to measure the
+dimensions and density.
+
+The mode of the distribution of muons passing through was $1.2 \pm
+0.1$ V. 
 
