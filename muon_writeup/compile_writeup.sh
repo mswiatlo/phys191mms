@@ -1,6 +1,6 @@
 #!/bin/sh
 latex ./writeup.tex
-bibtex ./writeup.bib
+bibtex ./writeup
 latex ./writeup.tex
 latex ./writeup.tex
 dvips -z ./writeup.dvi

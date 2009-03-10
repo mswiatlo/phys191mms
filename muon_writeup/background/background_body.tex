@@ -32,7 +32,7 @@ level forms $80\%$ of the total cosmic ray flux \cite[p.~8]{rossi}.
   \end{picture}
 }
 \caption{Weak decay of $\pi^-$, producing $\mu^-$: $\pi^- \rightarrow
-\mu^-~\nu_\{mu}$}
+\mu^-~\nu_{\mu}$}
 \label{figure:pidecay}
 \end{center}
 \end{figure}
@@ -116,12 +116,13 @@ the experimentally established $2.197~\mu$s in free space \cite{pdg}
 Even with velocities within a percent of the speed of light, the
 travel time of the muon from the point of creation in the atmosphere
 takes approximately $50\mu$s - over 20 decay lifetimes - to reach the
-ground. According to Newtonian physics, the flux would be reduced by a
-factor of over $10^{10}$ over the time of flight, and muons would be
-undetectable at sea level. However, the flux of muons at sea level,
-where the lab is located, remains large at $10^{-2}$
-cm$^{-2}$s$^{-1}$sr$^{-1}$: reduced by a factor of just $5$ from the
-peak flux at $15$km \cite{rossi}.
+ground for a muon emitted in the downward direction. According to
+Newtonian physics, the flux would be reduced by a factor of over
+$10^{10}$ over the time of flight, and muons would be undetectable at
+sea level. However, the flux of muons at sea level, where the lab is
+located, remains large at $10^{-2}$ cm$^{-2}$s$^{-1}$sr$^{-1}$:
+reduced by a factor of just $5$ from the peak flux at $15$km
+\cite{rossi}.
 
 This effect is due to time dilation predicted by the theory of special
 relativity. While in the frame of the laboratory the time of flight of
@@ -129,7 +130,7 @@ the muons is $50\mu$s, the muon itself experiences a proper time
 reduced by a factor of $\gamma$: $ \gamma t_{\mu} = t_{lab}$, where
 $\gamma = 1/\sqrt{1 - \frac{v_{\mu}^2}{c^2}}$. Since the particles are
 travelling close to the speed of light, the relativistic correction
-becomes non-negligible. With muon speeds ranging from $.994c$ to
+becomes non-negligible. With muon velocities ranging from $.994c$ to
 $.998c$, the proper time experienced by the muon is between $3.2$ and
 $5.5\mu$s, less than $2$ lifetimes on average, constistent with
 detected muon flux values.
@@ -142,71 +143,70 @@ measurement. While we do sample fewer short decay times and detect
 fewer slow moving muons, this fact simply decreases the amount of data
 without affecting the parameters of the exponential.
 
-\subsection{Muon Mass}
+\subsection{Muon Mass}\label{muonmass}
 
-The experimental setup which records the time between a muon stopping
-event and a released electron or positron event needs to be only
-slightly modified in order to measure the mass of the muon.
+A similar experimental setup (Section BLAH) can be used to make a
+measurement of the muon mass.
 
-In order to measure muon mass, we consider the products of the $\mu^-$
-decay: electron and two neutrinos \eqref{mudecay}; the antimatter
-decay analysis is equivalent to the following. For a muon that is
-stopped in the scintillator, the center of mass frame is the same as
-the lab frame. Then, since the electron mass is only $0.5\%$ of the
-muon mass and the neutrinos are essentially massless, to a good
-approximation we can assume that the rest energy of the muon is fully
-converted to the kinetic energy of the $e^-$ and neutrinos. Then,
-measuring the energy distribution of the emitted electrons will
-provide information regarding the initial muon mass. Specifically, due
-to conservation of momentum, the magnitude of the electron momentum,
-$p_e$, must equal the sum of the neutrino momenta. Fixing $p_e$ along
-the x-axis, the only possible scenario of the decay is pictured in
-Figure ~\ref, where $0 \leq \theta <\pi/2$ and is measured from the
-negative x-axis.
+In order to measure muon mass, we consider the products of $\mu^-$
+decay: electron and two neutrinos (Equation~\eqref{mudecay}); the
+antimatter decay analysis is equivalent. For a muon which stops and
+decays in the scintillator, the center of mass frame is the same as
+the lab frame. To a good approximation we can assume that the rest
+energy of the muon is fully converted to the kinetic energy of the
+$e^-$ and neutrinos, as the electron mass is only $0.5\%$ of the muon
+mass and the neutrinos are essentially massless. Then, measuring the
+energy distribution of the emitted electrons will provide information
+regarding the initial muon mass. Specifically, due to conservation of
+momentum, the magnitude of electron momentum, $p_e$, must equal the
+sum of the neutrino momenta. We can see this from the following
+argument. Fixing $p_e$ along the x-axis, the only possible scenario of
+the decay is pictured in Figure~\ref{figure:e_nu}, where $0 \leq
+\theta <\pi/2$ and is measured from the negative x-axis.
 
-
-
-\begin{figure}[htbp]
+\begin{figure}[ht]
 \begin{center}
- 
 \input{./figures/electron_neutrino.pstex_t}
- 
 \caption{\small{Decay products of the muon. Due to conservation of
-energy and momentum, the momenta of the two neutrinos but be at equal
-angles, $\theta$ and $-\theta$, from the direction of the electron
-momentum. Maximizing the electron momentum (and therefore energy) is
-the configuration with $\theta = 0$.}}
-\label{e_nu}
+energy and momentum, momenta of the two neutrinos must be at equal
+angles, $\theta$ and $-\theta$, from the direction of electron
+momentum. The configuration with $\theta = 0$ maximizes the electron
+momentum (and therefore energy).}}
+\label{figure:e_nu}
 \end{center}
 \end{figure}
 
-
-The total momentum of the neutrinos is minimized when there is no y
-component, that is $\theta = 0$. In this case, $p_e = p_e^{max} =
-\frac{1}{2}p_{tot}$. Again neglecting electron mass, we have $E_e =
-p_ec$, so the energy of the electron is maximized when the momentum is
-maximized, and so
+The total momentum of the electron is maximized when the neutrino
+momenta have no $y$ component, that is $\theta = 0$. In this case,
+$p_e = p_e^{max} = \Sigma p_{nu}$ by conservation of momentum. Again
+neglecting electron mass, we have $E_e = p_ec$, so the energy of the
+electron is maximized when its momentum is maximized. Thus, the
+maximum kinetic energy of the electron is half the rest energy of the
+muon, as claimed.
 
 \begin{equation}E_e^{max} = \frac{1}{2}E_{\mu} = \frac{1}{2}m_{\mu}\end{equation}
 
-Then by measuring the electron energy spectrum, which is a $\beta$
-decay spectrum with a cutoff at $ \frac{1}{2}m_{\mu}$, we can find the
-maximum electron energy and thus measure the muon mass.
+By measuring the energy spectrum of emitted electrons, which is
+a $\beta$ decay spectrum with a cutoff at $ \frac{1}{2}m_{\mu}$, we
+can find the maximum electron energy and thereby determine the muon
+mass.
 
-\subsubsection{Energy Calibration}
+\subsubsection{Energy Calibration}\label{energycalibration}
 
-Our intruments enable us to measure the height of the pulse from the
-electron that registers on the PMT. In order to convert the pulse
-height distribution to an energy distribution, we have to calibrate
-the pulse height voltage in terms of energy left in the detector.
+Our instruments enable us to measure the maximum voltage of a pulse
+from an electron that registers on the PMT. In order to convert the
+pulse height distribution to an energy distribution, we have to
+calibrate the pulse height voltage in terms of energy lost by the
+particle in the detector.
 
-To do so, we find the pulse height voltage which corresponds to the
-minimum ionization energy (approximately $2$ MeVg$^{-1}$cm$^{2}$) by
-finding the maximum in the peak height distribution of muons which
-pass through all three scintillators. Since the incoming muons have a
-relatively random distribution of momenta, the most frequent rate of
-energy loss will be near a local extremum, which in this case is a
-minimum (see appendix blah for more details).
+To do so, we find the muon pulse height voltage which corresponds to
+the minimum ionization energy (approximately $2$
+MeVg$^{-1}$cm$^{2}$). This is done by finding the maximum in the peak
+height distribution of muons which pass through all three
+scintillators. Since the incoming muons have a relatively random
+distribution of momenta, the most frequent rate of energy loss will be
+near a local extremum, which in this case is a minimum (see appendix
+blah for more details).
 
 Assuming the scintillator light output varies linearly with the amount
 of energy deposited, and measuring the scintillator density and
