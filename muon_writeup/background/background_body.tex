@@ -84,7 +84,7 @@ measure the characteristic lifetime of the decay, $\tau_{\mu} =
 %decay. The histogram of the recorded times is then fit to
 %\eqref{expdecay} to give the lifetime of the muon.
 
-\subsubsection{Decay in Matter}
+\subsubsection{Decay in Matter}\label{decayinmatter}
 
 In matter, another decay channel is possible for $\mu^-$ via nucleus
 capture:
@@ -145,8 +145,8 @@ without affecting the parameters of the exponential.
 
 \subsection{Muon Mass}\label{muonmass}
 
-A similar experimental setup (Section BLAH) can be used to make a
-measurement of the muon mass.
+A similar experimental setup (Section~\ref{instrumentation}) can be
+used to make a measurement of the muon mass.
 
 In order to measure muon mass, we consider the products of $\mu^-$
 decay: electron and two neutrinos (Equation~\eqref{mudecay}); the
@@ -178,35 +178,38 @@ momentum (and therefore energy).}}
 
 The total momentum of the electron is maximized when the neutrino
 momenta have no $y$ component, that is $\theta = 0$. In this case,
-$p_e = p_e^{max} = \Sigma p_{nu}$ by conservation of momentum. Again
+$p_e = p_e^{max} = \Sigma p_{\nu}$ by conservation of momentum. Again
 neglecting electron mass, we have $E_e = p_ec$, so the energy of the
 electron is maximized when its momentum is maximized. Thus, the
 maximum kinetic energy of the electron is half the rest energy of the
 muon, as claimed.
 
-\begin{equation}E_e^{max} = \frac{1}{2}E_{\mu} = \frac{1}{2}m_{\mu}\end{equation}
+\begin{equation}E_e^{max} = \frac{1}{2}E_{\mu} = \frac{1}{2}m_{\mu}c^2\end{equation}
 
-By measuring the energy spectrum of emitted electrons, which is
-a $\beta$ decay spectrum with a cutoff at $ \frac{1}{2}m_{\mu}$, we
+By measuring the energy spectrum of emitted electrons, which is a
+$\beta$ decay spectrum with a cutoff at $ \frac{1}{2}m_{\mu}c^2$, we
 can find the maximum electron energy and thereby determine the muon
 mass.
 
 \subsubsection{Energy Calibration}\label{energycalibration}
 
 Our instruments enable us to measure the maximum voltage of a pulse
-from an electron that registers on the PMT. In order to convert the
-pulse height distribution to an energy distribution, we have to
+from an electron that registers on the PMT (the method is described in
+more detail in Section~\ref{muonmassmeasurement}). In order to convert
+the pulse height distribution to an energy distribution, we have to
 calibrate the pulse height voltage in terms of energy lost by the
 particle in the detector.
 
 To do so, we find the muon pulse height voltage which corresponds to
-the minimum ionization energy (approximately $2$
-MeVg$^{-1}$cm$^{2}$). This is done by finding the maximum in the peak
+the minimum stopping power, as a function of incoming momentum, of the
+muon ($\langle -\frac{dE}{dx}\rangle$, approximately $2$ MeV
+g$^{-1}$cm$^{2}$). This voltage is given by the mode in the peak
 height distribution of muons which pass through all three
-scintillators. Since the incoming muons have a relatively random
+scintillators. Since the through going muons have a relatively random
 distribution of momenta, the most frequent rate of energy loss will be
-near a local extremum, which in this case is a minimum (see appendix
-blah for more details).
+near a local extremum in the stopping power vs. momentum function,
+which in this case is a minimum (see Appendix~\ref{masscalibration}
+for more details).
 
 Assuming the scintillator light output varies linearly with the amount
 of energy deposited, and measuring the scintillator density and
@@ -215,25 +218,26 @@ electron energy.
 
 \subsection{Weak Force Coupling Constant}
 
-The decay rate $\Gamma_{\mu}$ is proportional to the square of the
-amplitude of the decay diagram (Figure ~\ref), which depends on the
-product of the couplings at each vertex. In this case, the coupling at
-each of the two vertices is proportional to $\sqrt{G_F}$, the Fermi
-coupling constant, so we have
+The decay rate of the muon $\Gamma_{\mu}$ is proportional to the
+square of the amplitude of the decay diagram (Figure
+~\ref{figure:mudecay}), which depends on the product of the couplings
+at each vertex. In this case, the coupling at each of the two vertices
+is proportional to $\sqrt{G_F}$, the Fermi coupling constant, so we
+have
 
 \begin{equation}\Gamma_{\mu} \propto G_F^2 \end{equation}
 
 A more involved calculation \cite[p.~310-314]{griffiths} gives that the
 lifetime of the muon is
 
-\begin{equation}\tau_{\mu} = \dfrac{192\pi^3\hbar^7}{G_F^2m_{\mu}^5c^4}\end{equation}
+\begin{equation}\tau_{\mu} = \dfrac{192\pi^3\hbar^7}{G_F^2m_{\mu}^5c^4}\label{gf}\end{equation}
 where $c$ is the speed of light, $\hbar$ is Planck's constant, and
 $m_{\mu}$ is the rest mass of the muon. 
 
-Once we establish the value of $m_{\mu}$, we can find the Fermi
-coupling constant $G_F$, which describes the strength of the weak
-interaction\footnote{Although $G_F$ is not equivalent to the weak
-coupling constant, $g_w$, they are related by the equation
+Once we establish the values of $\tao_{\mu}$ and $m_{\mu}$, we can
+find the Fermi coupling constant $G_F$, which describes the strength
+of the weak interaction\footnote{Although $G_F$ is not equivalent to
+the weak coupling constant, $g_w$, they are related by the equation
 \[G_F\equiv \frac{\sqrt{2}}{8}\left(\frac{g_w}{M_Wc^2}\right)^2(\hbar c)^3\]
 where $M_W$ is the mass of the $W$ bosons which mediate the weak
 interaction. Thus $G_F$ is sufficient and is commonly used to describe
@@ -241,5 +245,5 @@ weak interaction formulas\cite[p.~313]{griffiths}}.
 
 The weak decay of the muon is the clearest of all weak interaction
 phenomena in both its experimental and theoretical aspects. Thus, the
-muon decay is an effective means of studying the weak force, and
-specifically finding the Fermi coupling constant $G_F$.
+muon decay is an effective means of studying the nature of the weak
+force, and specifically finding the Fermi coupling constant $G_F$.
