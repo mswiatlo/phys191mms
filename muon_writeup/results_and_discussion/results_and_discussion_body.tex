@@ -38,8 +38,7 @@ where $h$ is the number of bins, $IQR$ is the interquartile range, and $N$ is th
 \end{figure}
 
  As a decay process with some time time constant, $\tau_{\mu}$, we
-would expect the data to be modeled by the exponential decay of Equation
-(4).  However because there is background noise recorded by our
+would expect the data to be modeled by the exponential decay of Equation \eqref{expdecay}.  However because there is background noise recorded by our
 scintillator the data is modeled by
 
 \begin{equation}
@@ -83,8 +82,8 @@ nonlinear regression test.  For each fit, the $\tau_{\mu}$ and the
 associated $r^{2}$ value were computed for $t_{c}\leq 5\mu s$.  These
 results are shown in Figure~\ref{fig:rsq}.  We wanted $t_{c}$ to be a
 value which corresponded to an $r^{2} \geq .995$ and a region of
-minimally fluctuating $\tau_{\mu}$.  Observing the Figs, we decided
-that ${.4\mu s \leq t_{c}\leq 2.0}$ was an adequate range for $t_{c}$.
+minimally fluctuating $\tau_{\mu}$.  Observing the Figure~\ref{fig:rsq}, we decided
+that ${.4\mu s \leq t_{c}\leq 2.0\mu s}$ was an adequate range for $t_{c}$.
 Because data for smaller time values were more likely to be corrupted,
 we ultimately chose our cutoff time to be $2.0 \mu s$.
 
@@ -108,9 +107,9 @@ Excluding all points prior to and including $t_{c}$, we were able to determine $
 
 By measuring the heights of pulses produced by PMT flashes, we are
 able to ultimately determine the muon mass.  As discussed in Section
-\ref{Muon Mass}, we can determine this mass by observing the electron cutoff energy, $E_{e}^{max}$. In order to measure electron energy in general
+\ref{muonmass}, we can determine this mass by observing the electron cutoff energy, $E_{e}^{max}$. In order to measure electron energy in general
 we first calibrated the PMT pulse height to the energy deposited in
-the scintillator as discussed in Section \ref{Energy Calibration}. This calibration
+the scintillator as discussed in Section \ref{energycalibration}. This calibration
 was done by measuring the pulse heights of muon which passed through
 all three scintillator panels.  More $50000$ events were observed in
 roughly four hours of data aquisition.  The distribution of binned
@@ -145,7 +144,7 @@ scintillator that correspond to STOP pulses, we then measured the
 energy deposited by electrons produced from muon decay.  This data was
 recorded for roughly five days and included nearly $7000$ events.  The
 distribution of binned electron pulse heights, $V_{e}$, is shown in
-Figure~\ref{fig:pulseheights}(b).  As noted in Section 2.3, the shape of this energy
+Figure~\ref{fig:pulseheights}(b).  As noted in Section \ref{muonmass}, the shape of this energy
 distribution is determined by the kinematics of the muon decay.  Most
 importantly, the energy cutoff (the point at which the distribution
 decays to zero) occurs at roughly one-half the mass of the decayed
