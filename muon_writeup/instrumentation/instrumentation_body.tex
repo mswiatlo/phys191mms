@@ -1,7 +1,7 @@
 \section{Instrumentation}
 \label{instrumentation}
 
-In order to detect muon and electron events, signals from scintillators are correlated and matched against an expected pattern. The next section will discuss how these are used to generate lifetimes; here, we focus on describing the apparatus and problems associated with it.
+In order to detect muon and electron events, signals from scintillators are correlated and matched against an expected pattern. The next section (\ref{procedure}) will discuss how these are used to generate lifetimes; here, we focus on describing the apparatus and problems associated with it.
 
 \subsection{Scintillators}
 \label{scintillators}
@@ -11,14 +11,16 @@ The scintillator consists of polystyrene ($\mathrm{C}_{8}\mathrm{H}_{9}$, with d
 \subsubsection{Photomultiplier False Flashes}
 \label{photomultiplierfalseflashes}
 
-Photomultipliers, while incredibly useful and sensitive in delivering amplified event signals, have a notorious weakness: false signals which occur with some regularity directly after real signals. The number of these signals, as detailed in the autocorrelator section of Appendix~\ref{muontimeerroranalysis}, follows a more or less exponential decay (that is, there are exponentially fewer false pulses at longer times than shorter times); however, the decay is sadly on approximately same order as the lifetime of the muons. Different techniques, described below and in the \emph{Procedure} section (\ref{muonlifetimemeasurement}), were used to lower the effect of these false signals; however, they remain a significant pollutant of data in the low end of the timescale, and must be dealt with statistically.
+Photomultipliers, while incredibly useful and sensitive in delivering amplified event signals, have a notorious weakness: false signals which occur with some regularity directly after real signals. The number of these signals, as detailed in the autocorrelator section of Appendix~\ref{muontimeerroranalysis}, follows a more or less exponential decay (that is, there are exponentially fewer false pulses at longer times than shorter times); however, the decay lifetime is of approximately the same order of magnitude as the lifetime of the muons. Different techniques, described below (\ref{efficiencyoptimization}) and in the \emph{Procedure} section (\ref{muonlifetimemeasurement}), were used to lower the effect of these false signals; however, they remain a significant pollutant of data in the low end of the timescale, and must be dealt with statistically (see Appendix~\ref{muontimeerroranalysis}).
 
 \subsubsection{Efficiency Optimization}
 \label{efficiencyoptimization}
 
-Many different factors come into the consideration for choosing the settings at which the run the scintillators. The most obvious is the drive to maximize efficiency of the detectors so as to maximize muon count; this would require setting the voltages as high and the threshold levels as low. The other primary concern is noise (particularly false flashes), which increases at higher voltages and lower thresholds; this concern keeps voltages lower and thresholds higher.
+Many different factors come into the consideration for choosing the settings at which the run the scintillators. The most obvious is the desire to maximize efficiency of the detectors so as to maximize muon count; this would require setting the voltages as high as possible and the threshold levels as low as possible. The other primary concern is noise (particularly false flashes), which increases at higher voltages and lower thresholds; this concern keeps voltages lower and thresholds higher. An optimization procedure determines the optimal settings to maximize efficiency.
 
 The optimization technique relies on the very high number of muons that go straight through all detectors. As most muons are very high energy when they reach the surface of the earth, nearly the entire flux from the atmosphere passes through all the detectors without stopping. Thus, by taking the ratio of the number of events detected by all three detectors as compared to the number detected by just two of the detectors, we can get an approximation of the efficiency of the excluded detector, as any event detected by just the two should have been detected by all three. The ratio should be near 1 for something perfectly efficient, as losses from solid angles and muons which stop in the detectors are incredibly small as compared to the total muon flux. We chose the most efficient detector to be in the middle, as most of the signals require at least one middle input.
+
+Optimal voltage values are chosen by plotting efficiency against voltage; this produces a plot that increases dramatically at low voltages but soon plateaus. A value in the middle of this plateau is chosen to guarantee the high rate of efficiency, but not so high as to increase noise. Optimal values for discriminator threshold levels were chosen in a similar fashion; a plot of threshold versus efficiency showed a plateau as discriminator levels are lowered. Once again a middle value on the plateau is chosen, in an attempt to balance guaranteeing high efficiency with noise concerns.
 
 Initial data runs were taken with very high efficiency: $99\%$ efficiency for the middle detector, $83\%$ for the top, and $90\%$ for the bottom. Voltages for the photomultiplier tubes were set at 1160 V, 1190 V, and 1190 V respectively. All the thresholds were set to 70 mV. 
 
@@ -46,7 +48,7 @@ However, this allows for START and STOP events to happen simultaneously: note th
 
 \subsection{Autocorrelator}
 \label{autocorrelator}
-In order to better study the effects of the photomultiplier false flashes, we used a Langley Ford Instruments Model 1096 Correlator to track the autocorrelation of the signal coming from each photomultiplier. The machine monitors at an input line for a signal, and records when another signal comes onto the same channel. We set it to record bins of $.1 \mu s$, up to a total of $8 \mu s$ after the starting signal. Because the rate of muons coming into a scintillator is significantly smaller than this timescale, any autocorrelated signals could be strongly assumed to be false flashes (indeed, if there were extra muons coming in during this window, we would expect an even distribution over all times, but we did not see this). The results were normalized by dividing by the total number of signals detected over the run period.
+In order to better study the effects of the photomultiplier false flashes, we used a Langley Ford Instruments Model 1096 Correlator to track the autocorrelation of the signal coming from each photomultiplier. The machine monitors at an input line for a signal, and records when another signal comes onto the same channel. We set it to record bins of $.1 \mu$s, up to a total of $8 \mu$s after the starting signal. Because the rate of muons coming into a scintillator is significantly smaller than this timescale, any autocorrelated signals could be strongly assumed to be false flashes (indeed, if there were extra muons coming in during this window, we would expect an even distribution over all times, but we did not see this). The results were normalized by dividing by the total number of signals detected over the run period.
 
 \subsection{Measurements}
 \label{measurements}
