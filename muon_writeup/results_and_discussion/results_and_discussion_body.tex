@@ -11,14 +11,12 @@ and correspondingly produce a START signal. Likewise, we can determine when the 
 the production of an electron with downward velocity, producing a STOP signal.  By observing the
 duration between START and STOP signals, we are able to measure
 the time it takes for a stopped muon to decay.  Essentially this time
-is the lifetime of an individual muon.\footnote{The proper time
-experienced during its time of flight before being stopped in the
-scintillator blah bah}
+is the lifetime of an individual muon.
 
 This time data was measured and recorded over roughly a six day period
 during which nearly $15000$ events were recorded.  To analyze this
 data, we binned the time data to create a histogram shown in Figure~\ref{fig:muondecay} which measures number of events versus lifetime.
-The binwidths were chosen to be $200$ ns. A good binwidth for data is given by the Freedman-Diaconis' choice,\footnote{ref}
+The binwidths were chosen to be $200$ ns. A good binwidth for data is given by the Freedman-Diaconis' choice,\cite{scott}
 
 \begin{equation}
 \label{eq:binwidth}
@@ -67,9 +65,8 @@ events.
 Determining the range over which we would fit the data to our model
 was a crucial step in determining the mean lifetime of muons.  We
 determined that the chance of data corruption increased for smaller
-time values due to several uncontrollable systematic
-limitations.\footnote{These limitations will be discussed in the
-Blah.3.1} Likewise, we found that the goodness of our fit worsened as
+time values due to uncontrollable systematic
+limitations (See Appendix \ref{muontimeerroranalysis}). Likewise, we found that the goodness of our fit worsened as
 we excluded an increasing amount of front end data points (most likely
 due to the exclusion emphasizing the background noise dominating the
 tail end data).  Resultantly, we determined that there existed an
@@ -114,8 +111,8 @@ was done by measuring the pulse heights of muon which passed through
 all three scintillator panels.  More $50000$ events were observed in
 roughly four hours of data aquisition.  The distribution of binned
 pulse heights is shown in Figure~\ref{fig:pulseheights}(a).  As previously stated, the
-maximum, or the mode, of this distribution corresponds to a minimum of
-the BB equation (see Appendix).  From this we determined that a pulse
+maximum, or the mode, of this distribution corresponds to a minimum in
+the Bethe-Block equation (see Appendix \ref{minimumionizationenergy} for more information).  From this we determined that a pulse
 height $V_{\mu} = 9.8\pm.5 \times 10^{-2}$ V corresponds to a $\frac{dE}{dx}= 1.85\pm.10$ MeV
 g$^{-1}$ cm$^{2}$.  Knowing both the density and the thickness of the
 scintillator panels to be $2.5\pm.2$ and $1.08\pm.09$ g cm$^{-3}$ respectively, we can determine
@@ -185,6 +182,6 @@ However our $17\%$ error includes the accepted value.
 
 \subsection{Determination of Weak Force Coupling Constant}\label{determinationofweakforcecouplingconstant}
 
-Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using Equation \eqref{gf}. Ultimately, from our results we calculate that $G_{F}=3.0\pm1.3\times 10^{-59}$ Jm$^{3}$.  This value deviates from the accepted value, $4.305\times10^{-59}$ Jm$^{3}$, by $43\%$. Our $43\%$ error just includes this accepted value.
+Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using Equation \eqref{gf}. Ultimately, from our results we calculate that $G_{F}=3.0\pm1.3\times 10^{-59}$ Jm$^{3}$.  This value deviates from the accepted value, $4.305\times10^{-59}$ Jm$^{3}$,\cite{pdg} by $43\%$. Our $43\%$ error just includes this accepted value.
 
 Our calculation of $G_F$ is by no means a precision measurement.  Although certain aspects of this experiment have relatively low error ($<8\%$), such as the measurement of $\tau_{\mu}$, ultimately the overwhelming error associated with the energy calibration prevented a more precise measurement of $G_F$.
