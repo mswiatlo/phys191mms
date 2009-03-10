@@ -18,14 +18,14 @@ scintillator blah bah}
 This time data was measured and recorded over roughly a six day period
 during which nearly $15000$ events were recorded.  To analyze this
 data, we binned the time data to create a histogram shown in Figure~\ref{fig:muondecay} which measures number of events versus lifetime.
-The binwidths were chosen to be $200 ns$. A good binwidth for data is given by the Freedman-Diaconis' choice,\footnote{ref}
+The binwidths were chosen to be $200$ ns. A good binwidth for data is given by the Freedman-Diaconis' choice,\footnote{ref}
 
 \begin{equation}
 \label{eq:binwidth}
-h=2\frac{IQR}{N^{1/3}}
+h=2(IQR)N^{-1/3}
 \end{equation}
 
-where $h$ is the number of bins, $IQR$ is the interquartile range, and $N$ is the number data points in the set.  According to this formula, the optimal binwidth for our data is $227 ns$.  Because there does not exist a formula for optimal binwidth (the goodness of a specific binwidth is dependent upon the distribution of the data), the comparable binwidth of $200 ns$ is a valid, much more convenient choice. 
+where $h$ is the number of bins, $IQR$ is the interquartile range, and $N$ is the number data points in the set.  According to this formula, the optimal binwidth for our data is $227$ ns.  Because there does not exist a formula for optimal binwidth (the goodness of a specific binwidth is dependent upon the distribution of the data), the comparable binwidth of $200$ ns is a valid, much more convenient choice. 
 
 
 
@@ -185,6 +185,6 @@ However our $18.2\%$ error includes the accepted value.
 
 \subsection{Determination of Weak Force Coupling Constant}\label{determinationofweakforcecouplingconstant}
 
-Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using Equation (7). Ultimately, from our results we calculate that $G_{F}=blah \pm blah$.  This value deviates from the accepted value, $blah$, by $blah\%$. However our $blah\%$ error includes this accepted value.
+Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using Equation \eqref{gf}. Ultimately, from our results we calculate that $G_{F}=blah \pm blah$.  This value deviates from the accepted value, $blah$, by $blah\%$. However our $blah\%$ error includes this accepted value.
 
 Our calculation of $G_F$ is by no means a precision measurement.  Although certain aspects of this experiment have relatively low error ($<8\%$), such as the measurement of $\tau_{\mu}$, ultimately the overwhelming error associated with the energy calibration prevented a more precise measurement of $G_F$.
