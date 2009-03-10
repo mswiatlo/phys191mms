@@ -1,14 +1,16 @@
 \section{Procedure}\label{procedure}
 
 \subsection{Muon Lifetime Measurement}
+\label{muonlifetimemeasurement}
 
 After calibration and logic setup, the muon lifetime measurement consists of monitoring the START and STOP signals on an oscilloscope and recording the difference in time between the start of their pulses. After binning the results, an exponential decay is observed, and if instrumentation was perfect, this would be all that was necessary.
 
 However, false flashes from the photomultiplier caused us to revise our collection procedures. First, the autocorrelation data presented in section~something provided convincing evidence of data corruption in the first 2 or 3 $\mu s$, but lowering threshold levels and voltages gave some relief to these issues. A second solution was to eliminate the $T \wedge M \wedge \bar{B}$ term before the or gate in the STOP signal. As the muons come in from the top, the rate of false flashes coming from the top should be greater than the rate of false flashes coming from the bottom; eliminating the top going electron stop signal halved the rate of data acquisition, but did have a small impact on eliminating the noise problem. 
 
-After data was collected, the curve was fitted to an exponential term with a constant background, as in equation (something). The lifetime is given by the fit parameter $\tau$. The bulk of the noise problem was addressed by the statistical analysis described in sections blah and appendix blah.
+After data was collected, the curve was fitted to an exponential term with a constant background, as in equation~\eqref{eq:fitdecay}. The lifetime is given by the fit parameter $\tau$. The bulk of the noise problem was addressed by the statistical analysis described in sections blah and appendix blah.
 
 \subsection{Muon Mass Measurement}
+\label{muonmassmeasurement}
 
 To measure the mass of the muon, we measured the cutoff in the energy spectrum of outgoing decay electrons, as described in section blah. This first required calibration of voltage levels to energy; to do this, we measured the voltage spectrum of muons passing completely through. The peak of this curve would correspond to the minimum ionization energy, as discussed in section blah. 
 
@@ -16,4 +18,4 @@ The calibration was performed by setting a start signal to $\mathrm{START} = T \
 
 The electron energy spectrum (really, the voltage spectrum before being calibrated) was measured by using the STOP signal discussed in sections blah and blah (i.e., only a bottom going electron was counted as a valid stop event, in order to minimize noise) as a trigger on channel 2. The signal from the middle detector is once again split using the linear fanout and the minimum recorded on channel 1. 
 
-With the calibration calculated and the cutoff determined by the statistical analysis in section blah, the mass of the muon is determined to be twice the value of the cutoff energy.
+With the calibration calculated and the cutoff determined by the statistical analysis in Section~\ref{determinationofmuonmass}, the mass of the muon is determined to be twice the value of the cutoff energy.
