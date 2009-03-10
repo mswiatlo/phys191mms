@@ -23,14 +23,14 @@ The binwidths were chosen to be $200$ ns. A good binwidth for data is given by t
 h=2(IQR)N^{-1/3}
 \end{equation}
 
-where $h$ is the number of bins, $IQR$ is the interquartile range, and $N$ is the number data points in the set.  According to this formula, the optimal binwidth for our data is $227$ ns.  Because there does not exist a formula for optimal binwidth (the goodness of a specific binwidth is dependent upon the distribution of the data), the comparable binwidth of $200$ ns is a valid, much more convenient choice. 
+where $h$ is the number of bins, $IQR$ is the interquartile range, and $N$ is the number of data points in the set.  According to this formula, a good binwidth for our data is $227$ ns.  Because there does not exist a formula for optimal binwidth (the goodness of a specific binwidth is dependent upon the distribution of the data), the comparable binwidth of $200$ ns is a valid, much more convenient choice. 
 
 
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/muon_decay.eps}
-\caption{A histogram of muon lifetimes. The lifetimes follow exponential decay to some background noise level.  The data was fit using 2-parameter nonlinear regression using $\sqrt{N}$ weighting and excluding the first $2.0~\mu$s.  The fit has an $r^{2}$ value of $0.996$ and produces a $\tau_{\mu}$ of $2.12 \pm 0.06~\mu$s.}
+\caption{\small{A histogram of muon lifetimes. The lifetimes follow exponential decay to some background noise level.  The data was fit using 2-parameter nonlinear regression using $\sqrt{N}$ weighting and excluding the first $2.0~\mu$s.  The fit has an $r^{2}$ value of $0.996$ and produces a $\tau_{\mu}$ of $2.12 \pm 0.06~\mu$s.}}
 \label{fig:muondecay}
 \end{center}
 \end{figure}
@@ -88,7 +88,7 @@ we ultimately chose our cutoff time to be $2.0~\mu$s.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=60mm]{./figures/lifetime_fit_param.eps}
-\caption{This plot shows the effect of excluding data up to some cutoff time $t_{c}$ from the fitting process.  We chose $t_{c}$ to be $2.0~\mu$s because it produced a value for $\tau{\mu}$ that was in a range of relative stability and because it produced a fit with an $r^{2}$ value $> 0.995$ as seen above.}
+\caption{\small{This plot shows the effect of excluding data up to some cutoff time $t_{c}$ from the fitting process.  We chose $t_{c}$ to be $2.0~\mu$s because it produced a value for $\tau_{\mu}$ that was in a range of relative stability and because it produced a fit with an $r^{2}$ value $> 0.995$ as seen above.}}
 \label{fig:rsq}
 \end{center}
 \end{figure}
@@ -108,7 +108,7 @@ able to ultimately determine the muon mass.  As discussed in Section
 we first calibrated the PMT pulse height to the energy deposited in
 the scintillator as discussed in Section \ref{energycalibration}. This calibration
 was done by measuring the pulse heights of muon which passed through
-all three scintillator panels.  More $50000$ events were observed in
+all three scintillator panels.  More than $50,000$ events were observed in
 roughly four hours of data acquisition.  The distribution of binned
 pulse heights is shown in Figure~\ref{fig:pulseheights}(a).  As previously stated, the
 maximum, or the mode, of this distribution corresponds to a minimum in
@@ -130,8 +130,8 @@ energy of $51 \pm 7$ MeV.
 \vspace{-2mm}
 \subfigure[Histogram of electron pulse heights]{\label{fig:edge-b}\includegraphics[height=52mm]{figures/Electron_Energy_Cutoff.eps}}
 \vspace{-2mm}
-\caption{These raw pulse heights produced by the PMTs correspond to muon and electron energies deposited in the scintillators.  Data from (a) is used to calibrate a scale from pulse height (measured in V) to energy (measured in MeV).  Data from (b) was used to determine the electron cutoff energy.  Together information from both plots were used to calculate the muon mass.}
-\label{fig:pulseheights}
+\caption{\small{These raw pulse heights produced by the PMTs correspond to muon and electron energies deposited in the scintillators.  Data from (a) is used to calibrate a scale from pulse height (measured in V) to energy (measured in MeV).  Data from (b) was used to determine the electron cutoff energy.  Together information from both plots were used to calculate the muon mass.}
+\label{fig:pulseheights}}
 \end{center}
 \end{figure}
 
@@ -139,7 +139,7 @@ energy of $51 \pm 7$ MeV.
 By observing the pulse heights produced by PMT flashes from the middle
 scintillator that correspond to STOP pulses, we then measured the
 energy deposited by electrons produced from muon decay.  This data was
-recorded for roughly five days and included nearly $7000$ events.  The
+recorded for roughly five days and included nearly $7,000$ events.  The
 distribution of binned electron pulse heights, $V_{e}$, is shown in
 Figure~\ref{fig:pulseheights}(b).  As noted in Section \ref{muonmass}, the shape of this energy
 distribution is determined by the kinematics of the muon decay.  Most
@@ -163,7 +163,7 @@ produce a fit with $r^{2}\geq0.99$ was the exclusion range $0$ V $\leq
 V_{e}\leq 0.1$ V.  We were then able to compute the model for the
 decay distributions decay as $V_{e}$ approached the cutoff energy.
 This model approximated the number of electrons one would expect to
-see (relative to the number of events observed, which was nearly 7000)
+see (relative to the number of events observed, which was nearly 7,000)
 for some $V_{e}$.
 
 The model for the distribution's decay was then used to determine
