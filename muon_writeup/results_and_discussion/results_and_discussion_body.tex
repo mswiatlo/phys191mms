@@ -30,7 +30,7 @@ where $h$ is the number of bins, $IQR$ is the interquartile range, and $N$ is th
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/muon_decay.eps}
-\caption{A histogram of muon lifetimes. The lifetimes follow exponential decay to some background noise level.  The data was fit using 2-parameter nonlinear regression using $\sqrt{N}$ weighting and excluding the first $2.0~\mu$s.  The fit has an $r^{2}$ value of $.996$ and produces a $\tau_{\mu}$ of $2.12 \pm 0.06~\mu$s.}
+\caption{A histogram of muon lifetimes. The lifetimes follow exponential decay to some background noise level.  The data was fit using 2-parameter nonlinear regression using $\sqrt{N}$ weighting and excluding the first $2.0~\mu$s.  The fit has an $r^{2}$ value of $0.996$ and produces a $\tau_{\mu}$ of $2.12 \pm 0.06~\mu$s.}
 \label{fig:muondecay}
 \end{center}
 \end{figure}
@@ -55,7 +55,7 @@ through using a 2-parameter nonlinear regression test based on Equation~\eqref{e
 To determine the noise background, a linear regression test was used.
 We created an algorithm which iteratively tested increasingly large
 portions of the tail end data from Figure~\ref{fig:muondecay} until we detected a
-slight correlation ($p$-value $\leq .1$) between the points.  We took
+slight correlation ($p$-value $\leq 0.1$) between the points.  We took
 this portion of noncorrelated tail end data to be the result of
 background noise measured by the scintillator.  Accordingly, the mean
 value of this subset was taken to be the background noise level,
@@ -78,9 +78,9 @@ iteratively fit the data with increasing $t_{c}$ using a 2-parameter
 nonlinear regression test.  For each fit, the $\tau_{\mu}$ and the
 associated $r^{2}$ value were computed for $t_{c}\leq 5~\mu$s.  These
 results are shown in Figure~\ref{fig:rsq}.  We wanted $t_{c}$ to be a
-value which corresponded to an $r^{2} \geq .995$ and a region of
+value which corresponded to an $r^{2} \geq 0.995$ and a region of
 minimally fluctuating $\tau_{\mu}$.  Observing the Figure~\ref{fig:rsq}, we decided
-that $.4~\mu$s$ \leq t_{c}\leq 2.0~\mu$s was an adequate range for $t_{c}$.
+that $0.4~\mu$s$ \leq t_{c}\leq 2.0~\mu$s was an adequate range for $t_{c}$.
 Because data for smaller time values were more likely to be corrupted,
 we ultimately chose our cutoff time to be $2.0~\mu$s.
 
@@ -88,7 +88,7 @@ we ultimately chose our cutoff time to be $2.0~\mu$s.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=60mm]{./figures/lifetime_fit_param.eps}
-\caption{This plot shows the effect of excluding data up to some cutoff time $t_{c}$ from the fitting process.  We chose $t_{c}$ to be $2.0~\mu$s because it produced a value for $\tau{\mu}$ that was in a range of relative stability and because it produced a fit with an $r^{2}$ value $> .995$ as seen above.}
+\caption{This plot shows the effect of excluding data up to some cutoff time $t_{c}$ from the fitting process.  We chose $t_{c}$ to be $2.0~\mu$s because it produced a value for $\tau{\mu}$ that was in a range of relative stability and because it produced a fit with an $r^{2}$ value $> 0.995$ as seen above.}
 \label{fig:rsq}
 \end{center}
 \end{figure}
@@ -159,19 +159,19 @@ excluded an increasingly large range of low pulse heights points
 beginning at $V_{e}=0$.  In these fits we weighted each data point by
 $\sqrt{N_{e}}$, where $N_{e}$ is the number of electrons in some pulse
 height bin.  We determined that the smallest exclusion range to
-produce a fit with $r^{2}\geq.99$ was the exclusion range $0$ V $\leq
-V_{e}\leq .1$ V.  We were then able to compute the model for the
+produce a fit with $r^{2}\geq0.99$ was the exclusion range $0$ V $\leq
+V_{e}\leq 0.1$ V.  We were then able to compute the model for the
 decay distributions decay as $V_{e}$ approached the cutoff energy.
 This model approximated the number of electrons one would expect to
 see (relative to the number of events observed, which was nearly 7000)
-for some $V_{e}$ .
+for some $V_{e}$.
 
 The model for the distribution's decay was then used to determine
 $E_{e}^{max}$ by finding the scope voltage at which the interval
 $N_{e}\pm \delta N_{e}$ ($1-\sigma$ error bars) was completely below
 $1$.  Because $N_{e}$ is a discrete value being modeled by exponential
 decay, we claim that an $N_{e} \leq 1$ essentially corresponds to no
-events.  Therefore we take this $V_{e}$, found to be $1.18\pm.10$ V,
+events.  Therefore we take this $V_{e}$, found to be $1.18\pm0.10$ V,
 to be $V_{e}^{max}$. We take all subsequent nonzero values of $N_{e}$
 to be background noise produced by PMT false flashes.  Converting from
 $V_{e}^{max}$, we find that $E_{e}^{max}=60.8 \pm 11.1$ MeV.  Based on
