@@ -4,13 +4,13 @@
 \section{Background}\label{background}
 
 The muon is a lepton, originally discovered by Carl Anderson in 1936
-\cite{anderson}. Muons ($\mu^-$) and antimuons($\mu^+$) are the most
+\cite{anderson}. Muons ($\mu^-$) and antimuons ($\mu^+$) are the most
 numerous charged particles at sea level\cite{pdg}. Most of them are
-produced at a height of about $15$ km in decays of charged kaons and
-pions which are formed via the interaction of cosmic ray particles
-with the Earth's upper atmosphere \cite{amsler}. The muon is produced
-in a weak decays as shown for example in Figure~\ref{figure:pidecay}
-and at sea level forms $80\%$ of cosmic ray flux \cite[p.~8]{rossi}.
+decay products of pions and kaons, mesons produced at a height of
+about $15$ km via the interaction of cosmic ray particles with the
+Earth's upper atmosphere \cite{amsler}. The muon is produced in weak
+decays as shown for example in Figure~\ref{figure:pidecay}, and at sea
+level forms $80\%$ of the total cosmic ray flux \cite[p.~8]{rossi}.
 
 \begin{figure}[h]
 \begin{center}
@@ -31,7 +31,8 @@ and at sea level forms $80\%$ of cosmic ray flux \cite[p.~8]{rossi}.
     \Text(304,-10)[lb]{\large{\Black{$W^{-}$}}}
   \end{picture}
 }
-\caption{Weak decay of $\pi^-$, producing $\mu^-$.}
+\caption{Weak decay of $\pi^-$, producing $\mu^-$: $\pi^- \rightarrow
+\mu^-~\nu_\{mu}$}
 \label{figure:pidecay}
 \end{center}
 \end{figure}
@@ -42,11 +43,9 @@ and at sea level forms $80\%$ of cosmic ray flux \cite[p.~8]{rossi}.
 In free space, negatively charged muons decay weakly into an electron,
 muon neutrino, and electron antineutrino \cite{easwar}
 (Figure~\ref{figure:mudecay}):
-
 \begin{equation}\mu^- \rightarrow e^-~\nu_{\mu}~\overline{\nu_e}\label{mudecay}\end{equation}
 
-with a corresponding antimatter process of
-
+with a corresponding antimatter process:
 \begin{equation}\mu^+ \rightarrow e^+~\overline{\nu_{\mu}}~{\nu_e}\label{antimudecay}\end{equation}
 
 \begin{figure}[h]
@@ -75,38 +74,42 @@ with a corresponding antimatter process of
 The decay of the muon is desribed by an exponential function
 
 \begin{equation} N(t) = N_0 e^{-\Gamma_{\mu} t} \label{expdecay}\end{equation} 
-here $\Gamma_{\mu}$ is the decay rate, which gives the decay lifetime
-$\tau_{\mu} = 1/\Gamma_{\mu}$.
+here $\Gamma_{\mu}$ is the decay rate. In this experiment, we seek to
+measure the characteristic lifetime of the decay, $\tau_{\mu} =
+1/\Gamma_{\mu}$.
 
-In this experiment, we measure the time between the start event, when
-a $\mu^- (\mu^+)$ comes to rest in a scintillator in the lab and the
-stop event, which signals the emission of $e^- (e^+)$ in the muon
-decay. The histogram of the recorded times is then fit to
-\eqref{expdecay} to give the lifetime of the muon.
+%we measure the time between the start event, when
+%a $\mu^- (\mu^+)$ comes to rest in a scintillator in the lab and the
+%stop event, which signals the emission of $e^- (e^+)$ in the muon
+%decay. The histogram of the recorded times is then fit to
+%\eqref{expdecay} to give the lifetime of the muon.
 
 \subsubsection{Decay in Matter}
 
-The muon lifetime is approximately $2.2 \mu$s\cite{easwar}, second
-only to the lifetime of the neutron. In matter, another decay is
-possible for $\mu^-$ via nucleus capture:
+In matter, another decay channel is possible for $\mu^-$ via nucleus
+capture:
 
-\begin{equation}\mu^-p^+ \rightarrow n \nu_{\mu} \label{pcap} \end{equation}
+\begin{equation}\mu^-~p \rightarrow n~\nu_{\mu} \label{pcap} \end{equation}
 
 Due to the relatively faster process of decay via proton capture, the
-mean lifetime of $\mu^-$ in matter is shortened and depends on the
-material. The likelyhood of the capture is proportional to $Z^4$,
-where $Z$ is the atomic number of the material; for light elements,
-the effect of this process is minimal \cite[p.172]{rossi}. For carbon,
-for instance, $Z=6$ and the mean lifetime of the muon is theoretically
-predicted to be between $1.5$ and $1.9\mu$s \cite[p.~170]{rossi}. 
+mean lifetime of $\mu^-$ in matter is shortened relative to that in
+free space and depends on the material. Since the positive $\mu^+$ is
+repelled by the nucleus, the $\mu^+$ lifetime is unaltered in matter.
 
-In addition, the products of the decay\eqref{pcap} are a neutron and a
-neutrino. In our experiment, the efficiency of the scintillator in
-detecting neutrons is lower than the electrons and positrons which are
-results of \eqref{mudecay} and \eqref{antimudecay}, because neutrons
-carry no charge. Thus, we expect that the effect of muon capture to be
-small, although it may lower the measured lifetime from the
-experimentally established value in free space.
+The likelyhood of the $\mu^-$ capture is proportional to $Z^4$, where
+$Z$ is the atomic number of the material; for light elements, the
+effect of this process is minimal \cite[p.172]{rossi}. For carbon, for
+instance, $Z=6$ and the mean lifetime of the muon is theoretically
+predicted to be between $1.5$ and $1.9\mu$s \cite[p.~170]{rossi}.
+
+In addition, the products of the decay desribed in Equation
+~\eqref{pcap} are a neutron and a neutrino. In our experiment, the
+efficiency of the scintillator in detecting neutrons is lower than the
+electrons and positrons which are results of processes in Equations
+\eqref{mudecay} and \eqref{antimudecay}, because neutrons carry no
+charge. Thus, we expect the effect of muon capture on the measured
+lifetime to be small, although it may slightly decrease the value from
+the experimentally established $2.2~\mu$s in free space.
 
 \subsection{Effects of Relativistic Time Dilation}
 
