@@ -1,13 +1,14 @@
 %appendix blhablhaakljfdldskj
 %Created MB 03-01
 
-\section{Muon Mass Calibration}
+\section{Muon Mass Calibration}\label{masscalibration}
 
-In order to calculate the muon mass, many measurements contributed, a
-large portion of which were imprecise due to equipment limitations. 
+In order to calibrate the electron energy and thus calculate the muon
+mass, many measurements contributed, a large portion of which were
+imprecise due to equipment limitations.
 
 To find the conversion ratio between pulse height in volts and energy
-deposited in $MeV$, 
+deposited in $MeV$, we used the relation
 
 \begin{equation} VtoMeV = E_{min}\cdot h\cdot\rho\cdot\frac{1}{V_{peak}}\end{equation}   
 
@@ -17,7 +18,7 @@ and $h$ is the height of the scintillator, and $V_{peak}$ is the most
 frequent peak voltage of through going muons, corresponding to the
 minimum ionization energy.
 
-\subsection{Minimum Ionization Energy}
+\subsection{Minimum Ionization Energy}\label{minionizationenergy}
 
 For heavy ($\mu$ and heavier) charged particles passing through
 matter, the amount of energy deposited depends on the incident
@@ -40,7 +41,7 @@ ionization energy was determined by weighing the $C$ and $H$ values,
 $1.75\pm 0.1$ MeV g$^{-1}$cm$^{2}$ and $4.0\pm 0.1$
 MeV g$^{-1}$cm$^{2}$, respectively, according to the mass ratio of the
 two elements in the compound, to give a the energy deposited by a
-minimum-ionizing muon to be $1.85 \pm 0.1$ MeV g$^{-1}$cm$^{2}$ in the
+minimum-ionizing muon to be $E_{min} = 1.85 \pm 0.1$ MeV g$^{-1}$cm$^{2}$ in the
 scintillator material.
 
 \label{energy_loss}
@@ -59,6 +60,11 @@ The density of the scintillator material was found to be $1.08 \pm
 to the tape around the scintillator making it difficult to measure the
 dimensions and density.
 
-The mode of the distribution of muons passing through was $1.2 \pm
-0.1$ V. 
+The mode of the distribution of muons passing through was $9.8 \pm 0.5
+\times 10^{-2}$ V.  Combined with the value of $E_min$ from
+\ref{minionizationenergy}, this gives the converstion ratio to be
+
+\begin{equation} VtoMeV = 51 \pm 7 \mathrm{ MeV/V} \end{equation}   
+
+where the errors 
 
