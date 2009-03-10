@@ -3,21 +3,21 @@
 
 \section{Muon Time Error Analysis}\label{muontimeerroranalysis}
 
-The main source of statistical error for $\tau_{\mu}$ was due to the fitting process.  Using 2-parameter nonlinear regression, the data in Figure \ref{fig:muondecay} is approximated by
+The main source of statistical error for $\tau_{\mu}$ was due to the fitting process.  Using 2-parameter nonlinear regression, the data in Figure \ref{fig:muondecay} is approximated by \cite{bates}
 
 \begin{equation}
 \label{nonlinfit}
 y_{i}=f(\mathbf{\beta},\mathbf{x_{i}'})+\epsilon_{i}
 \end{equation}
 
-where $y_{i}$ is the $i$th expected value, $\mathbf{\beta}$ is a parameter vector, $\mathbf{x_{i}'}$ is the $i$th row of predictors, and $\epsilon_{i}$ is the associated random error.  The Likelihood, $L$, is given by 
+where $y_{i}$ is the $i$th expected value, $\mathbf{\beta}$ is a parameter vector, $\mathbf{x_{i}'}$ is the $i$th row of predictors, and $\epsilon_{i}$ is the associated random error.  The likelihood, $L$, is given by \cite{bates}
 
 \begin{equation}
 \label{likelihood}
 L(\beta,\sigma^{2})=\frac{1}{(2\pi\sigma^{2})^{n/2}}exp(-\frac{\sum_{i=1}^{n}[y_{i}-f(\beta,\mathbf{x_{i}'})]^{2}}{2\sigma^{2}})
 \end{equation}
 
-where $n$ is the number of data points and $\sigma^{2}$ is the variance. $L$ is maximized where the sum of squared errors, $S(\beta)$, given by
+where $n$ is the number of data points and $\sigma^{2}$ is the variance. $L$ is maximized where the sum of squared errors, $S(\beta)$, given by \cite{bates}
 
 \begin{equation}
 \label{sse}
