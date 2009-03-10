@@ -9,8 +9,9 @@ numerous charged particles at sea level\cite{pdg}. Most of them are
 decay products of pions and kaons, mesons produced at a height of
 about $15$ km via the interaction of cosmic ray particles with the
 Earth's upper atmosphere \cite{amsler}. The muon is produced in weak
-decays as shown for example in Figure~\ref{figure:pidecay}, and at sea
-level forms $80\%$ of the total cosmic ray flux \cite[p.~8]{rossi}.
+decays as shown in Figure~\ref{figure:pidecay}, and at sea
+level forms $80\%$ of the total cosmic ray flux \cite[p.~8]{rossi}. This very 
+high flux rate makes the muon an ideal particle for studying weak interactions.
 
 \begin{figure}[h]
 \begin{center}
@@ -31,7 +32,7 @@ level forms $80\%$ of the total cosmic ray flux \cite[p.~8]{rossi}.
     \Text(304,-10)[lb]{\large{\Black{$W^{-}$}}}
   \end{picture}
 }
-\caption{Weak decay of $\pi^-$, producing $\mu^-$: $\pi^- \rightarrow
+\caption{The weak decay of $\pi^-$ which produces $\mu^-$: $\pi^- \rightarrow
 \mu^-~\nu_{\mu}$}
 \label{figure:pidecay}
 \end{center}
@@ -71,10 +72,12 @@ with a corresponding antimatter process:
 \end{center}
 \end{figure}
 
-The decay of the muon is desribed by an exponential function
+The decay of the muon is desribed by the exponential function:
 
 \begin{equation} N(t) = N_0 e^{-\Gamma_{\mu} t} \label{expdecay}\end{equation} 
-here $\Gamma_{\mu}$ is the decay rate. In this experiment, we seek to
+
+where $\Gamma_{\mu}$ is the decay rate. In our first experiment 
+(as described in Section~\ref{muonlifetimemeasurement}), we seek to
 measure the characteristic lifetime of the decay, $\tau_{\mu} =
 1/\Gamma_{\mu}$.
 
@@ -139,18 +142,22 @@ The time in flight is still on the same order as, and even greater
 than, the lifetime of muon decay that our experiment seeks to
 measure. Nevertheless, the time the muons experience in the atmosphere
 prior to stopping in the detector has no effect on the decay rate
-measurement. While we do sample fewer short decay times and detect
-fewer slow moving muons, this fact simply decreases the amount of data
-without affecting the parameters of the exponential.
+measurement. While we do not sample the quickest decaying electrons,
+this amounts to simply cutting off the lowest end of the exponential: the actual
+decay parameter $\Gamma_{\mu}$ is not changed by eliminating this data.
+
+%While we do sample fewer short decay times and detect
+%fewer slow moving muons, this fact simply decreases the amount of data
+%without affecting the parameters of the exponential.
 
 \subsection{Muon Mass}\label{muonmass}
 
-A similar experimental setup (Section~\ref{instrumentation}) can be
+Another experimental setup (Section~\ref{muonmassmeasurement}) can be
 used to make a measurement of the muon mass.
 
 In order to measure muon mass, we consider the products of $\mu^-$
 decay: electron and two neutrinos (Equation~\eqref{mudecay}); the
-antimatter decay analysis is equivalent. For a muon which stops and
+antimatter decay analysis is identical. For a muon which stops and
 decays in the scintillator, the center of mass frame is the same as
 the lab frame. To a good approximation we can assume that the rest
 energy of the muon is fully converted to the kinetic energy of the
@@ -177,7 +184,8 @@ momentum (and therefore energy).}}
 \end{figure}
 
 The total momentum of the electron is maximized when the neutrino
-momenta have no $y$ component, that is $\theta = 0$. In this case,
+momenta have no $y$ component, that is $\theta = 0$ (an identical argument
+eliminates any possible $z$ component as well). In this case,
 $p_e = p_e^{max} = \Sigma p_{\nu}$ by conservation of momentum. Again
 neglecting electron mass, we have $E_e = p_ec$, so the energy of the
 electron is maximized when its momentum is maximized. Thus, the
@@ -187,7 +195,7 @@ muon, as claimed.
 \begin{equation}E_e^{max} = \frac{1}{2}E_{\mu} = \frac{1}{2}m_{\mu}c^2\end{equation}
 
 By measuring the energy spectrum of emitted electrons, which is a
-$\beta$ decay spectrum with a cutoff at $ \frac{1}{2}m_{\mu}c^2$, we
+$\beta$ decay spectrum with a cutoff at $\frac{1}{2}m_{\mu}c^2$, we
 can find the maximum electron energy and thereby determine the muon
 mass.
 
@@ -201,8 +209,7 @@ calibrate the pulse height voltage in terms of energy lost by the
 particle in the detector.
 
 To do so, we find the muon pulse height voltage which corresponds to
-the minimum stopping power, as a function of incoming momentum, of the
-muon ($\langle -\frac{dE}{dx}\rangle$, approximately $2$ MeV
+the minimum stopping power of the muon, as a function of incoming momentum ($\langle -\frac{dE}{dx}\rangle$, approximately $2$ MeV
 g$^{-1}$cm$^{2}$). This voltage is given by the mode in the peak
 height distribution of muons which pass through all three
 scintillators. Since the through going muons have a relatively random
@@ -244,6 +251,7 @@ interaction. Thus $G_F$ is sufficient and is commonly used to describe
 weak interaction formulas\cite[p.~313]{griffiths}}.
 
 The weak decay of the muon is the clearest of all weak interaction
-phenomena in both its experimental and theoretical aspects. Thus, the
+phenomena in both its experimental and theoretical aspects. Further
+considering the easy availability of muons at sea level, the
 muon decay is an effective means of studying the nature of the weak
 force, and specifically finding the Fermi coupling constant $G_F$.
