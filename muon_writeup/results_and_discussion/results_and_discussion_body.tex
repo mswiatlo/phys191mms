@@ -32,7 +32,7 @@ where $h$ is the number of bins, $IQR$ is the interquartile range, and $N$ is th
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/muon_decay.eps}
-\caption{A histogram of muon lifetimes. The lifetimes follow exponential decay to some background noise level.  The data was fit using 2-parameter nonlinear regression using $\sqrt{N}$ weighting and excluding the first $2.0~\mu$ s.  The fit has an $r^{2}$ value of $.996$ and produces a $\tau_{\mu}$ of $2.12 \pm .06~\mu$s.}
+\caption{A histogram of muon lifetimes. The lifetimes follow exponential decay to some background noise level.  The data was fit using 2-parameter nonlinear regression using $\sqrt{N}$ weighting and excluding the first $2.0~\mu$s.  The fit has an $r^{2}$ value of $.996$ and produces a $\tau_{\mu}$ of $2.12 \pm .06~\mu$s.}
 \label{fig:muondecay}
 \end{center}
 \end{figure}
@@ -79,13 +79,13 @@ points before and including $t_{c}$ were excluded from the fitting
 process.  To determine $t_{c}$, we created an algorithm which
 iteratively fit the data with increasing $t_{c}$ using a 2-parameter
 nonlinear regression test.  For each fit, the $\tau_{\mu}$ and the
-associated $r^{2}$ value were computed for $t_{c}\leq 5~\mu$ s.  These
+associated $r^{2}$ value were computed for $t_{c}\leq 5~\mu$s.  These
 results are shown in Figure~\ref{fig:rsq}.  We wanted $t_{c}$ to be a
 value which corresponded to an $r^{2} \geq .995$ and a region of
 minimally fluctuating $\tau_{\mu}$.  Observing the Figure~\ref{fig:rsq}, we decided
-that $.4~\mu$ s$ \leq t_{c}\leq 2.0~\mu$ s was an adequate range for $t_{c}$.
+that $.4~\mu$s$ \leq t_{c}\leq 2.0~\mu$s was an adequate range for $t_{c}$.
 Because data for smaller time values were more likely to be corrupted,
-we ultimately chose our cutoff time to be $2.0~\mu$ s.
+we ultimately chose our cutoff time to be $2.0~\mu$s.
 
 
 \begin{figure}[htbp]
@@ -122,7 +122,7 @@ scintillator panels to be $2.5\pm.2$ and $1.08\pm.09$ g cm$^{-3}$ respectively, 
 the actual scale between pulse height and deposited energy.  Taking
 this scale to be approximately linear in this regime, we found that
 $1$V produced by the PMTs as measured by an oscilloscope, maps to an
-energy of $51.3 \pm 8.3$ MeV.
+energy of $51 \pm 7$ MeV.
 
 
 
@@ -179,12 +179,12 @@ to be $V_{e}^{max}$. We take all subsequent nonzero values of $N_{e}$
 to be background noise produced by PMT false flashes.  Converting from
 $V_{e}^{max}$, we find that $E_{e}^{max}=60.8 \pm 11.1$ MeV.  Based on
 the kinematics of the muon decay we determined that this cutoff energy
-implies a muon mass of $m_{\mu} = 122 \pm 22$ MeV/c$^{2}$.  This
-value deviates from the accepted value, $105.66$ MeV/c$^{2}$, by $13.1\%$.
-However our $18.2\%$ error includes the accepted value.
+implies a muon mass of $m_{\mu} = 120 \pm 20$ MeV/c$^{2}$.  This
+value deviates from the accepted value, $105.66$ MeV/c$^{2}$, by $14\%$.
+However our $17\%$ error includes the accepted value.
 
 \subsection{Determination of Weak Force Coupling Constant}\label{determinationofweakforcecouplingconstant}
 
-Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using Equation \eqref{gf}. Ultimately, from our results we calculate that $G_{F}=blah \pm blah$.  This value deviates from the accepted value, $blah$, by $blah\%$. However our $blah\%$ error includes this accepted value.
+Having determined the parameters for both the muon mean lifetime, $\tau_{\mu}$, and the muon mass, $m_{\mu}$ we can calculate the value for $G_{F}$ using Equation \eqref{gf}. Ultimately, from our results we calculate that $G_{F}=3.0\times 10^{-59}$ Jm$^{3}$  \pm blah$.  This value deviates from the accepted value, $4.305\times10^{-59}$ Jm$^{3}$, by $30\%$. However our $43\%$ error includes this accepted value.
 
 Our calculation of $G_F$ is by no means a precision measurement.  Although certain aspects of this experiment have relatively low error ($<8\%$), such as the measurement of $\tau_{\mu}$, ultimately the overwhelming error associated with the energy calibration prevented a more precise measurement of $G_F$.
