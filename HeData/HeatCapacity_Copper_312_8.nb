@@ -10,15 +10,19 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[     15259,        392]
-NotebookOptionsPosition[     14594,        366]
-NotebookOutlinePosition[     14932,        381]
-CellTagsIndexPosition[     14889,        378]
+NotebookDataLength[     15669,        402]
+NotebookOptionsPosition[     14928,        374]
+NotebookOutlinePosition[     15266,        389]
+CellTagsIndexPosition[     15223,        386]
 WindowFrame->Normal
 ContainsDynamic->False*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{"Quit", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.446307198263953*^9, 3.446307200486087*^9}}],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"rawdata", " ", "=", 
@@ -157,7 +161,7 @@ Q7upRdz1GuwTg8bi/xbE1GKfGGjRspRDddgnhtzXv55Oq+8n/wck/f0l
  CellChangeTimes->{{3.446145369959073*^9, 3.4461454298085117`*^9}, {
    3.446147755002101*^9, 3.446147766151781*^9}, {3.446149104608971*^9, 
    3.446149123320805*^9}, {3.44614916011644*^9, 3.446149164788373*^9}, 
-   3.446149446723466*^9}]
+   3.446149446723466*^9, 3.446307207423362*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -166,56 +170,55 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"dT", "=", 
    RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Do", "[", 
-   RowBox[{
-    RowBox[{"If", "[", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"If", "[", 
+    RowBox[{
      RowBox[{
+      RowBox[{
+       RowBox[{"voltage", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", "+", "2"}], "]"}], "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "<", 
       RowBox[{
        RowBox[{
         RowBox[{"voltage", "[", 
-         RowBox[{"[", 
-          RowBox[{"i", "+", "2"}], "]"}], "]"}], "[", 
-        RowBox[{"[", "1", "]"}], "]"}], "<", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"voltage", "[", 
-          RowBox[{"[", "i", "]"}], "]"}], "[", 
-         RowBox[{"[", "1", "]"}], "]"}], "-", "threshold"}]}], ",", 
-      RowBox[{"{", 
-       RowBox[{"dT", "=", 
-        RowBox[{"Join", "[", 
-         RowBox[{"dT", ",", 
+         RowBox[{"[", "i", "]"}], "]"}], "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "-", "threshold"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"dT", "=", 
+       RowBox[{"Join", "[", 
+        RowBox[{"dT", ",", 
+         RowBox[{"{", 
           RowBox[{"{", 
-           RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"voltage", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
             RowBox[{
              RowBox[{
-              RowBox[{"voltage", "[", 
-               RowBox[{"[", "i", "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"Mean", "[", 
+               RowBox[{"Take", "[", 
+                RowBox[{"voltage", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"i", "-", "5"}], ",", "i"}], "}"}]}], "]"}], "]"}],
+               "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "-", 
              RowBox[{
-              RowBox[{
-               RowBox[{"Mean", "[", 
-                RowBox[{"Take", "[", 
-                 RowBox[{"voltage", ",", 
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"i", "-", "5"}], ",", "i"}], "}"}]}], "]"}], 
-                "]"}], "[", 
-               RowBox[{"[", "1", "]"}], "]"}], "-", 
-              RowBox[{
-               RowBox[{"Mean", "[", 
-                RowBox[{"Take", "[", 
-                 RowBox[{"voltage", ",", 
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"i", "+", "3"}], ",", 
-                    RowBox[{"i", "+", "7"}]}], "}"}]}], "]"}], "]"}], "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], "}"}]}], "]"}]}], 
-       "}"}]}], "]"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"i", ",", 
-      RowBox[{"num", "-", "7"}]}], "}"}]}], "]"}]}]}], "Input",
+              RowBox[{"Mean", "[", 
+               RowBox[{"Take", "[", 
+                RowBox[{"voltage", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"i", "+", "3"}], ",", 
+                   RowBox[{"i", "+", "7"}]}], "}"}]}], "]"}], "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], "}"}]}], "]"}]}], 
+      "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     RowBox[{"num", "-", "7"}]}], "}"}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.446151218416806*^9, 3.446151313096743*^9}, {
   3.446151346971691*^9, 3.446151353226255*^9}, {3.44615142941992*^9, 
   3.446151473618224*^9}, {3.4461515351901903`*^9, 3.446151550543831*^9}, {
@@ -284,7 +287,7 @@ EHyeP/yKmTaOJz+Af+9PI4duP3ypFJtYfn0P/kGdohgPP3xeuXHnSPx7sFyu
  CellChangeTimes->{{3.4461515593178663`*^9, 3.446151568807522*^9}, 
    3.446151694628005*^9, {3.44615175608254*^9, 3.4461517679849653`*^9}, {
    3.446151800468047*^9, 3.446151807652665*^9}, {3.446152711531612*^9, 
-   3.446152791575725*^9}}]
+   3.446152791575725*^9}, {3.4463072094729958`*^9, 3.4463072334338713`*^9}}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -362,10 +365,15 @@ Cell[BoxData[{
       "}"}]}], "]"}], ",", 
    RowBox[{"{", 
     RowBox[{"i", ",", 
-     RowBox[{"num", "-", "7"}]}], "}"}]}], "]"}]}], "Input"]
+     RowBox[{"num", "-", "7"}]}], "}"}]}], "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NonlinearRegression`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.446307240790497*^9, 3.446307246408731*^9}, {
+  3.446307427921692*^9, 3.446307433044364*^9}}]
 },
 WindowSize->{640, 605},
-WindowMargins->{{Automatic, 121}, {Automatic, 46}},
+WindowMargins->{{Automatic, 160}, {Automatic, 12}},
 FrontEndVersion->"6.0 for Mac OS X x86 (32-bit) (April 20, 2007)",
 StyleDefinitions->"Default.nb"
 ]
@@ -380,20 +388,22 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[568, 21, 301, 7, 73, "Input"],
-Cell[872, 30, 287, 7, 27, "Input"],
-Cell[1162, 39, 637, 17, 58, "Input"],
-Cell[1802, 58, 794, 24, 43, "Input"],
+Cell[568, 21, 118, 2, 27, "Input"],
+Cell[689, 25, 301, 7, 73, "Input"],
+Cell[993, 34, 287, 7, 27, "Input"],
+Cell[1283, 43, 637, 17, 58, "Input"],
+Cell[1923, 62, 794, 24, 43, "Input"],
 Cell[CellGroupData[{
-Cell[2621, 86, 440, 9, 27, "Input"],
-Cell[3064, 97, 3452, 62, 229, "Output"]
+Cell[2742, 90, 440, 9, 27, "Input"],
+Cell[3185, 101, 3474, 62, 229, "Output"]
 }, Open  ]],
-Cell[6531, 162, 2249, 60, 133, "Input"],
+Cell[6674, 166, 2187, 59, 118, "Input"],
 Cell[CellGroupData[{
-Cell[8805, 226, 130, 2, 27, "Input"],
-Cell[8938, 230, 3077, 56, 240, "Output"]
+Cell[8886, 229, 130, 2, 27, "Input"],
+Cell[9019, 233, 3127, 56, 240, "Output"]
 }, Open  ]],
-Cell[12030, 289, 2560, 75, 148, "Input"]
+Cell[12161, 292, 2560, 75, 148, "Input"],
+Cell[14724, 369, 200, 3, 27, "Input"]
 }
 ]
 *)
