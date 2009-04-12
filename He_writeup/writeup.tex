@@ -1,0 +1,77 @@
+%Master document for paper.
+%Created MS 1/30
+
+\documentclass[psfig,12pt,notitlepage]{article}
+\usepackage{axodraw4j}
+\usepackage{axodraw4j}
+\usepackage[text={6.5in,9in},centering]{geometry}               % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{epstopdf}
+\usepackage{epsfig}
+\usepackage{psfig}
+\usepackage[dvips, bookmarks, colorlinks=true, linkcolor=blue, citecolor=blue, pdftitle={Measurement of the Fermi Coupling Constant Using Mass and Lifetime of mu Leptons}, pdfauthor={Baryakhtar, Schowalter, Swiatlowski}, pdfsubject={Physics 191 Lab Report}, pdfkeywords={muon, physics, 191}]{hyperref}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{cite}
+
+
+\begin{document}
+
+\title{Investigation of the Properties of Superfluid He$^4$}
+\author{Maria Baryakhtar \footnote{Produced Introduction and
+    Background (Sections \ref{introduction}, \ref{background}),
+    Appendix ~\ref{masscalibration}, and Abstract} \and Steven
+  Schowalter \footnote{Produced Results and Discussion (Section
+    \ref{resultsanddiscussion}) and Appendix
+    ~\ref{muontimeerroranalysis}} \and Maximilian Swiatlowski
+  \footnote{Produced Instrumentation and Procedure (Sections
+    \ref{instrumentation}, \ref{procedure})}}
+
+\maketitle
+\thispagestyle{empty}
+
+\input{./abstract/abstract_body}
+
+\clearpage
+
+
+\clearpage
+
+\input{./introduction/introduction_body}
+
+\input{./background/background_body}
+
+\input{./instrumentation/instrumentation_body}
+
+\input{./procedure/procedure_body}
+
+\input{./results_and_discussion/results_and_discussion_body}
+
+\input{./conclusion/conclusion_body}
+
+
+\newpage
+
+\appendix
+
+\begin{center}
+\begin{Large}
+\bfseries{Appendices}
+\end{Large}
+\end{center}
+
+\addcontentsline{toc}{section}{References}
+\bibliography{writeup}
+\bibliographystyle{plain}
+
+\end{document}
+
+
