@@ -28,10 +28,43 @@ paper.
 
 \subsection{The Two-Fluid Model}
 
+A key model explaining the unusual properties of He II was proposed by
+Landau in 1941 as the two-fluid model \cite{landau}. In this theory,
+the liquid below the $\lambda$-point can be viewed as being composed
+of two noninteracting fluids: a superfluid component with density
+$\rho_s$ and a normal component with density $\rho_n$, such that the
+total density $\rho$ is given as the sum of the two components:
+\begin{equation}
+\rho = \rho_s + \rho_n
+\end{equation}
 
+and the total current density of He II is given by
+\begin{equation}
+\mathbf{j} = \rho_s\mathbf{v_s} + \rho_n\mathbf{v_n}
+\end{equation}
+
+where $\mathbf{v_s}$ and $\mathbf{v_n}$ are the velocities of the
+superfluid and normal fluid, respectively. Then, the behavior of the
+fluid can be understood in terms of the different characteristic of
+the two components: while the normal fluid acts according to the
+regular laws of fluid mechanics and satisfies the Navier-Stokes
+equation, the superfluid flows has zero entropy and flows with zero
+viscocity. Furthermore, it is important to note that the two
+components are non-interacting, that is, there is no transfer of
+momentum between the two fluids, and most importantly that they are
+not physically distinct and cannot be separated.
+
+With the incorporation of theories of Bose-Einstein condensates into
+Landau's theory, further understanding of the fluid is possible. The
+superfluid can be viewed as an interacting Bose-Einstein condensate
+system, occupying a single macroscopic quantum state, whereas the
+normal fluid consists the excitations (photons and rotons) of the
+superfluid. As tempereature decreases from $2.17$ to $0$ K, the
+fraction of superfluid increases, from $0$ at the $\lambda$-point to
+unity at absolute zero, with excitations decreasing to zero.
 \begin{figure}[ht]
 \begin{center}
-\input{./figures/twofluid.png}
+\input{./figures/twofluid.eps}
 \caption{\small{}}
 \label{figure:twofluid}
 \end{center}
@@ -39,4 +72,16 @@ paper.
 
 
 \subsection{Second Sound}
+
+The relationship between velocity of second sound, $u_2$, and the
+relative fractions of the fluids was derived analytically by Landau
+and is given by
+
+\begin{equation}
+u_2^2 = \frac{\rho_s}{\rho_n}\frac{T S^2}{C}
+\end{equation}
+
+where $S$ and $C$ are the entropy and heat capacity per gram of the
+liquid and can be measured experimentally. 
+
 \subsection{Heat Capacity}
