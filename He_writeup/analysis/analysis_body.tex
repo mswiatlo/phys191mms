@@ -38,7 +38,7 @@ Blah
 \end{center}
 where $T$ is the temperature of the cell and $V$ is the potential difference across the germanium resistor.  Relative uncertainties in the fitting parameters of this polynomial will add to the relative error in calculated temperatures.   
 
-\subsubsection{Calculating the Heat Capacity of the Cell}\label{calculatingtheheatcapacityofthecell}
+\subsubsection{Calculating the Heat Capacity of Helium}\label{calculatingtheheatcapacityofthecell}
 
 In order to calculate heat capacity from the data shown in Figure \ref{fig:rawdata}, the potential difference across the germanium resistor must be converted to temperature using Equation \ref{eq:polyfit} determined in Section \ref{temperaturecalibration}. A portion of the sample data after being converted from potential to temperature is shown in Figure \ref{fig:heatingdata}.  
 
@@ -75,20 +75,7 @@ Blah.
 \end{equation}
 \end{center}
 
-We thus have the information needed to remove the Cu addendum addition to the He heat capacity.
-
-
-error?
-
-\subsubsection{Calculating the Specific Heat of Superfluid Helium}\label{calculatingthespecificheatofsuperfluidhelium}
-
-
-
-normalization
-	subtracting
-	moles
-	
-error?
+To remove the Cu addition to the combined heat capacity at a specific temperature, we simply subtract the heat capacity of Cu, given by Equation \ref{eq:cufit}, for that temperature. Thus we are able to calculate the heat capacity of the He which is contained in the cell for the temperature region observed.  This heat capacity data must then be normalized to account for the amount of He in the cell. As described in Section \ref{heatcapacityexperiment}, by measuring the pressure of a certain volume of He at room temperature, we can use the ideal gas law to compute the number of moles of He in that volume.  That volume is then inserted into the cell through a capillary tubing.  We assume that almost all of the He is condensed in the cell due to the density of liquid helium being much greater than that of gaseous helium.  Knowing the number of moles of He in the cell, we can calculate its specific heat in J/mol K. This final data is shown in Figure \ref{fig:lambdatrans}.
 
 \begin{figure}[htbp]
 \begin{center}
