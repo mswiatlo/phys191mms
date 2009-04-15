@@ -6,9 +6,6 @@
 
 By analyzing the second sound data shown in Figure \ref{fig:secondsoundraw}, we can determine the relationship between the temperature of He II and the propagation speed of second sound.  By using linear regression analysis, we can determine the slope of each data set corresponding to a certain He II temperature.  For each of the fifteen data sets, the coefficient of determination, $r^{2}$ is greater than $0.99$.  The values for the slope of these fits, in m/s, correspond to the propagation speed of second sound in the respective temperature.  These speeds can then be plotted against temperature in order to show the relationship between the two in He II.  Due to the goodness of each fit, the statistical error in the data is smaller than each speed's level of precision. Figure \ref{fig:secondsound} shows the relationship between second sound speed and temperature in He II.  This data is compared to results made by Peshkov.\cite{peshkov}
 
-In order to eliminate systematic error in second sound calculations, we chose not to calculate velocity by simply dividing a measured displacement between the balometer from the heater by an observed time delay between the pulse trigger and signature recorded by the balometer. This method would insert systematic offsets to either the time delay or the displacement which would then affect the overall accuracy of second sound speeds.  By calculating the slope of several of these measurements we remove the effect of these offsets and instead emphasize the relative differences between data points.  As a result, the error in second sound speed is purely statistical given by the linear regression analysis.  
-
-
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/secondsound.eps}
@@ -17,10 +14,12 @@ In order to eliminate systematic error in second sound calculations, we chose no
 \end{center}
 \end{figure}
 
-%\footnote{V. Peshkov, "'Second Sound' in Helium II," J. Phys. (Moscow) 8, 381 (1944)}
+In order to eliminate systematic error in second sound calculations, we chose not to calculate velocity by simply dividing a measured displacement between the balometer from the heater by an observed time delay between the pulse trigger and signature recorded by the balometer. This method would insert systematic offsets to either the time delay or the displacement which would then affect the overall accuracy of second sound speeds.  By calculating the slope of several of these measurements we remove the effect of these offsets and instead emphasize the relative differences between data points.  As a result, the error in second sound speed is purely statistical given by the linear regression analysis.  
 
 \subsection{Heat Capacity Analysis}\label{heatcapacityanalysis}
 \subsubsection{Temperature Calibration}\label{temperaturecalibration}
+
+In order to measure heat capacity, we must be able to measure the temperature of the cell.  Because the germanium resistor is thermally coupled to the cell, we can use it as a thermometer for the cell.  Thus the potential difference of the resistor must be converted to temperature.  Following the procedure described in Section \ref{heatcapacityexperiment}, data relating the potential difference across the resistor to the temperature of the cell is produced.  This data can then be fit to a curve given by Equation \ref{eq:fiteqn} in order to determine an expression for temperature as a function of electric potential.  This data with the fit is shown in Figure.  
 
 %\begin{figure}[htbp]
 %\begin{center}
@@ -30,7 +29,18 @@ In order to eliminate systematic error in second sound calculations, we chose no
 %\end{center}
 %\end{figure}
 
+The fit was computed doing a $8^{th}$-degree polynomial regression of the log-log data and found to be 
+
+\begin{center}
+\begin{equation}\label{eq:polyfit}
+Blah
+\end{equation}
+\end{center}
+where $T$ is the temperature of the cell and $V$ is the potential difference across the germanium resistor.  Relative uncertainties in the fitting parameters of this polynomial will add to the relative error in calculated temperatures.   
+
 \subsubsection{Calculating the Heat Capacity of the Cell}\label{calculatingtheheatcapacityofthecell}
+
+In order to calculate heat capacity from the data shown in Figure \ref{fig:rawdata}, the potential difference across the germanium resistor must be converted to temperature using Equation \ref{eq:polyfit} determined in Section \ref{temperaturecalibration}. A portion of the sample data after being converted from potential to temperature is shown in Figure \ref{fig:heatingdata}.  
 
 \begin{figure}[htbp]
 \begin{center}
@@ -39,6 +49,12 @@ In order to eliminate systematic error in second sound calculations, we chose no
 \label{fig:heatingdata}
 \end{center}
 \end{figure}
+
+By analyzing data shown in Figure \ref{fig:rawdata} (b) and using Equation \ref{eq:polyfit}, we can determine the value for $T_{\lambda}$ from $V_{\lambda}$.  $V_{\lambda}$ is defined as the potential difference across the germanium resistor at which which the He within the cell transitions form a superfluid to a fluid. As the temperature of He II heats to $T_{\lambda}$, the change in temperature, $\Delta T$, decreases for a constant heat pulse $Q$.  This implies the change in electric potential, $\Delta V$, decreases as it heats to $V_{\lambda}$.  
+
+
+causing the heat capacity, $C=Q/\Delta T$, to diverge.  Because $\Delta T$ decreases while approaching $T_{\lambda}$
+
 
 \begin{figure}[htbp]
 \begin{center}
