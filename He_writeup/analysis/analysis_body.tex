@@ -21,13 +21,13 @@ In order to eliminate systematic error in second sound calculations, we chose no
 
 In order to measure heat capacity, we must be able to measure the temperature of the cell.  Because the germanium resistor is thermally coupled to the cell, we can use it as a thermometer for the cell.  Thus the potential difference of the resistor must be converted to temperature.  Following the procedure described in Section \ref{heatcapacityexperiment}, data relating the potential difference across the resistor to the temperature of the cell is produced.  This data can then be fit to a curve given by Equation \ref{eq:fiteqn} in order to determine an expression for temperature as a function of electric potential.  This data with the fit is shown in Figure.  
 
-%\begin{figure}[htbp]
-%\begin{center}
-%\includegraphics[height=70mm]{./figures/.eps}
-%\caption{\small{}}
-%\label{fig:}
-%\end{center}
-%\end{figure}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[height=70mm]{./figures/polyfit.eps}
+\caption{\small{This plot show the log-log relationship between the potential difference across the germanium resistor and the temperature of the cell for temperatures ranging between $1$ K and $4$ K.  The fit is based on Equation \ref{eq:fiteqn} resulting in an $8^{th}$-degree polynomial using nonlinear regression analysis.  The resultant $r^{2}$ value is $0.999$.}}
+\label{fig:polyfit}
+\end{center}
+\end{figure}
 
 The fit was computed doing a $8^{th}$-degree polynomial regression of the log-log data and found to be 
 
@@ -50,7 +50,7 @@ In order to calculate heat capacity from the data shown in Figure \ref{fig:rawda
 \end{center}
 \end{figure}
 
-By analyzing data shown in Figure \ref{fig:rawdata} (b) and using Equation \ref{eq:polyfit}, we can determine the value for $T_{\lambda}$ from $V_{\lambda}$.  $V_{\lambda}$ is defined as the potential difference across the germanium resistor at which which the He within the cell transitions form a superfluid to a fluid. As the temperature of He II heats to $T_{\lambda}$, the change in temperature, $\Delta T$, decreases for a constant heat pulse $Q$.  This implies the change in electric potential, $\Delta V$, decreases as it heats to $V_{\lambda}$.  
+By analyzing data shown in Figure \ref{fig:rawdata} (b) and using Equation \ref{eq:polyfit}, we can determine the value for $T_{\lambda}$ from $V_{\lambda}$.  $V_{\lambda}$ is defined as the potential difference across the germanium resistor at which which the He within the cell transitions form a superfluid to a fluid. As the temperature of He II heats to $T_{\lambda}$, the change in temperature, $\Delta T$, decreases for a constant heat pulse $Q$.  This implies the change in electric potential, $\Delta V$, decreases as it heats to $V_{\lambda}$.  The transition from He I to He II is denoted by a change in the heat pulse's signature.  As seen in Figure \ref{fig:rawdata}, $\Delta V$ transitions from discrete steps to discrete exponentially decaying steps.  This signature is repeated after converting electric potential to temperature as shown in Figure \ref{fig:heatingdata}.  The reason for this change in signature is due to the drastic divergence of the heat capacity of helium at $T_{\lambda}$.  For temperatures less than $T_{\lambda}$, the energy of the heat pulse sent to the cell is immediately absorbed uniformly in the He II due to the inability of superfluids to have temperature gradients.  This is translated to the discrete steps we see in Figures \ref{fig:rawdata} and \ref{fig:heatingdata}.  For temperatures greater than $T_{\lambda}$, the liquid helium, no longer in its superfluid state, can support temperature gradients.  As a result, the heat pulse is not immediately absorbed by the helium.  Instead the time constant describing the transfer of heat from the Cu addendum to the contained helium is much longer due to the He I's ability to support temperature gradients. This results in a clearly exponential cooling curve as we see in Figures \ref{fig:rawdata} and \ref{fig:heatingdata}.
 
 
 causing the heat capacity, $C=Q/\Delta T$, to diverge.  Because $\Delta T$ decreases while approaching $T_{\lambda}$
