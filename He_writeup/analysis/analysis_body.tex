@@ -8,7 +8,7 @@ We determine the relationship between the temperature of He II and the propagati
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/secondsound.eps}
-\caption{\small{A plot of the second sound speed verses temperature in He II.  This data is compared to Peshkov's results\cite{peshkov}. Second sound velocity goes to zero at the transition from He II to He I, enabling a rough estimate of $T_{\lambda}$.}}
+\caption{\small{The second sound speed verses temperature in He II.  This data is compared to Peshkov's results\cite{peshkov}. Second sound velocity goes to zero at the transition from He II to He I, enabling a rough estimate of $T_{\lambda}$.}}
 \label{fig:secondsound}
 \end{center}
 \end{figure}
@@ -27,7 +27,7 @@ In order to measure heat capacity, we must be able to measure the temperature of
 \end{center}
 \end{figure}
 
-The fit was computed using a $8^{th}$-degree polynomial regression (see Appendix \ref{nonlinearregressionanalysis}) of the log-log data and found to be 
+The fit was computed using an $8^{th}$-degree polynomial regression (see Appendix \ref{nonlinearregressionanalysis}) of the log-log data and found to be 
 \begin{eqnarray}\label{eq:polyfit}
 \ln(T) &=& 0.6568 - 0.3503\ln(V) - 0.1635\ln(V)^{2} + 0.2846\ln(V)^{3} \\
 & & + 1.813\ln(V)^{4} + 2.521\ln(V)^{5} + 1.593\ln(V)^{6} + 0.4845\ln(V)^{7} + 0.0578\ln(V)^{8} \nonumber
@@ -37,7 +37,7 @@ where $T$ is the temperature of the cell and $V$ is the potential difference acr
 
 \subsubsection{Calculating the Heat Capacity of Helium}\label{calculatingtheheatcapacityofthecell}
 
-In order to calculate heat capacity from the data shown in Fig. \ref{fig:rawdata}, the potential difference across the germanium resistor must be converted to temperature using Eqn. \ref{eq:polyfit} determined in Section \ref{temperaturecalibration}. A portion of the sample data after being converted from potential to temperature is shown in Fig. \ref{fig:heatingdata}.  
+In order to calculate heat capacity from the data shown in Fig. \ref{fig:rawdata}, the potential difference across the germanium resistor must be converted to temperature using Eqn. \ref{eq:polyfit}. A portion of the sample data after being converted from potential to temperature is shown in Fig. \ref{fig:heatingdata}.  
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/heatingdata.eps}
@@ -48,7 +48,7 @@ In order to calculate heat capacity from the data shown in Fig. \ref{fig:rawdata
 
 By analyzing data shown in Fig. \ref{fig:rawdata} (b) and using Eqn. \ref{eq:polyfit}, we can determine the value for $T_{\lambda}$ from $V_{\lambda}$, which is defined as the potential difference across the germanium resistor at which the helium in the cell transitions from helium II to helium I. 
 
-As the temperature of He II increases to $T_{\lambda}$, the change in temperature $\Delta T$ decreases for a constant heat pulse $Q$.  This implies that the change in electric potential, $\Delta V$, decreases as it approaches $V_{\lambda}$.  The transition from He I to He II is denoted by a change in the heat pulse's signature.  As seen in Fig. \ref{fig:rawdata}, $\Delta V$ transitions from discrete steps to discrete exponentially decaying steps.  This signature is repeated after converting electric potential to temperature as shown in Fig. \ref{fig:heatingdata}.  The reason for this change in signature is due to the drastic divergence of the heat capacity of helium at $T_{\lambda}$.  For temperatures less than $T_{\lambda}$, the energy of the heat pulse sent to the cell is immediately absorbed uiformly in the He II due to the inability of superfluids to sustain temperature gradients.  This corresponds to the discrete steps we see in Fig. \ref{fig:rawdata} and Fig. \ref{fig:heatingdata}.  For temperatures greater than $T_{\lambda}$, the liquid helium, no longer in its superfluid state, can support temperature gradients.  As a result, the heat pulse is not immediately absorbed by the helium and the time constant describing the transfer of heat from the copper cell to the contained helium is much longer. This results in an exponential cooling curve as we see in Fig. \ref{fig:rawdata} and Fig. \ref{fig:heatingdata}.  
+As the temperature of He II increases to $T_{\lambda}$, the change in temperature $\Delta T$ decreases for a constant heat pulse $Q$.  This implies that the change in electric potential, $\Delta V$, decreases as it approaches $V_{\lambda}$.  The transition from He I to He II is denoted by a change in the heat pulse's signature.  As seen in Fig. \ref{fig:rawdata}, $\Delta V$ transitions from discrete steps to discrete exponentially decaying steps.  This signature is repeated after converting electric potential to temperature as shown in Fig. \ref{fig:heatingdata}.  The reason for this change in signature is due to the drastic divergence of the heat capacity of helium at $T_{\lambda}$.  For temperatures less than $T_{\lambda}$, the energy of the heat pulse sent to the cell is immediately absorbed uiformly in the He II due to the inability of superfluids to sustain temperature gradients.  This corresponds to the discrete steps we see in Fig. \ref{fig:rawdata} and Fig. \ref{fig:heatingdata}.  For temperatures greater than $T_{\lambda}$, the liquid helium, no longer in its superfluid state, can support temperature gradients.  As a result, the heat pulse is not immediately absorbed by the helium and the time constant describing the transfer of heat from the copper cell to the contained helium is much longer. This results in an exponential cooling curve because heat from the copper, which is coupled directly to the heater, distributes to the helium, as seen in Fig. \ref{fig:rawdata} and Fig. \ref{fig:heatingdata}.  
 
 From this analysis, we can determine the range in which $T_{\lambda}$ occurs: \emph{i.e.}, between the temperatures which we know correspond to either He I or He II.  More precisely, we know that a heat pulse followed by discrete step in electric potential (or temperature) is the signature of He II, while an exponentially decaying signature corresponds to He I. Therefore the transition must lie in between these signatures.  Observing the measured electric potential data in Fig. \ref{fig:rawdata}, the interval for $V_{\lambda}$ must be as shown.  With Eqn. \ref{eq:polyfit}, we can convert this potential to temperature in order to determine $T_{\lambda}$.  Figure \ref{fig:heatingdata} shows the interval for $T_{\lambda}$, which we calculate to be $2.178\pm0.081$ K (see Appendix \ref{errorinspecificheatcalculation} for error analysis). 
 
@@ -114,9 +114,9 @@ $22\%$ on superfluid density. The curve can be seen to be in good
 agreement with previously established results: most significantly the
 shape, position of the $\lambda$-point, and temperature where $\rho_s
 = \rho_n$ are in correspondence with previous literature \cite{andro}.
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \begin{center}
-\includegraphics[height=90mm]{./figures/density.eps}
+\includegraphics[height=75mm]{./figures/density.eps}
 \caption{\small{Fraction of superfluid and normal fluid densities in
     helium II as a function of temperature, compared to
     Andronikoshvili's classic result from 1946 (solid
