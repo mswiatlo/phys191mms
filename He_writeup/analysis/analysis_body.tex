@@ -14,7 +14,7 @@ By analyzing the second sound data shown in Figure \ref{fig:secondsoundraw}, we 
 \end{center}
 \end{figure}
 
-The statistical error of the speeds is due to statistical measurement error, resulting in a relative error of $2.1\%$. To eliminate systematic error in second sound calculations, we chose not to calculate velocity by simply dividing a measured displacement between the balometer from the heater by an observed time delay between the pulse trigger and signature recorded by the balometer. This method would insert systematic offsets to either the time delay or the displacement which would then affect the overall accuracy of second sound speeds.  By calculating the slope of several of these measurements we remove the effect of these offsets and instead emphasize the relative differences between data points.  As a result, the error in second sound speed is purely statistical.
+The statistical error of the speeds is due to statistical measurement error, resulting in a relative error of $2.1\%$. To eliminate systematic error in second sound calculations, we chose not to calculate velocity by simply dividing a measured displacement between the balometer from the heater by an observed time delay between the pulse trigger and signature recorded by the balometer. This method would insert systematic offsets to either the time delay or the displacement which would then affect the overall accuracy of second sound speeds.  By calculating the slope of several of these measurements we remove the effect of these offsets and instead emphasize the relative differences between data points.  As a result, the error in second sound speed is purely statistical (see Appendix \ref{errorinsecondsoundcalculation} for further error analysis).
 
 \subsection{Heat Capacity Analysis}\label{heatcapacityanalysis}
 \subsubsection{Temperature Calibration}\label{temperaturecalibration}
@@ -29,7 +29,7 @@ In order to measure heat capacity, we must be able to measure the temperature of
 \end{center}
 \end{figure}
 
-The fit was computed doing a $8^{th}$-degree polynomial regression of the log-log data and found to be 
+The fit was computed doing a $8^{th}$-degree polynomial regression (see Appendix \ref{nonlinearregressionanalysis}) of the log-log data and found to be 
 \begin{eqnarray}\label{eq:polyfit}
 \ln(T) &=& 0.6568 - 0.3503\ln(V) - 0.1635\ln(V)^{2} + 0.2846\ln(V)^{3} \\
 & & + 1.813\ln(V)^{4} + 2.521\ln(V)^{5} + 1.593\ln(V)^{6} + 0.4845\ln(V)^{7} + 0.0578\ln(V)^{8} \nonumber
@@ -53,7 +53,7 @@ By analyzing data shown in Figure \ref{fig:rawdata} (b) and using Equation \ref{
 
 As the temperature of He II heats to $T_{\lambda}$, the change in temperature, $\Delta T$, decreases for a constant heat pulse $Q$.  This implies the change in electric potential, $\Delta V$, decreases as it heats to $V_{\lambda}$.  The transition from He I to He II is denoted by a change in the heat pulse's signature.  As seen in Figure \ref{fig:rawdata}, $\Delta V$ transitions from discrete steps to discrete exponentially decaying steps.  This signature is repeated after converting electric potential to temperature as shown in Figure \ref{fig:heatingdata}.  The reason for this change in signature is due to the drastic divergence of the heat capacity of helium at $T_{\lambda}$.  For temperatures less than $T_{\lambda}$, the energy of the heat pulse sent to the cell is immediately absorbed uniformly in the He II due to the inability of superfluids to have temperature gradients.  This is translated to the discrete steps we see in Figures \ref{fig:rawdata} and \ref{fig:heatingdata}.  For temperatures greater than $T_{\lambda}$, the liquid helium, no longer in its superfluid state, can support temperature gradients.  As a result, the heat pulse is not immediately absorbed by the helium.  Instead the time constant describing the transfer of heat from the Cu addendum to the contained helium is much longer due to the He I's ability to support temperature gradients. This results in a clearly exponential cooling curve as we see in Figures \ref{fig:rawdata} and \ref{fig:heatingdata}.  
 
-From this analysis, we can determine the range in which $T_{\lambda}$ occurs, namely between the temperatures which we know correspond to either He I or He II.  More precisely, we know that a heat pulse followed by discrete step in electric potential (or temperature) is the signature of He II.  While an exponentially decaying signature corresponds to He I. Therefore the transition must lie in between these signatures.  Observing our measured electric potential data in Figure \ref{fig:rawdata}, the interval for $V_{\lambda}$ must be as shown.  With Equation \ref{eq:polyfit}, we can convert this potential to temperature in order to determine $T_{\lambda}$.  Figure \ref{fig:heatingdata} shows the interval for $T_{\lambda}$ which we calculate to be $2.178\pm0.081$ (see Appendix \ref{} for error analysis). 
+From this analysis, we can determine the range in which $T_{\lambda}$ occurs, namely between the temperatures which we know correspond to either He I or He II.  More precisely, we know that a heat pulse followed by discrete step in electric potential (or temperature) is the signature of He II.  While an exponentially decaying signature corresponds to He I. Therefore the transition must lie in between these signatures.  Observing our measured electric potential data in Figure \ref{fig:rawdata}, the interval for $V_{\lambda}$ must be as shown.  With Equation \ref{eq:polyfit}, we can convert this potential to temperature in order to determine $T_{\lambda}$.  Figure \ref{fig:heatingdata} shows the interval for $T_{\lambda}$ which we calculate to be $2.178\pm0.081$ (see Appendix \ref{errorinspecificheatcalculation} for error analysis). 
 
 To calculate heat capacity we use the converted temperature data in order to determine the cell's change in temperature, $\Delta T$, from some initial temperature T when for each heat pulse with known energy $Q$.  To do this intensive calculation, due to the number of sent heat pulses being quite large ($>500$), we created a \emph{Mathematica} program which would iteratively measure $\Delta T$ over the entire temperature range observed ($>50000$ data points).  By designating a threshold which varies over different temperature regions, the program identifies occurrences of sudden jumps in temperature corresponding to a heat pulse's signature. Having identified a pulse, the steady state mean temperatures before and after the pulse are recorded \footnote{The determination of the steady state temperature varied according to the temperature relative to $T_{\lambda}$.} and $\Delta T$ is computed.  Heat capacity is then calculated for each $\Delta T$ where $C=Q/\Delta T$.  This process produces data relating the heat capacity to temperature.  Using this algorithm, we are able to determine this relationship for both the evacuated and filled copper cell (Figure \ref{fig:lambdanorm}).
 
@@ -79,7 +79,7 @@ To remove the copper's contribution from the combined heat capacity at a specifi
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=80mm]{./figures/lambdatrans.eps}
-\caption{\small{A plot of the specific heat of He II verses temperature. The transition from He(I) to He (II) occurs at $T_{\lambda} = 2.178 \pm .081$ K.  The values for specific heat each have a relative statistical error ranging from $10\%$  to $17\%$ based on the temperature of the helium (see Appendix \ref{} for error analysis).}}
+\caption{\small{A plot of the specific heat of He II verses temperature. The transition from He(I) to He (II) occurs at $T_{\lambda} = 2.178 \pm .081$ K.  The values for specific heat each have a relative statistical error ranging from $10\%$  to $17\%$ based on the temperature of the helium (see Appendix \ref{errorinspecificheatcalculation} for error analysis).}}
 \label{fig:lambdatrans}
 \end{center}
 \end{figure}
@@ -88,7 +88,7 @@ To remove the copper's contribution from the combined heat capacity at a specifi
 
 
 We use the second sound speed and specific heat measurements derived
-in sections \ref{secondsoundanalysis} and \ref{heatcapacityanalysis}
+in Sections \ref{secondsoundanalysis} and \ref{heatcapacityanalysis}
 to derive the fractions of superfluid and normal fluid as a function
 of temperature. Given the speed of second sound, the specific heat,
 and the entropy of helium II, it is possible to derive the ratio of
@@ -109,7 +109,7 @@ entropy, $\ln S$, was fitted to a second order polynomial:
 \ln S = -0.8529T^2 + 6.092T - 8.82
 \end{equation}
 
-with an $r^2$ value of $0.9999$, which justifies the use of this fit
+with an $r^2$-value of $0.9999$, which justifies the use of this fit
 to interpolate entropy data.
 
 In order to increase the precision of the specific heat data, between
@@ -117,7 +117,7 @@ $5$ and $10$ data points were averaged to give a value at each
 temperature. The data from our experiment of the specific heat per
 gram, and second sound velocity were combined with the entropy data to
 find the fraction of superfluid and normal fluid
-\ref{fig:density}. The curve can be seen to be in good agreement with
+(Figure \ref{fig:density}). The curve can be seen to be in good agreement with
 previously established results: most significantly the shape, position
 of the $\lambda$-point, and the appromixate temperature where $\rho_s
 = \rho_n$ are in correspondence with previous literature \cite{andro}.
