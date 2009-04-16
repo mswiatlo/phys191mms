@@ -44,7 +44,6 @@ In the second part of the experiment, we measure the propagation speed of second
 
 Second sound is the wave propagation of heat in a superfluid, so a source of heat is necessary. A grid of Nichrome wire, with a resistance of about $10$ $\Omega$, is used as a resistive heater. A HP3018A function generator creates an $80$ $\mu$s low voltage ($5$ V) pulse, which is amplified to $40$ V with a Kepco BOP 50-2M Power Amplifier and sent to the heater. 
 
-\subsubsection{Thermometry}
 To measure second sound propagation speed, a thermometer is necessary
 to detect the signal. A carbon resistor ($65$ $\Omega$ at room
 temperature) is supplied with a constant $100$ $\mu$A current, and the
@@ -66,33 +65,140 @@ other sources of noise and to amplify the signal, a EG\&G PARC 113
 Pre-Amp is set to a gain of $10^4$ with a $3\times 10^3$ Hz high-pass
 filter and $0.1$ Hz low-pass filter.
 
-To perform measurements at a constant temperature, it is important to maintain the vapor pressure at a constant level. A series of valves attached to the vacuum pump allows for very fine control of the pumping rate, which can be set at a level to temporarily balance the heat flow from the outside environment. Changes in the volume of the liquid offset this delicate equilibrium, so it is necessary to constantly monitor the pressure and update the pumping rate to compensate.
+To perform each measurement at a constant temperature, it is important to maintain the vapor pressure at a constant level. A series of valves attached to the vacuum pump allows for very fine control of the pumping rate, which can be set at a level to temporarily balance the heat flow from the outside environment. Changes in volume of the liquid offset this delicate equilibrium, so it is necessary to constantly monitor the pressure and update the pumping rate to compensate.
 
-To perform measurements of the velocity of second sound, first a constant temperature is selected. A series of heat pulses is sent using the function generator, and an oscilloscope averages over the response from the bolometer to further reduce noise. The time between the pulse from the generator and the first dip on the bolometer is recorded; this time corresponds to how long it took the pulse to travel from the nichrome wire to the bolometer. The distance between the wire and the bolometer is then altered and recorded, and the measurement repeated. Once 7 measurements are taken at one temperature, the temperature is changed and the process is repeated.
+In order to calculate the second sound velocity, first a constant temperature is selected. A series of heat pulses are sent using the function generator, and an oscilloscope is set to average over $128$ measurements of the response from the bolometer to further increase signal to noise. The distance between the wire and the bolometer is recorded as well as the time between the pulse from the generator and the first dip on the bolometer; this time corresponds to how long it took the pulse to travel from the nichrome wire to the bolometer. The bolometer distance is then altered, and the measurement repeated. Once $7$ measurements are taken at one temperature, the temperature is changed and the process is repeated.
 
 \subsection{Heat Capacity Experiment}\label{heatcapacityexperiment}
 
-The purpose of the next experiment is to determine the specific heat of liquid helium as a function of temperature; to measure this, a pulse of known heat is sent into a high purity sample of liquid helium in a small cell and the temperature response is measured at different starting temperatures.
+The purpose of the next experiment is to determine the specific heat
+of liquid helium as a function of temperature; to measure this
+dependence, predetermined heat pulse is sent into a high purity sample
+of liquid helium contained in a small copper cell and the temperature
+response is measured at different initial temperatures.
 
 \subsubsection{Thermometer Calibration}\label{thermometercalibration}
 
-The first step of monitoring the temperature response is to create a thermometer; as in the second sound experiment, a resistor attached to the cell is used to monitor changes in temperature. Unlike in the second sound experiment, the resistor used is composed of germanium, which has very predictable behavior as a function of temperature (resistance goes up with decreasing temperature) and excellent cycling properties (that is, one measurement of a resistance will always correspond to the same temperature, as there is little drift between experimental runs). A constant current of 1.00 $\mu$A is applied to the cold resistor by tuning the voltage of the power supply and reading the voltage drop across a 9.963 k$\Omega$ resistor at room temperature which is in series with the thermometer. The voltage across the cold resistor is then amplified by an op-amp circuit with a gain of 170 so as to increase the signal and decrease output impedance \footnote{Note that the maximum current is limited by the maximum output voltage of the op-amp, 4.4 Volts. While it would be ideal to use a higher current in order to increase resolution of the voltage measurement, since the error of the voltage measurement is $\delta V \propto \frac{V}{I} \delta I$ and therefore goes down with increased current, the op-amp enforces a maximum of 1 $\mu$A to avoid saturation.}. A large volume of exchange gas is introduced into the the inner vacuum can in order to couple the temperature of the cell (and thereby the cold resistor) with the temperature of the helium bath. Such a large amount is necessary because there of the activated charcoal cryopumps placed in the vacuum can: these must be saturated to provide proper coupling. As the temperature decreases the efficiency of the cryopump increases, so it is important to monitor the pressure of this exchange gas and ensure that it is always present, as the efficiency of the cryopump increases at low temperatures. The voltage across the germanium resistor and the vapor pressure of the helium bath are recorded as the helium is pumped down to equilibrium. Pumping is paused as each voltage measurement is taken, allowing the systems to thermally equilibrate. After adjusting values of the recorded pressure for known offsets in the gauges, the voltage is fit against temperature with the function
+As in the second sound experiment, a resistor attached to the cell is
+used to monitor changes in temperature. Unlike the second sound
+experiment, the resistor used is composed of germanium, which has
+predictable behavior as a function of temperature and excellent
+cycling properties (that is, one measurement of a resistance will
+always correspond to the same temperature, as there is little drift
+between experimental runs). A constant current of $1.00$ $\mu$A is
+applied to the thermometry resistor by tuning the voltage of the power
+supply and reading the electric potential drop across a fixed $9.963$
+k$\Omega$ resistor at room temperature which is in series with the
+thermometer. The potential difference across the thermometry resistor
+is then amplified by an operational amplifier circuit with a gain of
+170 so as to increase the signal and decrease output impedance
+\footnote{Note that the maximum current is limited by the maximum
+  output voltage of the op-amp, 4.4 Volts. While it would be ideal to
+  use a higher current in order to increase resolution of the
+  potential difference measurement, since the error is $\delta V
+  \propto \frac{V}{I} \delta I$ and therefore goes down with increased
+  current, the op-amp enforces a maximum of 1 $\mu$A to avoid
+  saturation.}. 
+
+A large volume of exchange gas is introduced into the the inner vacuum
+can in order to couple the temperature of the cell (and thereby the
+cold resistor) with the temperature of the helium bath. Such a large
+amount is necessary because there of the activated charcoal cryopumps
+placed in the vacuum can: these must be saturated to provide proper
+coupling. As the temperature decreases, the efficiency of the cryopump
+increases, so it is important to monitor the pressure of this exchange
+gas and ensure that it is always present. The potential difference
+across the germanium resistor and the vapor pressure of the helium
+bath are recorded as the helium is pumped down to equilibrium. Pumping
+is paused as each potential difference measurement is taken, allowing
+the systems to thermally equilibrate. After adjusting values of the
+recorded pressure for known offsets in the gauges, the potential
+difference is fit against temperature with the function
 
 \begin{equation}
 \label{eq:fiteqn}
 \ln{V} = \sum_{n=0}^{8} a_{n} (\ln{T})^{n}
 \end{equation}
 
-recommended by White for fitting the resistance of germanium as a function of temperature  \cite{white}. Note that we fit voltage, which is only different from resistance by a factor of $I$.
+recommended by White for fitting the resistance of germanium as a
+function of temperature \cite{white}. Note that we fit voltage, which
+is only different from resistance by a factor of $I$, changing the
+constants but not the overall form of Eqn.\ref{eq:fiteqn}.
 
 \subsubsection{Heat Pulses}
 
-With the germanium resistor successfully calibrated, the next step is devise a method for sending pulses of heat into the system. A second resistor is placed onto the copper cell to function as a heating element. A four probe measurement of the resistance is taken; for a voltage pulse of a set length, we now have $Q = P t = V^{2} t / R$. Note that the voltage here is read off from the 4-probe measurement as well, not from the pulser itself: the resistance of the wire down to the resistor does dissipate some voltage. A small electronics system sends out pulses of a chosen voltage and duration at the press of a button, so the rate and exact amount of heat per pulse can be chosen exactly.
+Once the germanium resistor successfully calibrated, the next step is
+to send constant heat pulses into the system. A second resistor is
+placed onto the copper cell to function as a heating element. A four
+probe measurement of the resistance is taken; for a potential
+difference pulse of a set duration and amplitude, the output heat is given by
+
+\begin{equation}
+Q = P t = V^{2} \Delta t /R
+\end{equation}
+where $V$ is the magnitude of the pulse, $\Delta t$ is the duration,
+and $R$ is the resistance. Note that the electric potential here is
+read off from the 4-probe measurement as well, not from the voltage
+source itself, in order to cancel the resistance of the long wires
+down to the resistor. An electronics system sends out pulses with
+adjustable amplitude and duration, so the rate of pulses and amount of
+heat per pulse can be precisely regulated.
 
 
 \subsubsection{Heat Capacity of Copper Cell}
 
-Before the specific heat of helium can be determined, it is necessary to measure the heat capacity of the empty copper cell. To begin, we pump down the system to the lowest temperature possible. At this point the inner vacuum is still empty, so the cell is still at room temperature. A moderate amount of helium buffer gas is introduced into the vacuum can, which the cryopump quickly absorbs. A heater attached to the cryopump is then activated (and the temperature monitored on a diode thermometer next to it) so as to desorb the cryopump and allow the copper cell to equilibrate with the helium bath at the very low temperature. The heater is then turned off and the buffer gas absorbed by the cryopump, so the copper cell is isolated from the bath. Because the capillary leading out is very small, coupling to the outside environment is minimal as well. Voltage across the germanium resistor is recorded by a computer, and pulses of heat are sent into the cell (making sure that there is enough time between pulses for the heat to distribute evenly through the cell). With a given heat pulse and a measured temperature response per pulse, the heat capacity of the copper cell (as a function of temperature) can easily be calculated and fit to a curve, as described in \ref{specificheatofmetals}.
+Before the specific heat of helium can be determined, it is necessary
+to measure the heat capacity of the empty copper cell. To begin, we
+pump down the system to the lowest temperature possible. At this point
+the inner vacuum is still empty, so the cell is still at room
+temperature. A moderate amount of helium buffer gas is introduced into
+the vacuum can, which the cryopump quickly absorbs. A heater attached
+to the cryopump is then activated (and the temperature monitored on a
+diode thermometer) so as to desorb the cryopump and allow the copper
+cell to equilibrate with the helium bath at the very low
+temperature. The heater is then turned off and the buffer gas absorbed
+by the cryopump, so the copper cell is isolated from the bath. Because
+the capillary leading out is very small, coupling to the outside
+environment is minimal, though not completely negligible. Potential
+difference across the germanium resistor is recorded by a computer,
+and pulses of heat are sent into the cell. Sufficient time is allowed
+between pulses for the system to equilibriate. With a given heat pulse
+and a measured temperature response per pulse, the heat capacity of
+the copper cell (as a function of temperature) can be calculated and
+fit to a curve, as described in \ref{specificheatofmetals}.
 
 \subsubsection{Specific Heat of Helium}
-With the heat capacity of the copper cell calculated, it is finally possible to measure the specific heat of helium. First, the number of moles in the high purity sample must be calculated. The helium is stored in a bottle of known volume at room temperature; once the pressure is measured, the ideal gas law $P V = n R T$ allows for the calculation of the number of moles. Next, the system is cooled to the lowest temperature again and the cell is brought into thermal contact with the bath with the procedure described above. The helium from the bottle is then allowed into the capillary connecting it to the cell; because liquid helium is 760 times as dense as gaseous helium at a given pressure \cite{shi}, almost all of the helium condenses into the cell, and the only gas that remains is from vapor pressure of the liquid at this low temperature. The cryopump heater is then turned off so as to isolate the system once more, and known heat pulses are sent into the cell through the heater. \footnote{We make the approximation that all the helium becomes liquid, and that this is true for all the relevant temperatures. Of course there is an element of inaccuracy to this, as the vapor pressure does change and the amount of gaseous helium therefore also changes, but this is a small effect compared to the factor of 700 discussed previously.} The voltage is once again read and recorded by a computer. It is particularly important at this step to ensure that enough time has been provided for the system to equilibrate after each pulse; while helium II does not support temperature gradients and therefore equilibrates quickly-- the copper is the relevant time constant here-- helium I takes much longer to settle. Given that there is an element of heating through the capillary, the top end of which is at room temperature, it is also important to not wait too long, so that heating does not dominate.  With these measurements made, the heat capacity of the entire system is calculated. The heat capacity of the copper is then subtracted off, and the result divided by the number of moles calculated earlier, so as to obtain the specific heat of the helium alone.
+In order to measure the specific heat per mole of helium, the number
+of moles in the high purity sample must be established. The helium is
+stored in a container of known volume at room temperature; once the
+pressure is measured, the ideal gas law $P V = n R T$ gives the number
+of moles $n$. Next, the system is cooled to the lowest achievable
+temperature and the cell is brought into thermal contact with the bath
+using the procedure described above. The helium from the container is
+then allowed into the capillary connecting it to the cell; because
+liquid helium is $760$ times as dense as gaseous helium at a given
+pressure \cite{shi}, almost all of the helium condenses into the cell,
+and the only gas that remains is from vapor pressure of the liquid at
+this low temperature. 
+
+The cryopump heater is then turned off so as to isolate the system,
+and predetermined heat pulses are sent into the cell through the
+heater. \footnote{We make the approximation that all the helium
+  becomes liquid, and that this is true for all the relevant
+  temperatures. This assumption introduces a minor error, as the vapor
+  pressure does change and the amount of gaseous helium therefore also
+  changes, but this is a negligible effect compared to the factor of
+  $760$ discussed previously.} The potential difference across the
+thermometer is once again read and recorded by a computer. It is
+particularly important at this step to ensure that enough time has
+been provided for the system to equilibrate after each pulse; while
+helium II does not support temperature gradients and therefore
+equilibrates quickly-- the copper is the relevant time constant here--
+helium I takes much longer to reach steady temperature. Given that
+there is an element of heating through the capillary which couples the
+system to room temperature, it is also important ensure the time
+between pulses is short enough such that the heating does not affect
+measurements.  Once the heat capacity of the entire system is
+calculated, the heat capacity of the copper is subtracted and the
+result divided by the number of moles, so as to obtain the molar
+specific heat of the helium alone.
