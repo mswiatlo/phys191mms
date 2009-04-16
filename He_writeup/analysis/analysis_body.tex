@@ -101,12 +101,35 @@ $\frac{\rho_n}{\rho} = 1 - \frac{\rho_s}{\rho}$.
 
 As our experiment did not measure the entropy of helium II, we use the
 results of Brooks and Donnelly given in \cite{brooks}. The entropy
-values assume a are 
+values are cited at pressures of $0.0$ atm, $2.50$ atm, and so on. Our
+measurements were done at vapor pressures between $0.01$ atm and
+$0.05$ atm, so the values for $0.0$ atm were used for the calculation.
+In order to interpolate the entropy data, the logarithm of the
+entropy, $\ln S$, was fitted to a second order polynomial:
+\begin{equation}
+\ln S = -0.8529T^2 + 6.092T - 8.82
+\end{equation}
+
+with an $r^2$ value of $0.9999$, which justifies the use of this fit
+to interpolate entropy data.
+
+In order to increase the precision of the specific heat data, between
+$5$ and $10$ data points were averaged to give a value at each
+temperature. The data from our experiment of the specific heat per
+gram, and second sound velocity were combined with the entropy data to
+find the fraction of superfluid and normal fluid
+\ref{fig:density}. The curve can be seen to be in good agreement with
+previously established results: most significantly the shape, position
+of the $\lambda$-point, and the appromixate temperature where $\rho_s
+= \rho_n$ are in correspondence with previous literature \cite{andro}.
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[height=80mm]{./figures/density.eps}
-\caption{\small{}}
+\includegraphics[height=70mm]{./figures/density.eps}
+\caption{\small{Fraction of superfluid and normal fluid densities in
+    helium II as a function of temperature, compared to
+    Andronikoshvili's classic result from 1946 (solid
+    line)\cite{andro}.}}
 \label{fig:density}
 \end{center}
 \end{figure}
