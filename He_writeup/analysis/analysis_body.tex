@@ -4,7 +4,7 @@
 \section{Analysis}\label{analysis}
 \subsection{Second Sound Analysis}\label{analysis}
 
-By analyzing the second sound data shown in Figure \ref{fig:secondsoundraw}, we can determine the relationship between the temperature of He II and the propagation speed of second sound.  By using linear regression analysis, we can determine the slope of each data set corresponding to a certain He II temperature.  For each of the fifteen data sets, the coefficient of determination, $r^{2}$ is greater than $0.99$.  The values for the slope of these fits, in m/s, correspond to the propagation speed of second sound in the respective temperature.  These speeds can then be plotted against temperature in order to show the relationship between the two in He II.  Due to the goodness of each fit, the statistical error in the data is smaller than each speed's level of precision. Figure \ref{fig:secondsound} shows the relationship between second sound speed and temperature in He II.  This data is compared to results made by Peshkov.\cite{peshkov}
+By analyzing the second sound data shown in Figure \ref{fig:secondsoundraw}, we can determine the relationship between the temperature of He II and the propagation speed of second sound.  By using linear regression analysis, we can determine the slope of each temperature data set.  For each of the fifteen data sets, the coefficient of determination, $r^{2}$ is greater than $0.99$.  The values for the slope of these fits, in m/s, correspond to the propagation speed of second sound in the respective temperature.  These speeds can then be plotted against temperature in order to show the relationship between the two in He II.  Due to the goodness of each fit, the statistical error in the data is smaller than each speed's level of precision. Figure \ref{fig:secondsound} shows the relationship between second sound speed and temperature in He II.  This data is compared to results made by Peshkov.\cite{peshkov}
 
 \begin{figure}[htbp]
 \begin{center}
@@ -19,12 +19,12 @@ In order to eliminate systematic error in second sound calculations, we chose no
 \subsection{Heat Capacity Analysis}\label{heatcapacityanalysis}
 \subsubsection{Temperature Calibration}\label{temperaturecalibration}
 
-In order to measure heat capacity, we must be able to measure the temperature of the cell.  Because the germanium resistor is thermally coupled to the cell, we can use it as a thermometer for the cell.  Thus the potential difference of the resistor must be converted to temperature.  Following the procedure described in Section \ref{heatcapacityexperiment}, data relating the potential difference across the resistor to the temperature of the cell is produced.  This data can then be fit to a curve given by Equation \ref{eq:fiteqn} in order to determine an expression for temperature as a function of electric potential.  This data with the fit is shown in Figure.  
+In order to measure heat capacity, we must be able to measure the temperature of the cell.  Because the germanium resistor is thermally coupled to the cell, we can use it as a thermometer for the cell.  Thus the potential difference across the resistor must be converted to temperature.  Following the procedure described in Section \ref{heatcapacityexperiment}, data relating the potential difference across the resistor to the temperature of the cell is produced.  This data can then be fit to a curve given by Equation \ref{eq:fiteqn} in order to determine an expression for temperature as a function of electric potential.  This data with the fit is shown in Figure \ref{fig:polyfit}.  
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/polyfit.eps}
-\caption{\small{This plot show the log-log relationship between the potential difference across the germanium resistor and the temperature of the cell for temperatures ranging between $1$ K and $4$ K.  The fit is based on Equation \ref{eq:fiteqn} resulting in an $8^{th}$-degree polynomial using nonlinear regression analysis.  The resultant $r^{2}$ value is $0.999$.}}
+\caption{\small{This plot show the log-log relationship between the potential difference across the germanium resistor and the temperature of the cell for temperatures ranging between $1.8$ K and $4$ K.  The fit is based on Equation \ref{eq:fiteqn} resulting in an $8^{th}$-degree polynomial using nonlinear regression analysis.  The resultant $r^{2}$ value is $0.999$.}}
 \label{fig:polyfit}
 \end{center}
 \end{figure}
@@ -45,7 +45,7 @@ In order to calculate heat capacity from the data shown in Figure \ref{fig:rawda
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/heatingdata.eps}
-\caption{\small{A plot of the data from Figure~\ref{fig:rawdata} (b) after being converted from electric potential to temperature using the calibration in Section \ref{temperaturecalibration}.  From this data, $T_{\lambda}$ is determined to be $2.176\pm0.010$ K.}}
+\caption{\small{A plot of the data from Figure~\ref{fig:rawdata} (b) after being converted from electric potential to temperature using the calibration in Section \ref{temperaturecalibration}.  From this data, $T_{\lambda}$ is determined to be $2.178\pm0.081$ K.}}
 \label{fig:heatingdata}
 \end{center}
 \end{figure}
@@ -80,7 +80,7 @@ To remove the Cu addition to the combined heat capacity at a specific temperatur
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=80mm]{./figures/lambdatrans.eps}
-\caption{\small{A plot of the specific heat of He(II) verses temperature. The transition from He(I) to He (II) occurs at $T_{\lambda} = 2.176 \pm .010$ K.  The values for specific heat each have a statistical error of $Blah$ J/mol K.}}
+\caption{\small{A plot of the specific heat of He(II) verses temperature. The transition from He(I) to He (II) occurs at $T_{\lambda} = 2.178 \pm .081$ K.  The values for specific heat each have a statistical error of $Blah$ J/mol K.}}
 \label{fig:lambdatrans}
 \end{center}
 \end{figure}
