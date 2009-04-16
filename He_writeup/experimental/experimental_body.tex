@@ -42,28 +42,32 @@ The next experiment allows for a particularly impressive display of this inabili
 
 In the second part of the experiment, we measure the propagation speed of second sound as a function of temperature.
 
-Second sound is the wave propagation of heat in a superfluid, so a source of heat is necessary. A grid of Nichrome wire, with a resistance of about $10$ $\Omega$, is used as a resistive heater. A HP3018A function generator creates an $80$ $\mu$s low voltage ($5$ V) pulse, which is amplified to $40$ V with a Kepco BOP 50-2M Power Amplifier and sent to the heater. 
+A grid of Nichrome wire, with a resistance of about $10$ $\Omega$, is
+used as a resistive heater to produce heat pulses. A HP3018A function
+generator creates an $80$ $\mu$s low voltage ($5$ V) pulse, which is
+amplified to $40$ V with a Kepco BOP 50-2M Power Amplifier and sent to
+the heater.
 
 To measure second sound propagation speed, a thermometer is necessary
-to detect the signal. A carbon resistor ($65$ $\Omega$ at room
-temperature) is supplied with a constant $100$ $\mu$A current, and the
-voltage across it is read by a voltmeter. A change in temperature of
-the resistor at very low temperatures corresponds to a change in
-resistance, and therefore a change in voltage. This resistor (referred
-to as a bolometer) is placed at the end of a sliding rod, whose
-distance from the Nichrome wire is able to be adjusted from $3$ cm to
-$12$ cm.
+to detect the signal produced by the heater. A carbon resistor ($65$
+$\Omega$ at room temperature) is supplied with a constant $100$ $\mu$A
+current, and the potential difference across it is read by a
+voltmeter. A change in temperature of the resistor at very low
+temperatures corresponds to a change in resistance, and therefore a
+change in potential difference. This resistor (referred to as a
+bolometer) is placed at the end of a sliding rod, whose distance from
+the Nichrome wire is able to be adjusted from $3$ cm to $12$ cm.
 
 A heat pulse read on the bolometer is expected to be visible as a dip
 on an oscilloscope. As temperature increases when the heat pulse
 passes the bolometer, the resistance decreases, and therefore the
-voltage decreases. The signal from the bolometer is very noisy and
-difficult to read, as the wires leading to it are unshielded so as to
-lower thermal contact into the liquid helium. A $60$ Hz bandpass
-filter reduces powerline pickup, the worst source of noise; to remove
-other sources of noise and to amplify the signal, a EG\&G PARC 113
-Pre-Amp is set to a gain of $10^4$ with a $3\times 10^3$ Hz high-pass
-filter and $0.1$ Hz low-pass filter.
+potential difference decreases. The signal from the bolometer is very
+noisy and difficult to read, as the wires leading to it are unshielded
+so as to lower thermal contact into the liquid helium. A $60$ Hz
+bandpass filter reduces powerline pickup, the worst source of noise;
+to remove other sources of noise and to amplify the signal, a EG\&G
+PARC 113 Pre-Amp is set to a gain of $10^4$ with a $3\times 10^3$ Hz
+high-pass filter and $0.1$ Hz low-pass filter.
 
 To perform each measurement at a constant temperature, it is important to maintain the vapor pressure at a constant level. A series of valves attached to the vacuum pump allows for very fine control of the pumping rate, which can be set at a level to temporarily balance the heat flow from the outside environment. Changes in volume of the liquid offset this delicate equilibrium, so it is necessary to constantly monitor the pressure and update the pumping rate to compensate.
 
@@ -92,7 +96,7 @@ k$\Omega$ resistor at room temperature which is in series with the
 thermometer. The potential difference across the thermometry resistor
 is then amplified by an operational amplifier circuit with a gain of
 170 so as to increase the signal and decrease output impedance.\footnote{Note that the maximum current is limited by the maximum
-  output voltage of the op-amp, 4.4 Volts. While it would be ideal to
+  output voltage of the op-amp, 4.4 V. While it would be ideal to
   use a higher current in order to increase resolution of the
   potential difference measurement, since the error is $\delta V
   \propto \frac{V}{I} \delta I$ and therefore goes down with increased
@@ -120,9 +124,10 @@ difference is fit against temperature with the function
 \end{equation}
 
 recommended by White for fitting the resistance of germanium as a
-function of temperature \cite{white}. Note that we fit voltage, which
-is only different from resistance by a factor of $I$, changing the
-constants but not the overall form of Eqn.\ref{eq:fiteqn}.
+function of temperature \cite{white}. Note that we fit potential,
+which is only different from resistance by the constant factor of $I$,
+changing the constants but not the overall form of
+Eqn.\ref{eq:fiteqn}.
 
 \subsubsection{Heat Pulses}
 
@@ -133,7 +138,7 @@ probe measurement of the resistance is taken; for a potential
 difference pulse of a set duration and amplitude, the output heat is given by
 
 \begin{equation}
-Q = P t = V^{2} \Delta t /R
+Q = P \Delta t = V^{2} \Delta t /R
 \end{equation}
 where $V$ is the magnitude of the pulse, $\Delta t$ is the duration,
 and $R$ is the resistance. Note that the electric potential here is
@@ -164,7 +169,7 @@ and pulses of heat are sent into the cell. Sufficient time is allowed
 between pulses for the system to equilibriate. With a given heat pulse
 and a measured temperature response per pulse, the heat capacity of
 the copper cell (as a function of temperature) can be calculated and
-fit to a curve, as described in \ref{specificheatofmetals}.
+fit to a theoretical curve, as described in \ref{specificheatofmetals}.
 
 \subsubsection{Specific Heat of Helium}
 In order to measure the specific heat per mole of helium, the number
