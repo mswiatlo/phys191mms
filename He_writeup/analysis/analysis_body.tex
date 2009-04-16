@@ -1,4 +1,4 @@
-%Conclusion body
+%analysis body
 %Created MB 04-12
 
 \section{Analysis}\label{analysis}
@@ -30,12 +30,11 @@ In order to measure heat capacity, we must be able to measure the temperature of
 \end{figure}
 
 The fit was computed doing a $8^{th}$-degree polynomial regression of the log-log data and found to be 
+\begin{eqnarray}\label{eq:polyfit}
+\ln(T) &=& 0.6568 - 0.3503\ln(V) - 0.1635\ln(V)^{2} + 0.2846\ln(V)^{3} \\
+& & + 1.813\ln(V)^{4} + 2.521\ln(V)^{5} + 1.593\ln(V)^{6} + 0.4845\ln(V)^{7} + 0.0578\ln(V)^{8} \nonumber
+\end{eqnarray}
 
-\begin{center}
-\begin{equation}\label{eq:polyfit}
-ln(T) = 0.6568 - 0.3503ln(V) - 0.1635ln(V)^{2} + 0.2846ln(V)^{3} + 1.813ln(V)^{4} + 2.521ln(V)^{5} + 1.593ln(V)^{6} + 0.4845ln(V)^{7} + 0.0578ln(V)^{8}
-\end{equation}
-\end{center}
 where $T$ is the temperature of the cell and $V$ is the potential difference across the germanium resistor.  Relative uncertainties in the fitting parameters of this polynomial will add to the relative error in calculated temperatures.   
 
 \subsubsection{Calculating the Heat Capacity of Helium}\label{calculatingtheheatcapacityofthecell}
@@ -56,18 +55,18 @@ As the temperature of He II heats to $T_{\lambda}$, the change in temperature, $
 
 From this analysis, we can determine the range in which $T_{\lambda}$ occurs, namely between the temperatures which we know correspond to either He I or He II.  More precisely, we know that a heat pulse followed by discrete step in electric potential (or temperature) is the signature of He II.  While an exponentially decaying signature corresponds to He I. Therefore the transition must lie in between these signatures.  Observing our measured electric potential data in Figure \ref{fig:rawdata}, the interval for $V_{\lambda}$ must be as shown.  With Equation \ref{eq:polyfit}, we can convert this potential to temperature in order to determine $T_{\lambda}$.  Figure \ref{fig:heatingdata} shows the interval for $T_{\lambda}$ which we calculate to be $2.178\pm0.081$ (see Appendix \ref{} for error analysis). 
 
-To calculate heat capacity we use the converted temperature data in order to determine the cell's change in temperature, $\Delta T$, from some initial temperature T when for each heat pulse with known energy $Q$.  To do this intensive calculation, due to the number of sent heat pulses being quite large ($>500$), we created a \emph{Mathematica} program which would iteratively measure $\Delta T$ over the entire temperature range observed ($>50000$ data points).  By designating a threshold which varies over different temperature regions, the program identifies occurrences of sudden jumps in temperature corresponding to a heat pulse's signature. Having identified a pulse, the steady state mean temperatures before and after the pulse are recorded \footnote{The determination of the steady state temperature varied according to the temperature relative to $T_{\lambda}$.} and $\Delta T$ is computed.  Heat capacity is then calculated for each $\Delta T$ where $C=Q/\Delta T$.  This process produces data relating the heat capacity to temperature.  Using this algorithm, we are able to determine this relationship for both the evacuated and filled Cu addendum (Figure \ref{fig:lambdanorm}).
+To calculate heat capacity we use the converted temperature data in order to determine the cell's change in temperature, $\Delta T$, from some initial temperature T when for each heat pulse with known energy $Q$.  To do this intensive calculation, due to the number of sent heat pulses being quite large ($>500$), we created a \emph{Mathematica} program which would iteratively measure $\Delta T$ over the entire temperature range observed ($>50000$ data points).  By designating a threshold which varies over different temperature regions, the program identifies occurrences of sudden jumps in temperature corresponding to a heat pulse's signature. Having identified a pulse, the steady state mean temperatures before and after the pulse are recorded \footnote{The determination of the steady state temperature varied according to the temperature relative to $T_{\lambda}$.} and $\Delta T$ is computed.  Heat capacity is then calculated for each $\Delta T$ where $C=Q/\Delta T$.  This process produces data relating the heat capacity to temperature.  Using this algorithm, we are able to determine this relationship for both the evacuated and filled copper cell (Figure \ref{fig:lambdanorm}).
 
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=80mm]{./figures/lambdanorm.eps}
-\caption{\small{A plot of the heat capacity of the Cu addendum filled with He II and the heat capacity of the evacuated Cu addendum.  A polynomial with cubic and linear terms was fit to the Cu data in order to ultimately remove the addendum's contribution to the heat capacity data.}}
+\caption{\small{The heat capacity of the copper cell filled with He II and the heat capacity of the evacuated copper cell.  A polynomial with cubic and linear terms was fit to the copper data in order to ultimately remove the cell's contribution to the heat capacity data.}}
 \label{fig:lambdanorm}
 \end{center}
 \end{figure}
 
-To determine heat capacity of He without the Cu addendum we need to uniformly subtract heat capacity of the Cu addendum from the filled addendum measurement.  To do this we fit a curve to the empty Cu addendum data.  At low temperatures, the heat capacity of copper is dominated by the effect of conduction electrons, which is linear with temperature, and the effect of phonon vibrations, which is cubic with temperature (see Section \ref{specificheatofmetals}).  Therefore we fit the Cu heat capacity data to a $3^{rd}$-degree polynomial without  quadratic or constant terms using nonlinear regression.  We find that the heat capacity of the Cu addendum is given by
+To determine heat capacity of He without the copper cell we need to uniformly subtract heat capacity of the copper cell from the filled cell measurement.  To do this we fit a curve to the empty copper cell data.  At low temperatures, the heat capacity of copper is dominated by the effect of conduction electrons, which is linear with temperature, and the effect of phonon vibrations, which is cubic with temperature (see Section \ref{specificheatofmetals}).  Therefore we fit the copper heat capacity data to a $3^{rd}$-degree polynomial without  quadratic or constant terms using nonlinear regression.  We find that the heat capacity of the copper cell is given by
 
 \begin{center}
 \begin{equation}\label{eq:cufit}
@@ -75,7 +74,7 @@ C^{Cu}_{p} =( 0.0159\pm0.0024 K^{-1}) T + (0.00125\pm0.00030 K^{-3}) T^{3}
 \end{equation}
 \end{center}
 
-To remove the Cu addition to the combined heat capacity at a specific temperature, we simply subtract the heat capacity of Cu, given by Equation \ref{eq:cufit}, for that temperature. Thus we are able to calculate the heat capacity of the He which is contained in the cell for the temperature region observed.  This heat capacity data must then be normalized to account for the amount of He in the cell. As described in Section \ref{heatcapacityexperiment}, by measuring the pressure of a certain volume of He at room temperature, we can use the ideal gas law to compute the number of moles of He in that volume.  That volume is then inserted into the cell through a capillary tubing.  We assume that almost all of the He is condensed in the cell due to the density of liquid helium being much greater than that of gaseous helium.  Knowing the number of moles of He in the cell, we can calculate its specific heat in J/mol K. This final data is shown in Figure \ref{fig:lambdatrans}.
+To remove the copper's contribution from the combined heat capacity at a specific temperature, we simply subtract the heat capacity of the cell, given by Equation \ref{eq:cufit}, for that temperature. Thus we are able to calculate the heat capacity of the He which is contained in the cell for the temperature region observed.  This heat capacity data must then be normalized to account for the amount of He in the cell. As described in Section \ref{heatcapacityexperiment}, by measuring the pressure of a certain volume of He at room temperature, we can use the ideal gas law to compute the number of moles of He in that volume.  That volume is then inserted into the cell through a capillary tubing.  We assume that almost all of the He is condensed in the cell due to the density of liquid helium being much greater than that of gaseous helium.  Knowing the number of moles of He in the cell, we can calculate its specific heat in J/mol K. This final data is shown in Figure \ref{fig:lambdatrans}.
 
 \begin{figure}[htbp]
 \begin{center}
