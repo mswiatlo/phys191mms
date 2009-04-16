@@ -33,7 +33,7 @@ The fit was computed doing a $8^{th}$-degree polynomial regression of the log-lo
 
 \begin{center}
 \begin{equation}\label{eq:polyfit}
-Blah
+ln(T) = 0.6568 - 0.3503ln(V) - 0.1635ln(V)^{2} + 0.2846ln(V)^{3} + 1.813ln(V)^{4} + 2.521ln(V)^{5} + 1.593ln(V)^{6} + 0.4845ln(V)^{7} + 0.0578ln(V)^{8}
 \end{equation}
 \end{center}
 where $T$ is the temperature of the cell and $V$ is the potential difference across the germanium resistor.  Relative uncertainties in the fitting parameters of this polynomial will add to the relative error in calculated temperatures.   
@@ -67,11 +67,11 @@ To calculate heat capacity we use the converted temperature data in order to det
 \end{center}
 \end{figure}
 
-To determine heat capacity of He without the Cu addendum we need to uniformly subtract heat capacity of the Cu addendum from the filled addendum measurement.  To do this we fit a curve to the empty Cu addendum data.  At low temperatures, the heat capacity of copper is dominated by the effects of I FORGET which is linear with temperature and I FORGET AGAIN which is cubic with temperature.  Therefore we fit the Cu heat capacity data to a $3^{rd}$-degree polynomial without  quadratic or constant terms using nonlinear regression.  We find that the heat capacity of the Cu addendum is given by
+To determine heat capacity of He without the Cu addendum we need to uniformly subtract heat capacity of the Cu addendum from the filled addendum measurement.  To do this we fit a curve to the empty Cu addendum data.  At low temperatures, the heat capacity of copper is dominated by the effect of conduction electrons (which is linear with temperature) and the effect of phonon vibrations (which is cubic with temperature).  Therefore we fit the Cu heat capacity data to a $3^{rd}$-degree polynomial without  quadratic or constant terms using nonlinear regression.  We find that the heat capacity of the Cu addendum is given by
 
 \begin{center}
 \begin{equation}\label{eq:cufit}
-Blah.
+C^{Cu}_{p} =( 0.0159\pm0.0024 K^{-1}) T + (0.00125\pm0.00030 K^{-3}) T^{3} 
 \end{equation}
 \end{center}
 
