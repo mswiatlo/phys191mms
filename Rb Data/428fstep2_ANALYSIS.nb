@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     24345,        590]
-NotebookOptionsPosition[     23043,        541]
-NotebookOutlinePosition[     23380,        556]
-CellTagsIndexPosition[     23337,        553]
+NotebookDataLength[     17289,        417]
+NotebookOptionsPosition[     16076,        370]
+NotebookOutlinePosition[     16413,        385]
+CellTagsIndexPosition[     16370,        382]
 WindowFrame->Normal
 ContainsDynamic->False*)
 
@@ -37,7 +37,8 @@ Cell[BoxData["80"], "Output",
  CellChangeTimes->{
   3.449507220508835*^9, {3.449507873705884*^9, 3.449507919516827*^9}, 
    3.449927663052404*^9, 3.449931445097934*^9, 3.44993220898549*^9, 
-   3.4499334641134443`*^9}]
+   3.4499334641134443`*^9, 3.4499354077448606`*^9, 3.449935471014968*^9, 
+   3.449935837162849*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -57,19 +58,24 @@ Cell[BoxData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"plotdata", "=", 
+  RowBox[{
+   RowBox[{"plotdata", "[", 
+    RowBox[{"[", "2", "]"}], "]"}], "=", 
    RowBox[{"Take", "[", 
     RowBox[{"rawdata", ",", "All", ",", "2"}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.449507401628911*^9, 3.449507419265745*^9}}],
+ CellChangeTimes->{{3.449507401628911*^9, 3.449507419265745*^9}, {
+  3.449935398338879*^9, 3.44993539944506*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"dataplot", "=", 
-  RowBox[{"ListPlot", "[", "plotdata", "]"}]}]], "Input",
+  RowBox[{"ListPlot", "[", 
+   RowBox[{"plotdata", "[", 
+    RowBox[{"[", "2", "]"}], "]"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.449507259620636*^9, 3.449507265958976*^9}, {
   3.4495074228120193`*^9, 3.449507426385441*^9}, {3.449930066416678*^9, 
-  3.449930068071445*^9}}],
+  3.449930068071445*^9}, {3.449935417011571*^9, 3.449935418862729*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, 
@@ -102,10 +108,12 @@ WzUmPf4/oGNmLA==
   PlotRangePadding->{
     Scaled[0.02], 
     Scaled[0.02]}]], "Output",
- CellChangeTimes->{3.4495072677266893`*^9, 3.4495074275768547`*^9, 
-  3.4495078841787453`*^9, 3.449507921004725*^9, 3.449927667477626*^9, 
-  3.449930068944908*^9, 3.449931449332857*^9, 3.449932210165389*^9, 
-  3.4499334652859497`*^9, 3.449933844326766*^9}]
+ CellChangeTimes->{
+  3.4495072677266893`*^9, 3.4495074275768547`*^9, 3.4495078841787453`*^9, 
+   3.449507921004725*^9, 3.449927667477626*^9, 3.449930068944908*^9, 
+   3.449931449332857*^9, 3.449932210165389*^9, 3.4499334652859497`*^9, 
+   3.449933844326766*^9, {3.449935409624963*^9, 3.449935420083539*^9}, 
+   3.449935473212202*^9, 3.4499358381015587`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -125,7 +133,9 @@ Cell[BoxData[
       RowBox[{
        RowBox[{"Print", "[", 
         RowBox[{"i", ",", 
-         RowBox[{"plotdata", "[", 
+         RowBox[{
+          RowBox[{"plotdata", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "[", 
           RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
        RowBox[{
         RowBox[{"{", "max", "}"}], "=", 
@@ -137,7 +147,7 @@ Cell[BoxData[
   3.4495075544177103`*^9, 3.449507582871752*^9}, {3.449507659698835*^9, 
   3.449507680211939*^9}, {3.4495077656439734`*^9, 3.4495077840658073`*^9}, {
   3.449507852386097*^9, 3.449507854015588*^9}, {3.4495079073233013`*^9, 
-  3.449507907607308*^9}}],
+  3.449507907607308*^9}, {3.44993548022508*^9, 3.449935481518561*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -150,7 +160,8 @@ Cell[BoxData[
    3.449507682650264*^9, {3.449507772896325*^9, 3.449507784803793*^9}, 
    3.449507884807292*^9, 3.449507921560069*^9, 3.4499276770881453`*^9, 
    3.449931452012933*^9, 3.449931482980619*^9, 3.449932210914806*^9, 
-   3.449933466189345*^9}]
+   3.449933466189345*^9, {3.449935475467771*^9, 3.4499354834227257`*^9}, 
+   3.4499358392218647`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -181,7 +192,9 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"fitdata", "=", 
   RowBox[{"NonlinearRegress", "[", 
-   RowBox[{"plotdata", ",", 
+   RowBox[{
+    RowBox[{"plotdata", "[", 
+     RowBox[{"[", "2", "]"}], "]"}], ",", 
     RowBox[{"{", 
      RowBox[{"model", ",", 
       RowBox[{"150000", "<", "x0", "<", "170000"}]}], "}"}], ",", 
@@ -196,200 +209,16 @@ Cell[BoxData[
   3.4499337773558283`*^9, 3.449933799423708*^9}, {3.449933855136499*^9, 
   3.449933855889863*^9}, {3.4499339094529047`*^9, 3.449933984116535*^9}, {
   3.449934198213005*^9, 3.449934217851097*^9}, {3.449934254835504*^9, 
-  3.449934275614449*^9}}],
+  3.449934275614449*^9}, {3.4499354933464727`*^9, 3.4499354945851107`*^9}}],
 
-Cell[BoxData[
- RowBox[{
-  RowBox[{"FindFit", "::", "\<\"eit\"\>"}], 
-  RowBox[{
-  ":", " "}], "\<\"The algorithm does not converge to the tolerance of \
-\\!\\(4.806217383937354`*^-6\\) in \\!\\(10000\\) iterations. The best \
-estimated solution, with feasibility residual, KKT residual or complementary \
-residual of \\!\\({1.1726717102892545`*^-8, 0.0006124922121114652`, \
-5.8633773207456365`*^-9}\\), is returned.\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.4499305288867817`*^9, {3.44993073829981*^9, 3.449930744524609*^9}, 
-   3.449931023002356*^9, {3.449931058367507*^9, 3.449931069938302*^9}, {
-   3.449931484861493*^9, 3.449931500041966*^9}, {3.4499334681590767`*^9, 
-   3.449933494619379*^9}, {3.44993378809437*^9, 3.4499338022923393`*^9}, 
-   3.449933859338484*^9, {3.449933935480712*^9, 3.449933984880664*^9}, 
-   3.449934222313326*^9, 3.44993427062199*^9, 3.44993432421029*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"NonlinearRegress", "::", "\<\"constr\"\>"}], 
-  RowBox[{
-  ":", " "}], "\<\"The report values \\!\\({ANOVATable, \
-AsymptoticCorrelationMatrix, EstimatedVariance, FitCurvatureTable, \
-ParameterCITable}\\) assume an unconstrained model. The results for these \
-report values may not be valid, particularly if the fitted parameters are \
-near a constraint boundary.\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.4499305288867817`*^9, {3.44993073829981*^9, 3.449930744524609*^9}, 
-   3.449931023002356*^9, {3.449931058367507*^9, 3.449931069938302*^9}, {
-   3.449931484861493*^9, 3.449931500041966*^9}, {3.4499334681590767`*^9, 
-   3.449933494619379*^9}, {3.44993378809437*^9, 3.4499338022923393`*^9}, 
-   3.449933859338484*^9, {3.449933935480712*^9, 3.449933984880664*^9}, 
-   3.449934222313326*^9, 3.44993427062199*^9, 3.449934324212685*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"BestFitParameters", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"x0", "\[Rule]", "152395.11307495204`"}], ",", 
-      RowBox[{"g", "\[Rule]", "146.35941762987534`"}], ",", 
-      RowBox[{"b", "\[Rule]", "97.05752202103619`"}]}], "}"}]}], ",", 
-   RowBox[{"ParameterCITable", "\[Rule]", 
-    TagBox[
-     TagBox[GridBox[{
-        {
-         StyleBox["\[Null]",
-          ShowStringCharacters->False], 
-         TagBox["\<\"Estimate\"\>",
-          HoldForm], 
-         TagBox["\<\"Asymptotic SE\"\>",
-          HoldForm], 
-         TagBox["\<\"CI\"\>",
-          HoldForm]},
-        {
-         TagBox["x0",
-          HoldForm], "152395.11307495204`", "3.179968565563358`*^6", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"-", "6.179731270299955`*^6"}], ",", 
-           "6.484521496449859`*^6"}], "}"}]},
-        {
-         TagBox["g",
-          HoldForm], "146.35941762987534`", "322937.8527825098`", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"-", "642905.0593728272`"}], ",", "643197.778208087`"}], 
-          "}"}]},
-        {
-         TagBox["b",
-          HoldForm], "97.05752202103619`", "428997.50887867046`", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"-", "854146.1176432956`"}], ",", "854340.2326873376`"}], 
-          "}"}]}
-       },
-       GridBoxAlignment->{
-        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
-          "RowsIndexed" -> {}},
-       GridBoxDividers->{
-        "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
-         "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
-       GridBoxSpacings->{"Columns" -> {
-           Offset[0.27999999999999997`], {
-            Offset[0.7]}, 
-           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-           Offset[0.2], {
-            Offset[0.4]}, 
-           Offset[0.2]}, "RowsIndexed" -> {}}],
-      {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
-     Function[BoxForm`e$, 
-      TableForm[
-      BoxForm`e$, TableDepth -> 2, 
-       TableHeadings -> {{$CellContext`x0, $CellContext`g, $CellContext`b}, {
-         "Estimate", "Asymptotic SE", "CI"}}]]]}], ",", 
-   RowBox[{"EstimatedVariance", "\[Rule]", "52.10316584350997`"}], ",", 
-   RowBox[{"ANOVATable", "\[Rule]", 
-    InterpretationBox[GridBox[{
-       {"\<\"\"\>", "\<\"DF\"\>", "\<\"SumOfSq\"\>", "\<\"MeanSq\"\>"},
-       {"\<\"Model\"\>", "3", "0.2515040497314658`", "0.08383468324382193`"},
-       {"\<\"Error\"\>", "77", "4011.9437699502673`", "52.10316584350997`"},
-       {"\<\"Uncorrected Total\"\>", "80", "4012.195273999999`", "\<\"\"\>"},
-       {"\<\"Corrected Total\"\>", "79", "279.7914978`", "\<\"\"\>"}
-      },
-      GridBoxAlignment->{
-       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-        "RowsIndexed" -> {}},
-      GridBoxSpacings->{"Columns" -> {
-          Offset[0.27999999999999997`], {
-           Offset[2.0999999999999996`]}, 
-          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-          Offset[0.2], {
-           Offset[0.4]}, 
-          Offset[0.2]}, "RowsIndexed" -> {}}],
-     TableForm[{{3, 0.2515040497314658, 0.08383468324382193}, {
-       77, 4011.9437699502673`, 52.10316584350997}, {80, 4012.195273999999}, {
-       79, 279.7914978}}, 
-      TableHeadings -> {{
-        "Model", "Error", "Uncorrected Total", "Corrected Total"}, {
-        "DF", "SumOfSq", "MeanSq"}}]]}], ",", 
-   RowBox[{"AsymptoticCorrelationMatrix", "\[Rule]", 
-    TagBox[
-     RowBox[{"(", "\[NoBreak]", GridBox[{
-        {"1.`", 
-         RowBox[{"-", "0.0001465919837043947`"}], 
-         RowBox[{"-", "0.00035849981500671335`"}]},
-        {
-         RowBox[{"-", "0.0001465919837043947`"}], "1.`", 
-         "0.002089685852595687`"},
-        {
-         RowBox[{"-", "0.00035849981500671335`"}], "0.0020896858525956876`", 
-         "1.0000000000000002`"}
-       },
-       GridBoxAlignment->{
-        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
-          "RowsIndexed" -> {}},
-       GridBoxSpacings->{"Columns" -> {
-           Offset[0.27999999999999997`], {
-            Offset[0.7]}, 
-           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-           Offset[0.2], {
-            Offset[0.4]}, 
-           Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
-     Function[BoxForm`e$, 
-      MatrixForm[BoxForm`e$]]]}], ",", 
-   RowBox[{"FitCurvatureTable", "\[Rule]", 
-    TagBox[
-     TagBox[GridBox[{
-        {
-         StyleBox["\[Null]",
-          ShowStringCharacters->False], 
-         TagBox["\<\"Curvature\"\>",
-          HoldForm]},
-        {
-         TagBox["\<\"Max Intrinsic\"\>",
-          HoldForm], "5398.2532622842555`"},
-        {
-         TagBox["\<\"Max Parameter-Effects\"\>",
-          HoldForm], "6939.857871569046`"},
-        {
-         TagBox["\<\"95. % Confidence Region\"\>",
-          HoldForm], "0.6059668444623288`"}
-       },
-       GridBoxAlignment->{
-        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
-          "RowsIndexed" -> {}},
-       GridBoxDividers->{
-        "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
-         "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
-       GridBoxSpacings->{"Columns" -> {
-           Offset[0.27999999999999997`], {
-            Offset[0.7]}, 
-           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-           Offset[0.2], {
-            Offset[0.4]}, 
-           Offset[0.2]}, "RowsIndexed" -> {}}],
-      {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
-     Function[BoxForm`e$, 
-      TableForm[
-      BoxForm`e$, TableDepth -> 2, 
-       TableHeadings -> {{
-         "Max Intrinsic", "Max Parameter-Effects", 
-          "95. % Confidence Region"}, {"Curvature"}}]]]}]}], "}"}]], "Output",\
-
+Cell[BoxData["$Aborted"], "Output",
  CellChangeTimes->{
   3.4499307445663033`*^9, 3.449931023045788*^9, {3.449931058410016*^9, 
    3.449931069980322*^9}, {3.4499314850503387`*^9, 3.449931500080121*^9}, {
    3.449933468208647*^9, 3.4499334946649113`*^9}, {3.449933788173526*^9, 
    3.449933802344584*^9}, 3.449933859390378*^9, {3.4499339354880238`*^9, 
    3.449933984916781*^9}, 3.449934222451158*^9, 3.44993427068013*^9, 
-   3.449934324283654*^9}]
+   3.449934324283654*^9, {3.449935488831438*^9, 3.449935514679817*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -558,33 +387,31 @@ Notebook[{
 Cell[423, 14, 391, 9, 73, "Input"],
 Cell[CellGroupData[{
 Cell[839, 27, 264, 6, 27, "Input"],
-Cell[1106, 35, 217, 4, 27, "Output"]
+Cell[1106, 35, 289, 5, 27, "Output"]
 }, Open  ]],
-Cell[1338, 42, 514, 13, 43, "Input"],
-Cell[1855, 57, 215, 5, 27, "Input"],
+Cell[1410, 43, 514, 13, 43, "Input"],
+Cell[1927, 58, 317, 8, 27, "Input"],
 Cell[CellGroupData[{
-Cell[2095, 66, 264, 5, 27, "Input"],
-Cell[2362, 73, 1726, 34, 238, "Output"]
+Cell[2269, 70, 364, 7, 27, "Input"],
+Cell[2636, 79, 1828, 36, 238, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4125, 112, 1027, 27, 43, "Input"],
-Cell[5155, 141, 510, 11, 20, "Print"]
+Cell[4501, 120, 1140, 29, 43, "Input"],
+Cell[5644, 151, 586, 12, 20, "Print"]
 }, Open  ]],
-Cell[5680, 155, 689, 17, 50, "Input"],
-Cell[6372, 174, 153, 2, 27, "Input"],
+Cell[6245, 166, 689, 17, 50, "Input"],
+Cell[6937, 185, 153, 2, 27, "Input"],
 Cell[CellGroupData[{
-Cell[6550, 180, 979, 18, 43, "Input"],
-Cell[7532, 200, 896, 15, 82, "Message"],
-Cell[8431, 217, 879, 15, 94, "Message"],
-Cell[9313, 234, 6350, 157, 373, "Output"]
+Cell[7115, 191, 1085, 20, 43, "Input"],
+Cell[8203, 213, 493, 7, 27, "Output"]
 }, Open  ]],
-Cell[15678, 394, 358, 9, 27, "Input"],
-Cell[16039, 405, 493, 13, 27, "Input"],
+Cell[8711, 223, 358, 9, 27, "Input"],
+Cell[9072, 234, 493, 13, 27, "Input"],
 Cell[CellGroupData[{
-Cell[16557, 422, 160, 3, 27, "Input"],
-Cell[16720, 427, 6210, 108, 238, "Output"]
+Cell[9590, 251, 160, 3, 27, "Input"],
+Cell[9753, 256, 6210, 108, 238, "Output"]
 }, Open  ]],
-Cell[22945, 538, 94, 1, 27, "Input"]
+Cell[15978, 367, 94, 1, 27, "Input"]
 }
 ]
 *)
