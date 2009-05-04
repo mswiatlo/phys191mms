@@ -10,12 +10,11 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[    291551,       4885]
-NotebookOptionsPosition[    290732,       4853]
-NotebookOutlinePosition[    291068,       4868]
-CellTagsIndexPosition[    291025,       4865]
-WindowFrame->Normal
-ContainsDynamic->False*)
+NotebookDataLength[    289426,       4850]
+NotebookOptionsPosition[    288606,       4818]
+NotebookOutlinePosition[    288950,       4833]
+CellTagsIndexPosition[    288907,       4830]
+WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
@@ -49,6 +48,10 @@ Cell[BoxData[
    3.449326216263788*^9, {3.449326320819551*^9, 3.449326340751972*^9}, 
    3.449326661706257*^9, 3.449326822856715*^9, 3.449326961789953*^9}]
 }, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", "blahblahblah", "*)"}]], "Input",
+ CellChangeTimes->{{3.450449904328125*^9, 3.450449907703125*^9}}],
 
 Cell[CellGroupData[{
 
@@ -4810,50 +4813,12 @@ jOfRqx3vY/1ww9yHpFb0rHp/bPN0K6JsDmkuP2kjnjNTJJrIgf8BbnklHg==
   PlotRangePadding->{
     Scaled[0.02], Automatic}]], "Output",
  CellChangeTimes->{
-  3.449326997175502*^9, {3.4493275577043753`*^9, 3.4493276299408293`*^9}},
- ImageCache->GraphicsData["CompressedBitmap", "\<\
-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
-Cv07hb5cpPpa44VmSoC/l9PFszoux3r/ADodp+Q=\
-\>"]]
+  3.449326997175502*^9, {3.4493275577043753`*^9, 3.4493276299408293`*^9}}]
 }, Open  ]]
 },
 WindowSize->{1203, 680},
 WindowMargins->{{4, Automatic}, {Automatic, 4}},
-FrontEndVersion->"6.0 for Mac OS X x86 (32-bit) (April 20, 2007)",
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (November 10, 2008)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -4867,25 +4832,25 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[568, 21, 120, 2, 27, "Input"],
-Cell[691, 25, 434, 9, 27, "Input"],
+Cell[545, 20, 120, 2, 31, "Input"],
+Cell[668, 24, 434, 9, 31, "Input"],
 Cell[CellGroupData[{
-Cell[1150, 38, 139, 2, 27, "Input"],
-Cell[1292, 42, 380, 7, 27, "Output"]
+Cell[1127, 37, 139, 2, 31, "Input"],
+Cell[1269, 41, 380, 7, 30, "Output"]
+}, Open  ]],
+Cell[1664, 51, 128, 2, 31, "Input"],
+Cell[CellGroupData[{
+Cell[1817, 57, 253, 6, 31, "Input"],
+Cell[2073, 65, 2008, 51, 465, "Output"]
+}, Open  ]],
+Cell[4096, 119, 266, 7, 31, "Input"],
+Cell[CellGroupData[{
+Cell[4387, 130, 433, 10, 31, "Input"],
+Cell[4823, 142, 88193, 1452, 303, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1709, 54, 253, 6, 27, "Input"],
-Cell[1965, 62, 2008, 51, 497, "Output"]
-}, Open  ]],
-Cell[3988, 116, 266, 7, 27, "Input"],
-Cell[CellGroupData[{
-Cell[4279, 127, 433, 10, 27, "Input"],
-Cell[4715, 139, 88193, 1452, 303, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[92945, 1596, 365, 9, 27, "Input"],
-Cell[93313, 1607, 197403, 3243, 253, 195074, 3203, "CachedBoxData", \
-"BoxData", "Output"]
+Cell[93053, 1599, 365, 9, 31, "Input"],
+Cell[93421, 1610, 195169, 3205, 253, "Output"]
 }, Open  ]]
 }
 ]
