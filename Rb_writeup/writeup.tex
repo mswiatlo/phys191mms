@@ -1,0 +1,92 @@
+%Master document for paper.
+%Created MS 4/12
+
+\documentclass[12pt,notitlepage]{article}
+
+\usepackage[text={6.5in,9in},centering]{geometry}               % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{epstopdf}
+\usepackage{epsfig}
+%\usepackage{psfig}
+\usepackage[dvips, bookmarks, colorlinks=true, linkcolor=blue, citecolor=blue, pdftitle={Investigation of the Properties of Superfluid He4}, pdfauthor={Baryakhtar, Schowalter, Swiatlowski}, pdfsubject={Physics 191 Lab Report}, pdfkeywords={helium, superfluid, physics, 191}]{hyperref}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{cite}
+
+\begin{document}
+
+%\title{Investigation of the Properties of Superfluid He$^4$}
+%\author{Maria Baryakhtar \footnote{Produced Introduction and
+%    Background (Sections \ref{introduction}, \ref{background}),
+%    Appendix ~\ref{masscalibration}, and Abstract} \and Steven
+%  Schowalter \footnote{Produced Results and Discussion (Section
+%    \ref{resultsanddiscussion}) and Appendix
+%    ~\ref{muontimeerroranalysis}} \and Maximilian Swiatlowski
+%  \footnote{Produced Instrumentation and Procedure (Sections
+%    \ref{instrumentation}, \ref{procedure})}}
+
+%\maketitle
+%\thispagestyle{empty}
+
+\begin{titlepage}
+\begin{center}
+\ \\
+\vspace{1in}
+
+{\Huge
+Investigation of the \\ Properties of Superfluid $^{4}$He
+\\}
+\ \\
+
+%\large{In partial fulfillment of the requirements of Physics 191r at Harvard University}
+
+Maria Baryakhtar \footnote{Harvard University, Cambridge MA 02138 \\ \qquad \qquad Masha Baryakhtar produced the Background~(\ref{background}) and Conclusion~(\ref{conclusion}) sections, and the superfluid fraction calculation~(\ref{superfluiddensity}). \\ \qquad Steven Schowalter produced the Results~(\ref{results}) and Analysis~(\ref{analysis}) sections and the Appendices. \\ \qquad Maximilian Swiatlowski produced the Abstract, Introduction~(\ref{introduction}), and Experimental~(\ref{experimental}) sections.}, Steven Schowalter \footnotemark[\value{footnote}], Maximilian Swiatlowski \footnotemark[\value{footnote}] 
+
+\ \\
+
+\input{./abstract/abstract_body}
+
+
+\end{center}
+\end{titlepage}
+
+\clearpage
+
+\input{./introduction/introduction_body}
+
+\input{./background/background_body}
+
+\input{./experimental/experimental_body}
+
+\input{./results/results_body}
+
+\input{./analysis/analysis_body}
+
+\input{./conclusion/conclusion_body}
+
+
+\appendix
+
+\begin{center}
+\begin{Large}
+\bfseries{Appendices}
+\end{Large}
+\end{center}
+
+
+%\addcontentsline{toc}{section}{References}
+\newpage
+\bibliography{writeup}
+\bibliographystyle{abbrv}
+
+\end{document}
+
+
