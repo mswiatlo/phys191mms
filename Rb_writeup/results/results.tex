@@ -5,6 +5,9 @@
 
 \subsection{Observing Optical Pumping and RF Interference}
 
+With the external magnetic field applied, laser light is used to optically pump Rb atoms into a preferential spin state.  To observe this pumping, we measure the fluorescence of pumped Rb atoms using an oscilloscope.  This sample data is shown in Figure \ref{fig:raw_pumping}.
+
+RF interference is used to disrupt the optically pumped steady state by coupling the pumped $m_F$ state to the next (lower) $m_F$ state.  This coupling creates a transient phenomenon which is signified by the decrease in signal from the pumped level to some new steady state.  In order to closely analyze the transient portion due RF interference, a chopped RF signal is used.  
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/rabi.eps}
@@ -12,24 +15,39 @@
 \label{fig:rabi}
 \end{center}
 \end{figure}
+The depumping caused by the $m_F$ coupling combined with optical pumping gives rise to Rabi oscillations in the transient portion between the fully state and the new equilibrium.  This phenomenon is shown in Figure \ref{fig:rabi}.  The oscillations signify periodic fluctuations in spin state populations due to the $m_F$ coupling.    
 
 \subsection{Measuring Linewidth and Optical Pumping Resonance}
 
-\begin{figure}[htbp]
+Using a lock-in amplifier, we measure the amplitude of Rabi oscillations as a function of applied RF frequency.  We use a \emph{LabVIEW} program in order to select and step through a range of RF frequencies in order to produce a Lorentzian resonance.  This data was taken for both $^{85}$Rb ($F=2$ to $F=2$, $F=3$ to $F=3$ transitions) and $^{87}$Rb ($F=1$ to $F=1$, $F=2$ to $F=2$ transitions).   This data is shown in Figure \ref{fig:rawcurve}.    
+\begin{figure}[h!]
 \begin{center}
-\includegraphics[height=70mm]{./figures/85raw_width.eps}
+\subfigure[$^{85}$Rb ($F=3$ to $F=3$)]{\label{fig:edge-a}\includegraphics[height=40mm]{./figures/85raw_width.eps}}
+\hspace{-1mm}
+\vspace{-2mm}
+\subfigure[$^{87}$Rb ($F=2$ to $F=2$)]{\label{fig:edge-b}\includegraphics[height=40mm]{./figures/87raw_width.eps}}
+\vspace{-2mm}
 \caption{\small{}}
-\label{fig:85raw}
+\label{fig:rawcurve}
 \end{center}
 \end{figure}
+This data was fit to lorentzian distributions.  These fits were then used to calculate the center, or resonant,  frequencies.  The resonant $m_F$ coupling frequencies for $^{85}$Rb and $^{87}$Rb are $161.7$ kHz and $243.0$ kHz respectively.  
 
-\begin{figure}[htbp]
+Further measurements are taken using the $^{85}$Rb $F=3$ to $F=3$ transition to determine the effect of RF amplitude and laser light intensity on the linewidth of the resonance. By independently varying either of these variables, several resonances are measured.  Using a \emph{Mathematica} program, the linewidths of these resonances are calculated and plotted with respect to both RF amplitude and laser light intensity.  This data is shown in Figure \ref{fig:linewidths}.
+\begin{figure}[h!]
 \begin{center}
-\includegraphics[height=70mm]{./figures/87raw_width.eps}
+\subfigure[Varying RF Amplitude]{\label{fig:edge-a}\includegraphics[height=40mm]{./figures/amp_width.eps}}
+\hspace{-1mm}
+\vspace{-2mm}
+\subfigure[Varying Intensity]{\label{fig:edge-b}\includegraphics[height=40mm]{./figures/intensity_width.eps}}
+\vspace{-2mm}
 \caption{\small{}}
-\label{fig:87raw}
+\label{fig:linewidths}
 \end{center}
 \end{figure}
+The variable being held constant was held constant in a regime in which it would not have a confounding effect on the linewidth (\emph{i.e.} while varying light intensity, RF amplitude was minimized and \emph{vice versa}). 
+The data are fit to $\alpha\sqrt{1+\beta x^{2}}$ 
+
 
 \subsection{Measuring}
 
