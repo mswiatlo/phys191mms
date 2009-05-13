@@ -3,23 +3,23 @@
 
 \section{Results}\label{results}
 
-\subsection{Observing Optical Pumping and RF Interference}
+\subsection{Observing Optical Pumping and RF Interference}\label{ObservingOpticalPumpingandRFInterference}
 
-With the external magnetic field applied, laser light is used to optically pump Rb atoms into a preferential spin state.  To observe this pumping, we measure the fluorescence of pumped Rb atoms using an oscilloscope.  This sample data is shown in Figure \ref{fig:raw_pumping}.
+With the external magnetic field applied, laser light is used to optically pump Rb atoms into a preferential spin state.  To observe this pumping, we measure the fluorescence of pumped Rb atoms using an oscilloscope.  This sample data is shown in Fig. \ref{fig:raw_pumping}.
 
 RF interference is used to disrupt the optically pumped steady state by coupling the pumped $m_F$ state to the next (lower) $m_F$ state.  This coupling creates a transient phenomenon which is signified by the decrease in signal from the pumped level to some new steady state.  In order to closely analyze the transient portion due RF interference, a chopped RF signal is used.  
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/rabi.eps}
-\caption{\small{}}
+\caption{\small{Rabi oscillations resulting from RF interference while optically pumping $^{85}$Rb due to the coupling of $m_F$ states.}}
 \label{fig:rabi}
 \end{center}
 \end{figure}
-The depumping caused by the $m_F$ coupling combined with optical pumping gives rise to Rabi oscillations in the transient portion between the fully state and the new equilibrium.  This phenomenon is shown in Figure \ref{fig:rabi}.  The oscillations signify periodic fluctuations in spin state populations due to the $m_F$ coupling.    
+The depumping caused by the $m_F$ coupling combined with optical pumping gives rise to Rabi oscillations in the transient portion between the fully state and the new equilibrium.  This phenomenon is shown in Fig. \ref{fig:rabi}.  The oscillations signify periodic fluctuations in spin state populations due to the $m_F$ coupling.    
 
-\subsection{Measuring Linewidth and Optical Pumping Resonance}
+\subsection{Measuring Linewidth and Optical Pumping Resonance}\label{MeasuringLinewidthandOpticalPumpingResonance}
 
-Using a lock-in amplifier, we measure the amplitude of Rabi oscillations as a function of applied RF frequency.  We use a \emph{LabVIEW} program in order to select and step through a range of RF frequencies in order to produce a Lorentzian resonance.  This data was taken for both $^{85}$Rb ($F=2$ to $F=2$, $F=3$ to $F=3$ transitions) and $^{87}$Rb ($F=1$ to $F=1$, $F=2$ to $F=2$ transitions).   This data is shown in Figure \ref{fig:rawcurve}.    
+Using a lock-in amplifier, we measure the amplitude of Rabi oscillations as a function of applied RF frequency.  We use a \emph{LabVIEW} program in order to select and step through a range of RF frequencies in order to produce a Lorentzian resonance.  This data was taken for both $^{85}$Rb ($F=2$ to $F=2$, $F=3$ to $F=3$ transitions) and $^{87}$Rb ($F=1$ to $F=1$, $F=2$ to $F=2$ transitions).   This data is shown in Fig. \ref{fig:rawcurve}.    
 \begin{figure}[h!]
 \begin{center}
 \subfigure[$^{85}$Rb ($F=3$ to $F=3$)]{\label{fig:edge-a}\includegraphics[height=40mm]{./figures/85raw_width.eps}}
@@ -27,13 +27,13 @@ Using a lock-in amplifier, we measure the amplitude of Rabi oscillations as a fu
 \vspace{-2mm}
 \subfigure[$^{87}$Rb ($F=2$ to $F=2$)]{\label{fig:edge-b}\includegraphics[height=40mm]{./figures/87raw_width.eps}}
 \vspace{-2mm}
-\caption{\small{}}
+\caption{\small{Optical pumping resonances for rubidium isotopes. Fitting this data to lorentzian distributions, we are able to determine the resonant frequencies at which $m_F$ states couple. For $^{85}$Rb and $^{87}$Rb, these resonant frequencies are $161.7$ kHz and $243.0$ kHz respectively. Furthermore we are able to use this data to measures the linewidth.}}
 \label{fig:rawcurve}
 \end{center}
 \end{figure}
 This data was fit to lorentzian distributions.  These fits were then used to calculate the center, or resonant,  frequencies.  The resonant $m_F$ coupling frequencies for $^{85}$Rb and $^{87}$Rb are $161.7$ kHz and $243.0$ kHz respectively.  
 
-Further measurements are taken using the $^{85}$Rb $F=3$ to $F=3$ transition to determine the effect of RF amplitude and laser light intensity on the linewidth of the resonance. By independently varying either of these variables, several resonances are measured.  Using a \emph{Mathematica} program, the linewidths of these resonances are calculated and plotted with respect to both RF amplitude and laser light intensity.  This data is shown in Figure \ref{fig:linewidths}.
+Further measurements are taken using the $^{85}$Rb $F=3$ to $F=3$ transition to determine the effect of RF amplitude and laser light intensity on the linewidth of the resonance. By independently varying either of these variables, several resonances are measured.  Using a \emph{Mathematica} program, the linewidths of these resonances are calculated and plotted with respect to both RF amplitude and laser light intensity.  This data is shown in Fig. \ref{fig:linewidths}.
 \begin{figure}[h!]
 \begin{center}
 \subfigure[Varying RF Amplitude]{\label{fig:edge-a}\includegraphics[height=40mm]{./figures/amp_width.eps}}
@@ -41,34 +41,32 @@ Further measurements are taken using the $^{85}$Rb $F=3$ to $F=3$ transition to 
 \vspace{-2mm}
 \subfigure[Varying Intensity]{\label{fig:edge-b}\includegraphics[height=40mm]{./figures/intensity_width.eps}}
 \vspace{-2mm}
-\caption{\small{}}
-\label{fig:linewidths}
+\caption{\small{Power broadening of rubidium linewidths due to laser light intensity and RF amplitude.  The data in (a) is fit to $\alpha \sqrt{1+\beta x^2}$ whereas the the data in (b) is fit ti $\alpha \sqrt{1+\beta x}$.  With these fits we are able to determine the natural $\gamma_2$ linewidths for $^{85}$Rb and $^{87}$Rb which are found to be $3.78 \pm BLAH$ kHz and $5.35 \pm BLAH$ kHz.}}\label{fig:linewidths}
 \end{center}
 \end{figure}
 The variable being held constant was held constant in a regime in which it would not have a confounding effect on the linewidth (\emph{i.e.} while varying light intensity, RF amplitude was minimized and \emph{vice versa}).  We expect the linewidth to be given by 
-Equations \ref{eq:} and \ref{eq:}. Accordingly, the data for varying RF amplitude is fit to a $\alpha \sqrt{1+\beta x^2}$ model whereas the data for varying light intensity is fit to a $\alpha \sqrt{1+\beta x}$ model.  Both fits are done using nonlinear regression analysis (See Appendix \ref{nonlinearregressionanalysis}).  We would expect the natural linewidths for each measurement process to be the same.  From our fitting analysis we find the natural linewidths to be $3.78 \pm BLAH$ kHz and $3.63 \pm BLAH$ kHz for varying RF amplitude and light intensity respectively.  Given the error for this measurement, the two values are in good agreement. 
+Eqs. \ref{eq:rfbroad} and \ref{eq:lightbroad}. Accordingly, the data for varying RF amplitude is fit to a $\alpha \sqrt{1+\beta x^2}$ model whereas the data for varying light intensity is fit to a $\alpha \sqrt{1+\beta x}$ model.  Both fits are done using nonlinear regression analysis (See Appendix \ref{nonlinearregressionanalysis}).  We would expect the natural linewidths for each measurement process to be the same.  From our fitting analysis we find the natural linewidths to be $3.78 \pm BLAH$ kHz and $3.63 \pm BLAH$ kHz for varying RF amplitude and light intensity respectively.  Given the error for this measurement, the two values are in good agreement. The natural linewidth for $^{87}$Rb was also measured by varying RF Amplitude and calculated to be $5.35 \pm BLAH$ kHz.
 
-\subsection{Measuring $T_1$ Relaxation and Optical Pumping Time}
+\subsection{Measuring $T_1$ Relaxation and Optical Pumping Time}\label{MeasuringT1RelaxationandOpticalPumpingTime}
 
-Using an optical chopper as described in Section \ref{}, we observe transient optical pumping without RF interference and without turning off the external magnetic field.  In doing so we can indirectly observe $T1$ relaxation (described in Section \ref{}) of $^{85}$Rb for the $3 \rightarrow 3$ transistion.  For this indirect measurement we observe the decrease in the fluorescence signal over a certain amount of time during which the laser light is blocked.  By measuring the relative decrease in signal height for different dark times, we can determine the $T1$ relaxation time. Upon being unblocked, the laser light again begins to optically pump the atoms before being once again blocked.  Sample data of this procedure is shown in Figure \ref{fig:chop}.
+Using an optical chopper as described in Section \ref{measurementoft1}, we observe transient optical pumping without RF interference and without turning off the external magnetic field.  In doing so we can indirectly observe $T1$ relaxation of $^{85}$Rb for the $3 \rightarrow 3$ transition.  For this indirect measurement we observe the decrease in the fluorescence signal over a certain amount of time during which the laser light is blocked.  By measuring the relative decrease in signal height for different dark times, we can determine the $T1$ relaxation time. Upon being unblocked, the laser light again begins to optically pump the atoms before being once again blocked.  Sample data of this procedure is shown in Fig. \ref{fig:chop}.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/raw_chop.eps}
-\caption{\small{}}
+\caption{\small{Sample data for the $T_1$ and optical pumping time measurement.  An optical chopper blocks the laser lights for some duration $\Delta t$ called the dark time.  During this dark time, the number of atoms in the excited $m_F$ state decreases due to $T_1$ relaxation.  Because the laser is blocked, this decay can only be indirectly measured.  After the dark time, laser light is able to pass through the chopper and optically pump the rubidium atoms.  The red fit is used to determine both the optical pumping time constant and the relative decrease in signal during the dark time. The hidden decay is shown purely for explanatory reasons and is not a fit to the data.}}
 \label{fig:chop}
 \end{center}
 \end{figure}
-By setting the optical chopper to different frequencies, we can measure measure the relative decrease in signal for different dark times and thus construct the hidden exponential decay.  Moreover, by fitting the subsequent rise in signal following the unblocking of laser light, we can calculate the optical pumping time constant by fitting to an exponential rise.  Further calculation and analysis of this data is done in Section \ref{Blah}.
+By setting the optical chopper to different frequencies, we can measure measure the relative decrease in signal for different dark times and thus construct the hidden exponential decay.  Moreover, by fitting the subsequent rise in signal following the unblocking of laser light, we can calculate the optical pumping time constant by fitting to an exponential rise.  Further calculation and analysis of this data is done in Section \ref{DeterminationofTimes}.
 
-\subsection{Measuring Spin Exchange Between $^{85}$Rb and $^{87}$Rb}
-By optically pumping $^{85}$Rb and coupling the $m_F$ states of $^{87}$Rb we observe spin exchange between the isotopes. Due to inelastic collisions, pumped $^{85}$Rb atoms effectively pump $^{87}$Rb atoms to their excited $m_F$ states.  To measure the spin exchange process, we use the lock-in amplifier to measure the amplitude of the Rabi oscillations of $^{87}$Rb atoms which have been excited by pumped $^{85}$Rb atoms.  This data is similar to the lorentzian resonances shown in Figure \ref{fig:rawcurve}.  This process is repeated while pumping $^{85}$Rb atoms and observing the spin exchange resulting in subsequent Rabi oscilliation of $^{87}$Rb atoms.
+\subsection{Measuring Spin Exchange Between $^{85}$Rb and $^{87}$Rb}\label{MeasuringSpinExchange}
+By optically pumping $^{85}$Rb and coupling the $m_F$ states of $^{87}$Rb we observe spin exchange between the isotopes. Due to inelastic collisions, pumped $^{85}$Rb atoms effectively pump $^{87}$Rb atoms to their excited $m_F$ states.  To measure the spin exchange process, we use the lock-in amplifier to measure the amplitude of the Rabi oscillations of $^{87}$Rb atoms which have been excited by pumped $^{85}$Rb atoms.  This data is similar to the lorentzian resonances shown in Fig. \ref{fig:rawcurve}.  This process is repeated while pumping $^{85}$Rb atoms and observing the spin exchange resulting in subsequent Rabi oscilliation of $^{87}$Rb atoms.
 
-In order to determine the natural linewidth of both spin exchange processes we measure the linewidths while varying RF amplitude (this procedure is identical to the one used in Section \ref{linewidthmeas}).  This data is fit to $\alpha \sqrt{1+\beta x^2}$ again using nonlinear regression analysis (shown in Figure \ref{fig: spinexchange}).
+In order to determine the natural linewidth of both spin exchange processes we measure the linewidths while varying RF amplitude (this procedure is identical to the one used in Section \ref{MeasuringLinewidthandOpticalPumpingResonance}).  This data is fit to $\alpha \sqrt{1+\beta x^2}$ again using nonlinear regression analysis (shown in Fig. \ref{fig: spinexchange}).
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/spin_exchange.eps}
-\caption{\small{}}
-\label{fig:spinexchange}
+\caption{\small{Power broadening of the rubidium spin exchange linewidths due to RF amplitude. By fitting to $\alpha \sqrt{1+\beta x^2}$, we are able to determine the natural spin exchange line widths for $^{85}$Rb and $^{87}$Rb which are found to be $2.80 \pm Blah$ and kHz $3.92 \pm Blah$ kHz respectively.}}\label{fig: spinexchange}
 \end{center}
 \end{figure}
-We find the natural linewidths for the spin exchange processes to be $BLAH$ and $BLAH$ for $^{85}$Rb and $^{87}$Rb respectively.
+We find the natural linewidths for the spin exchange processes to be $2.80 \pm Blah$ and kHz $3.92 \pm Blah$ for $^{85}$Rb and $^{87}$Rb respectively.
