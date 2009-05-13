@@ -278,9 +278,19 @@ where $\Omega = \mu V_0/2\hbar$. Eqn.~\ref{pump4}, when expressed in
 terms of the power absorbed by the medium, gives 
 
 \begin{equation}
-g(\nu) = \frac{(\Delta\nu/2\pi)}{(\nu-\nu_0)}
+g(\nu) = \frac{(\Delta\nu/2\pi)}{(\nu-\nu_0)^2 +(\Delta\nu/2)^2}
 \label{eqn:gamma1}
 \end{equation}
+
+where $g(\nu)$ is the normalized lineshape corresponding to the power. again, the lineshape is Lorentzian, with natural linewidth $\Delta\nu = (\piT_2)^{-1}$. Taking into account the saturation phenomena, we can rewrite the observed linewidth as a function of powerbroadening:
+
+\begin{equation}
+\Delta\nu_m = \Delta\nu\sqrt{1+\frac{\mu^2V_0^2T_2T_1}{\hbar^2}} = \Delta\nu\sqrt{1+\kappa_{rf}V_0^2}
+\label{eqn:gamma1}
+\end{equation}
+
+where $\kappa_{rf}$ is now a measure of line broadening as a function of RF. 
+
 
 \subsubsection{Time Constants}
 
@@ -291,7 +301,7 @@ The optical pumping time $\tau$ is defined as $\tau =
 1/\Gamma_{pump}$, the time it takes to change the total magnetization
 of the atomic ensemble from thermal equilibrium to the maximal
 equilibrium value with the presence of an external electromagnetic
-field.
+field. 
 
 $T_1 = 1/\gamma_1$ is time constant of longitudinal relaxation,
 i.e. the time that the diagonal elements of the density matrix
@@ -310,9 +320,13 @@ $\gamma_{1,w}$ is the wall collision rate due to leaving the beam, and
 $\gamma_{1,bg}$ is the rate due to buffer gas collisions
 \cite{vanier}.
 
+$T_1$ can be calculated by detemining the decay of the population
+coherence ``in the dark'', that is with no optical pumping.
+
 $T_2 = 1/\gamma_2$ is the time constant of transverse relaxation,
 alternatively described as the time constant of coherence relaxation
-of the off-diagonal density matrix elements $\rho_{ij}$. As for $\gamma_1$, different effects contribute to the linewidth:
+of the off-diagonal density matrix elements $\rho_{ij}$. As for
+$\gamma_1$, different effects contribute to the linewidth:
 
 \begin{equation}
 \gamma_2 = \gamma_{2,se} + \gamma_{2,w} + \gamma_{2,bg} 
@@ -321,6 +335,14 @@ of the off-diagonal density matrix elements $\rho_{ij}$. As for $\gamma_1$, diff
  
 where the components are the $T_2$ counterparts of those in
 Eqn~\ref{eqn:gamma1}.
+
+As seen in section \ref{rateequations}, $T_2$ can be reconstructed
+from calculating the natural linewidth of the RF resonance. This can
+be done either by measuring a dependence of the broadened linewidth on
+light intensity at low RF amplitude, or its dependence on RF amplitude
+at low light intensity, in order to stay in one of the two
+appoximation regimes treated above, and thus extrapolate to the
+natural linewidth at $V_0 = \mathcal{E}_0 = 0$.
 
 \subsection{Spin Exchange}\label{spinexchange}
 
