@@ -1,4 +1,4 @@
-vanier%Background body
+%Background body
 %Created MS 05-11
 
 \section{Background}\label{background}
@@ -39,6 +39,7 @@ hydrogen-like system. Here, we take the outer $5^2S_{1/2}$ level as
 the ground state and focus on the $D_1$ transition between the
 $5^2S_{1/2}$ and $5^2P_{1/2}$ states. 
 
+\subsubsection{Spin-Orbit and Hyperfine Splitting}
 We use a natural abundance Rubidium cell for optical pumping, which
 consists of $72\%$ $^{85}$Rb and $28\%$ $^{87}$Rb, so we are able to
 investigate the properties of both isotopes. The energy level diagrams
@@ -86,6 +87,8 @@ more easily separated from the neighboring transitions.
 \end{center}
 \end{figure}
 
+
+\subsubsection{Zeeman Effect}
 Further splitting occurs due to the Zeeman effect, where the degenerate
 magnetic sublevels are split via an application of a uniform magnetic
 field. For weak fields, the splitting is directly proportional to $B$,
@@ -104,6 +107,8 @@ in the $z$ direction of the total angluar momentum of the atom
 magnetic field amplitude can be seen in Fig.~\ref{fig:8587levels},
 where the energy split between initally degenerate levels increases
 with magnetic field.
+
+\subsubsection{Application to Optical Pumping}
 
 In our experiment, the different splittings of the rubidium levels are
 used as an effective 3-level system, as described in
@@ -144,9 +149,9 @@ transmission of laser light and creating the conditions of optical pumping, as d
 
 In order to study the properties of the rubidium atoms, such as the
 g-factor, we introduce a magnetic field transverse to the $z$
-direction established by the laser and uniform magnetic field. This
+direction as established by the laser and uniform magnetic field. This
 field is introduced at a radiofrequency on the order of the Zeeman splittings,
-coupling the dark state with the ground states. 
+coupling the dark state with the remaining ground states. 
 
 \subsubsection{Rabi Oscillations}\label{rabioscillations}
 
@@ -169,40 +174,106 @@ the excited state \cite{budker}.
 This gives the general behavior of a driven, damped optical system. In
 the case of a three level system, it is useful to make the
 approximation of a small RF perturbation on top of the pumping
-system. In that case the logic of the above discussion applies. Note also that the peak amplitude of these oscillations occurs when $\Delta\approx0$, \emph{i.e.} upon resonance.
+system. In that case the logic of the above discussion applies. Note
+also that the peak amplitude of these oscillations occurs when
+$\Delta\approx0$, \emph{i.e.}on resonance.
 
 
 \subsection{Rate Equations}\label{rateequations}
 
-\subsubsection{Power Broadening}
+Referring to Fig.~\ref{pumping}, we can write down the rate equations
+of the three level system:
+
+\begin{eqnarray}
+\frac{dN_g}{dt} &=& -\Gamma_{pump}N_g + \gamma_{rel}N_m\\
+\frac{dN_e}{dt} &=& +\Gamma_{pump}N_g - \gamma_{0}N_e\\
+\frac{dN_m}{dt} &=& +\gamma_{0}N_e - \gamma_{rel}N_m
+\end{eqnarray}
+
+where $N_g, N_e$, and $N_m$ are the populations of states
+$|g\rangle$,$|e\rangle$, and $|m\rangle$, respectively.
+
+To obtain the steady state result, we set the time derivates of the
+populations to zero. With the assumption that $\gamma_{rel}<<
+\gamma_0$ (as the transition from the metastable to the ground state
+is a forbidden dipole transition, the rate is much slower), we solve to get 
+
+\begin{equation}
+N_e = \frac{\kappa}{1+\kappa}\frac{\gamma_{rel}}{\gamma_{0}}N_{tot}
+\end{equation}
+
+where $\kappa = \frac{d^2\mathcal{E}_0^2}{\gamma_0\gamma_{rel}}$ is
+the laser light saturation parameter, with $d = \langle e|d|g\rangle$
+the dipole matrix element between the excited and ground state,
+$\mathcal{E}_0$ is the electric field amplitude of the laser, and
+$\gamma_0$, $\gamma_{rel}$ are as in Fig.~\ref{pumping}.
+
+In terms of the detuning $\Delta$ from resonance, we can write the fluorescence intensity as
+
+\begin{equation}
+I(\Delta) = \frac{\gamma_0^2/4}{\Delta^2 +(1+\kappa)\gamma_0^2/4}\kappa\gamma_{rel}N_{tot}
+\end{equation}
+
+which a Lorentzian profile with width
+
+\begin{equation}
+\gamma_m = \gamma_0\sqrt{1+\kappa} = \gamma_0\sqrt{1+\kappa_l\mathcal{E}_0^2}
+\end{equation}
+
+where $\kappa_l = d^2/(\gamma_0\gamma_{rel})$ is a constant that
+characterizes the broadening of the natural linewidth $\gamma_0$ with
+increased light intensity $\mathcal{E}_0^2$.
+
+As we are assuming that the coupling between states $|e\rangle$ and
+$|m\rangle$ is minimal, this derivation holds only in the limit of
+very weak RF perturbations. In order to understand the behavior of the
+RF system, we make the two level approximation of the the three level
+system. Following the derivation in Yariv, we can consider the two
+level system with energies $E_1$ and $E_2$ and perturbing Hamiltonian $\mathcal{H}'$.
+
+
+
+
 
 \subsubsection{Time Constants}
 
-$\tau$ is the optical pumping time, which is the time it takes to
-change the total magnetization from thermal equilibrium to the maximal
+Of particuar interest to experiment are the different time constants
+which emerge from the rate equations. 
+
+The optical pumping time $\tau$ is defined as $\tau =
+1/\Gamma_{pump}$, the time it takes to change the total magnetization
+of the atomic ensemble from thermal equilibrium to the maximal
 equilibrium value with the presence of an external electromagnetic
 field.
 
 $T_1 = 1/\gamma_1$ is time constant of longitudinal relaxation,
 i.e. the time that the diagonal elements of the density matrix
 $\rho_{jj}$ return to the equilibrium in the absence of other
-perturbations \cite{vanier} p79.
+perturbations. There are several effects which contribute to the
+relaxation rate, and they are assumed to add independently
+\cite{vanier}:
 
 \begin{equation}
-\gamma_1 = \gamma_1^{se} + \gamma_1^{w} + \gamma_1^{bg} 
+\gamma_1 = \gamma_{1,se} + \gamma_{1,w} + \gamma_{1,bg} 
 \label{eqn:gamma1}
 \end{equation}
 
-where $\gamma_1^{se}$ is the spin exchange rate, $\gamma_1^{w}$ is the
-wall collision rate due to leaving the beam, and $\gamma_1^{bg}$ is
-the rate due to buffer gas collisions \cite{vanier}.
+Here, $\gamma_{1,se}$ is the spin exchange relaxation rate,
+$\gamma_{1,w}$ is the wall collision rate due to leaving the beam, and
+$\gamma_{1,bg}$ is the rate due to buffer gas collisions
+\cite{vanier}.
 
-$\gamma_2$ is the coherence relaxation rate; the off-diagonal elements
-$\rho_{ij}$:
+$T_2 = 1/\gamma_2$ is the time constant of transverse relaxation,
+alternatively described as the time constant of coherence relaxation
+of the off-diagonal density matrix elements $\rho_{ij}$. As for $\gamma_1$, different effects contribute to the linewidth:
 
-\begin{equation}\gamma_2 = \gamma_2^{se} + \gamma_2^{w} + \gamma_2^{bg}
+\begin{equation}
+\gamma_2 = \gamma_{2,se} + \gamma_{2,w} + \gamma_{2,bg} 
 \label{eqn:gamma2}
 \end{equation} 
+ 
+where the components are the $T_2$ counterparts of those in
+Eqn~\ref{eqn:gamma1}.
 
 \subsection{Spin Exchange}\label{spinexchange}
 
