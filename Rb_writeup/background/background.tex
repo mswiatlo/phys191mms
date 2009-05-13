@@ -231,11 +231,56 @@ $|m\rangle$ is minimal, this derivation holds only in the limit of
 very weak RF perturbations. In order to understand the behavior of the
 RF system, we make the two level approximation of the the three level
 system. Following the derivation in Yariv, we can consider the two
-level system with energies $E_1$ and $E_2$ and perturbing Hamiltonian $\mathcal{H}'$.
+level system with energies $E_1$ and $E_2$ and perturbing Hamiltonian
+$\mathcal{H}'$.
 
+Then the rate equations governing the time evolution of the density matrix $\rho$ are 
 
+\begin{eqnarray}
+\frac{d\rho_{12}}{dt} &=& -\frac{i}{\hbar}(\mathcal{H}'_{21}(\rho_{11} - \rho_{22}) + (E_2 - E_1)\rho_{21}) \\
+ &=& -i\omega_0\rho_{21} + i\frac{\mu}{\hbar}E(t)(\rho_{11} - \rho_{22})
+\label{pump1}
+\end{eqnarray}
 
+where $\omega_0 = (E_2 - E_1)/\hbar$ and $-\mu E(t)$ is the pertubing
+hamiltonian.
 
+We also have
+
+\begin{eqnarray}
+\frac{d\rho_{22}}{dt} &=& -i\frac{\mu}{\hbar}E(t)(\rho_{21} - \rho_{21}^*)\\
+\frac{d}{dt}(\rho_{11} - \rho_{22}) &=& 2i\frac{\mu}{\hbar}E(t)(\rho_{21} - \rho_{21}^*)
+\label{pump2}
+\end{eqnarray}
+
+Now we introduce the relaxation times $T_1$ and $T_2$ by modifying Eqns \ref{pump1} and \ref{pump2} as follows \cite{yariv}:
+
+\begin{eqnarray}
+\frac{d\rho_{12}}{dt} &=& -i\omega_0\rho_{21} + i\frac{\mu}{\hbar}E(t)(\rho_{11} - \rho_{22}) - \frac{\rho_{21}}{T_2}\\
+\frac{d}{dt}(\rho_{11} - \rho_{22}) &=& 2i\frac{\mu}{\hbar}E(t)(\rho_{21} - \rho_{21}^*) - \frac{1}{T_1}((\rho_{11} - \rho_{22}) - (\rho_{11} - \rho_{22})_0)
+\label{pump3}
+\end{eqnarray}
+
+where $N(\rho_{11} - \rho_{22})_0$ is the population in the
+equilibrium state - in this case, with optical pumping but no RF
+field.
+
+Assuming a harmonic perturbation potential with amplitude $V_0$ and
+frequency $\omega$, we can again solve for the steady state by setting
+the time derivatives to $0$. This gives the polarization as
+
+\begin{eqnarray}
+P = \frac{\mu^2\Delta N_0 T_2}{\hbar}V_0\left(\frac{\sin\omega t + (\omega_0 - \omega)T_2\cos\omega t}{1 + (\omega - \omega_0)^2T_2^2 + 4\Omega^2T_2T_1}\right)
+\label{pump4}
+\end{eqnarray}
+
+where $\Omega = \mu V_0/2\hbar$. Eqn.~\ref{pump4}, when expressed in
+terms of the power absorbed by the medium, gives 
+
+\begin{equation}
+g(\nu) = \frac{(\Delta\nu/2\pi)}{(\nu-\nu_0)}
+\label{eqn:gamma1}
+\end{equation}
 
 \subsubsection{Time Constants}
 
