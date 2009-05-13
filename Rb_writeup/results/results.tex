@@ -5,11 +5,11 @@
 
 \subsection{Observing Optical Pumping and RF Interference}\label{ObservingOpticalPumpingandRFInterference}
 
-With the external magnetic field applied, laser light is used to optically pump Rb atoms into a preferential spin state.  To observe this pumping, we measure the fluorescence of pumped Rb atoms using an oscilloscope.  This sample data is shown in Fig. \ref{fig:raw_data}.
+With the external magnetic field applied, laser light is used to optically pump rubidium atoms into a preferential spin state.  To observe this pumping, we measure the transmission of laser light through the cell using a photodetector.  Transmission will increase when atoms are optically pumped into an excited $m_F$ state and no longer absorb the laser light. This sample data is observed on an oscilloscope as shown in Fig. \ref{fig:raw_data}.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/raw_data.eps}
-\caption{\small{}}
+\caption{\small{Sample oscilloscope data of optical pumping. At $t=t_{on}$, the external magnetic field is turned on. The subsequent Zeeman splitting enables the rubidium atoms to be optically pumped to preferential $m_F$ state using laser light.  Optical pumping is shown by the increase in transmission to some steady state level.}}
 \label{fig:raw_data}
 \end{center}
 \end{figure}
@@ -25,33 +25,33 @@ The depumping caused by the $m_F$ coupling combined with optical pumping gives r
 
 \subsection{Measuring Linewidth and Optical Pumping Resonance}\label{MeasuringLinewidthandOpticalPumpingResonance}
 
-Using a lock-in amplifier, we measure the amplitude of Rabi oscillations as a function of applied RF frequency.  We use a \emph{LabVIEW} program in order to select and step through a range of RF frequencies in order to produce a Lorentzian resonance.  This data was taken for both $^{85}$Rb ($F=2$ to $F=2$, $F=3$ to $F=3$ transitions) and $^{87}$Rb ($F=1$ to $F=1$, $F=2$ to $F=2$ transitions).   This data is shown in Fig. \ref{fig:rawcurve}.    
+Using a lock-in amplifier, we measure the amplitude of Rabi oscillations as a function of applied RF frequency.  We use a \emph{LabVIEW} program in order to select and step through a range of RF frequencies in order to produce a Lorentzian resonance.  This data was taken for both $^{85}$Rb and $^{87}$Rb.   This data is shown in Fig. \ref{fig:rawcurve}.    
 \begin{figure}[h!]
 \begin{center}
-\subfigure[$^{85}$Rb ($F=3$ to $F=3$)]{\label{fig:edge-a}\includegraphics[height=40mm]{./figures/85raw_width.eps}}
+\subfigure[$^{85}$Rb ($F=3$ to $F=3$)]{\label{fig:edge-a}\includegraphics[height=50mm]{./figures/85raw_width.eps}}
 \hspace{-1mm}
 \vspace{-2mm}
-\subfigure[$^{87}$Rb ($F=2$ to $F=2$)]{\label{fig:edge-b}\includegraphics[height=40mm]{./figures/87raw_width.eps}}
+\subfigure[$^{87}$Rb ($F=2$ to $F=2$)]{\label{fig:edge-b}\includegraphics[height=50mm]{./figures/87raw_width.eps}}
 \vspace{-2mm}
-\caption{\small{Optical pumping resonances for rubidium isotopes. Fitting this data to lorentzian distributions, we are able to determine the resonant frequencies at which $m_F$ states couple. For $^{85}$Rb and $^{87}$Rb, these resonant frequencies are $161.7$ kHz and $243.0$ kHz respectively. Furthermore we are able to use this data to measures the linewidth.}}
+\caption{\small{Optical pumping resonances for rubidium isotopes. Fitting this data to lorentzian distributions, we are able to determine the resonant frequencies at which $m_F$ states couple. For $^{85}$Rb and $^{87}$Rb, these resonant frequencies are $161.0 \pm 0.8$ kHz and $243.1\pm 0.3$ kHz respectively. Furthermore we are able to use this data to measures the linewidth.}}
 \label{fig:rawcurve}
 \end{center}
 \end{figure}
-This data was fit to lorentzian distributions.  These fits were then used to calculate the center, or resonant,  frequencies.  The resonant $m_F$ coupling frequencies for $^{85}$Rb and $^{87}$Rb are $161.7$ kHz and $243.0$ kHz respectively.  
+This data was fit to lorentzian distributions.  These fits were then used to calculate the center, or resonant,  frequencies.  The resonant $m_F$ coupling frequencies for $^{85}$Rb and $^{87}$Rb are $161.0 \pm 0.8$ kHz and $243.1\pm 0.3$ kHz respectively.  
 
 Further measurements are taken using the $^{85}$Rb $F=3$ to $F=3$ transition to determine the effect of RF amplitude and laser light intensity on the linewidth of the resonance. By independently varying either of these variables, several resonances are measured.  Using a \emph{Mathematica} program, the linewidths of these resonances are calculated and plotted with respect to both RF amplitude and laser light intensity.  This data is shown in Fig. \ref{fig:linewidths}.
 \begin{figure}[h!]
 \begin{center}
-\subfigure[Varying RF Amplitude]{\label{fig:edge-a}\includegraphics[height=40mm]{./figures/amp_width.eps}}
+\subfigure[Varying RF Amplitude]{\label{fig:edge-a}\includegraphics[height=50mm]{./figures/amp_width.eps}}
 \hspace{-1mm}
 \vspace{-2mm}
-\subfigure[Varying Intensity]{\label{fig:edge-b}\includegraphics[height=40mm]{./figures/intensity_width.eps}}
+\subfigure[Varying Intensity]{\label{fig:edge-b}\includegraphics[height=50mm]{./figures/intensity_width.eps}}
 \vspace{-2mm}
-\caption{\small{Power broadening of rubidium linewidths due to laser light intensity and RF amplitude.  The data in (a) is fit to $\alpha \sqrt{1+\beta x^2}$ whereas the the data in (b) is fit ti $\alpha \sqrt{1+\beta x}$.  With these fits we are able to determine the natural $\gamma_2$ linewidths for $^{85}$Rb and $^{87}$Rb which are found to be $3.78 \pm BLAH$ kHz and $5.35 \pm BLAH$ kHz.}}\label{fig:linewidths}
+\caption{\small{Power broadening of rubidium linewidths due to laser light intensity and RF amplitude.  The data in (a) is fit to $\alpha \sqrt{1+\beta x^2}$ whereas the the data in (b) is fit ti $\alpha \sqrt{1+\beta x}$.  With these fits we are able to determine the natural $\gamma_2$ linewidths for $^{85}$Rb and $^{87}$Rb which are found to be $3.70 \pm 0.48$ kHz and $5.35 \pm 0.47$ kHz.}}\label{fig:linewidths}
 \end{center}
 \end{figure}
-The variable being held constant was held constant in a regime in which it would not have a confounding effect on the linewidth (\emph{i.e.} while varying light intensity, RF amplitude was minimized and \emph{vice versa}).  We expect the linewidth to be given by 
-Eqns. \ref{eq:rfbroad} and \ref{eq:lightbroad}. Accordingly, the data for varying RF amplitude is fit to a $\alpha \sqrt{1+\beta x^2}$ model whereas the data for varying light intensity is fit to a $\alpha \sqrt{1+\beta x}$ model.  Both fits are done using nonlinear regression analysis (See Appendix \ref{nonlinearregressionanalysis}).  We would expect the natural linewidths for each measurement process to be the same.  From our fitting analysis we find the natural linewidths to be $3.78 \pm BLAH$ kHz and $3.63 \pm BLAH$ kHz for varying RF amplitude and light intensity respectively.  Given the error for this measurement, the two values are in good agreement. The natural linewidth for $^{87}$Rb was also measured by varying RF Amplitude and calculated to be $5.35 \pm BLAH$ kHz.
+The variable being held constant was held constant in a regime in which it would not have a confounding effect on the linewidth (\emph{i.e.} while varying light intensity, RF amplitude was minimized and \emph{vice versa}).  We expect the $\gamma_2$ linewidth to be given by 
+Eqns. \ref{eq:rfbroad} and \ref{eq:lightbroad}. Accordingly, the data for varying RF amplitude is fit to a $\alpha \sqrt{1+\beta x^2}$ model whereas the data for varying light intensity is fit to a $\alpha \sqrt{1+\beta x}$ model.  Both fits are done using nonlinear regression analysis (See Appendix \ref{nonlinearregressionanalysis}).  We would expect the natural linewidths for each measurement process to be the same.  From our fitting analysis we find the natural $\gamma_2$ linewidths to be $3.78 \pm 0.46$ kHz and $3.63 \pm 0.14$ kHz for varying RF amplitude and light intensity respectively.  Given the error for this measurement, the two values are in good agreement. From here on we take the natural $\gamma_2$ linewidth for $^{85}$Rb to be $3.70 \pm 0.48$ kHz. The natural  $\gamma_2$ linewidth for $^{87}$Rb was also measured by varying RF Amplitude and calculated to be $5.35 \pm 0.47$ kHz.
 
 \subsection{Measuring $T_1$ Relaxation and Optical Pumping Time}\label{MeasuringT1RelaxationandOpticalPumpingTime}
 
@@ -72,7 +72,7 @@ In order to determine the natural linewidth of both spin exchange processes we m
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/spin_exchange.eps}
-\caption{\small{Power broadening of the rubidium spin exchange linewidths due to RF amplitude. By fitting to $\alpha \sqrt{1+\beta x^2}$, we are able to determine the natural spin exchange line widths for $^{85}$Rb and $^{87}$Rb which are found to be $2.80 \pm Blah$ and kHz $3.92 \pm Blah$ kHz respectively.}}\label{fig: spinexchange}
+\caption{\small{Power broadening of the rubidium spin exchange linewidths due to RF amplitude. By fitting to $\alpha \sqrt{1+\beta x^2}$, we are able to determine the natural spin exchange line widths for $^{85}$Rb and $^{87}$Rb which are found to be $2.80 \pm 0.28$ and kHz $3.92 \pm 0.71$ kHz respectively.}}\label{fig: spinexchange}
 \end{center}
 \end{figure}
-We find the natural linewidths for the spin exchange processes to be $2.80 \pm Blah$ and kHz $3.92 \pm Blah$ for $^{85}$Rb and $^{87}$Rb respectively.
+We find the natural linewidths for the spin exchange processes to be $2.80 \pm 0.28$ and kHz $3.92 \pm 0.71$ for $^{85}$Rb and $^{87}$Rb respectively.
