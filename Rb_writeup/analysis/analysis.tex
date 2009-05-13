@@ -11,7 +11,7 @@ Using Eqn. \ref{eq:BLAH} and our calculated values for $g_F$, we can calculate t
 
 The ratio of the measured $g-$factors between $^{87}$Rb and $^{85}$Rb is calculated to be $1.5 \pm 0.2$ as compared to the predicted value of $1/2$.  Finally the ratio of nuclear spins in the $^{2}S_{1/2}$ atomic state between $^{87}$Rb and $^{85}$Rb is calculated to be $0.61\pm 0.09$ as compared to the predicted value of $3/5$.  These ratios are in good agreement with theory.
 
-Error Analysis (systematic)
+Error in this measurement mostly arises due to the uncertainty in the magnetic field.  For both calculations, we assume that the magnetic field is produced by a perfect solenoid, namely $B=\mu_0 n I$.  Because the precision of our measurements of the center frequencies and solenoid current are very low (less than $1\%$), we suspect that this error is systematic due to the imperfection of the solenoid.  We estimate that this error to be approximately a factor of $10\%$. The presence of systematic error is supported by the relative accuracy of the ratios of the calculated $g-$factors and nuclear spins as compared to their absolute values.  
 
 \subsection{Determination of $T_{1}$, $T_{2}$, and the Optical Pumping Time}\label{DeterminationofTimes}
 
@@ -19,22 +19,25 @@ To calculate the $T_1$ relaxation time, we use the data produced in Section \ref
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/T1.eps}
-\caption{\small{$T_1$ relaxation of $^{85}$Rb due to the blocking of laser light by an optical chopper.  This exponential decay was indirectly determined by measuring the relative decline in signal for different dark times as varied by the frequency of the optical chopper.  The $T_1$ relaxation time of this exponential decay is calculated to be $1.1\pm Blah$ ms.}}
+\caption{\small{$T_1$ relaxation of $^{85}$Rb due to the blocking of laser light by an optical chopper.  This exponential decay was indirectly determined by measuring the relative decline in signal for different dark times as varied by the frequency of the optical chopper.  The $T_1$ relaxation time of this exponential decay is calculated to be $1.2\pm 0.2$ ms.}}
 \label{fig:T1}
 \end{center}
 \end{figure}
-Fig. \ref{fig:T1} shows the compiled data fit to an exponential decay.  This decay represents the hidden decay which we were unable to observe due to the blocking of laser light.  Using nonlinear regression analysis we calculate $T_1$ to be $1.1 \pm BLAH$ ms.  By fitting the exponential rise in signal due to optical pumping, we are also able use this algorithm to determine the optical pumping time $\tau$. We calculate $\tau$ to be  $5.9 \pm 1.5$ ms.  
+Fig. \ref{fig:T1} shows the compiled data fit to an exponential decay.  This decay represents the hidden decay which we were unable to observe due to the blocking of laser light.  Using nonlinear regression analysis we calculate $T_1$ to be $1.2 \pm 0.2$ ms.  By fitting the exponential rise in signal due to optical pumping, we are also able use this algorithm to determine the optical pumping time $\tau$. We calculate $\tau$ to be  $5.9 \pm 1.5$ ms.  
 
-By measuring the natural linewidth of $^{85}$Rb , we can calculate the $T_2$ relaxation time.  In Section \ref{MeasuringLinewidthandOpticalPumpingResonance}, we found that the natural linewidth of $^{85}$Rb was $3.70$ kHz.  Using Eqn. \ref{eq:T2}, we calculate $T_2$ to be $86 \pm BLAH$ $\mu$s. The natural linewidth for $^{87}$Rb was calculated to be $5.35 \pm BLAH$ kHz, corresponding to a $T_2$ value of  $59 \pm BLAH$ $\mu$s.
+Error in both $T_1$ and $\tau$ mainly arises due to poor fitting by algorithm.  Any error in the fitting of the exponential rise due to optical pumping (the red curve in Fig. \ref{fig:chop}) greatly affects both values.  For this reason, it would be advantageous to fit the rise to as many data points as possible. Yet, due to the limited amount of data points, we are unable to consistently fit as well as we would like.  As a result, the statistical variation for $T_1$ values is quite large (shown by the distribution of points in Fig. \ref{fig:T1}). Likewise, the variation in $\tau$ is also quite large.  In order to combat this variation, data corresponding to short dark times (or high chopping frequencies) are removed.  At these frequencies, the decrease in signal due to $T_1$ relaxation is relatively low, thus the exponential rise due to optical pumping is also minimal.  The relative imprecision of fitting an exponential to a relatively flat distribution of data points forces us to exclude many of these points.
 
-Error Analysis
+
+By measuring the natural linewidth of $^{85}$Rb , we can calculate the $T_2$ relaxation time.  In Section \ref{MeasuringLinewidthandOpticalPumpingResonance}, we found that the natural linewidth of $^{85}$Rb was $3.70 \pm 0.48$ kHz.  Using Eqn. \ref{eq:T2}, we calculate $T_2$ to be $86 \pm 12$ $\mu$s. The natural linewidth for $^{87}$Rb was calculated to be $5.35 \pm 0.47$ kHz, corresponding to a $T_2$ value of  $59 \pm 5$ $\mu$s.
+
+Error in $T_2$ arises from error in the measurement of the linewidth. Part of this error comes from the algorithm used to calculate the linewidth.  Due to the difficulty in fitting the data to a lorentzian distribution, a more mechanical approach is taken to measure the linewidth. First the center frequency is found assuming  the data is symmetric. The highest data point below half-max is taken to half-max.  The difference between the frequencies corresponding to max and half-max is calculated and multiplied by two to give the linewidth (full width at half-max).  Accordingly error in this measurement is due to the step size between the points, which is $200$ Hz, and  any asymmetry of the resonance.  To minimize the the effect of asymmetry, resonances with low signal which typically exhibit asymmetry are excluded from the data.
 
 
 \subsection{Spin Exchange Analysis}\label{SpinExchangeAnalysis}
 
-In Section \ref{MeasuringSpinExchange}, we found the spin exchange linewidths, $\gamma_{\mathrm{SE}}$ of $^{85}$Rb and $^{87}$Rb to be $2.80 \pm BLAH$ kHz and $3.92 \pm BLAH$ kHz respectively. Compared to the natural $\gamma_2$ linewidths $3.70$ kHz  and $5.35$ kHz, we see that our values for $\gamma_{\mathrm{SE}}$ are in agreement with Eqn. \ref{eqn:gamma2}.
+In Section \ref{MeasuringSpinExchange}, we found the spin exchange linewidths, $\gamma_{\mathrm{SE}}$ of $^{85}$Rb and $^{87}$Rb to be $2.80 \pm 0.28$ and kHz $3.92 \pm 0.71$ kHz respectively. Compared to the natural $\gamma_2$ linewidths $3.70 \pm 0.48$  kHz  and $5.35 \pm 0.47$ kHz, we see that our values for $\gamma_{\mathrm{SE}}$ are in agreement with Eqn. \ref{eqn:gamma2}.
 
-By measuring the natural spin exchange linewidths of $^{85}$Rb and $^{87}$Rb, we are able to calculate the spin exchange time constant $T_{\mathrm{SE}}$.  Using Eqn. \ref{eq:Blah}, we determine $T_{SE}$ to be $114 \pm BLAH$ $\mu$s for  $^{85}$Rb and $81.2 \pm BLAH$ $\mu$s for  $^{87}$Rb. 
+By measuring the natural spin exchange linewidths of $^{85}$Rb and $^{87}$Rb, we are able to calculate the spin exchange time constant $T_{\mathrm{SE}}$.  Using Eqn. \ref{eq:Blah}, we determine $T_{SE}$ to be $110 \pm 11$ $\mu$s for  $^{85}$Rb and $81 \pm 15$ $\mu$s for  $^{87}$Rb. 
 
 
 Error Analysis
