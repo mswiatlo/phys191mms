@@ -10,7 +10,7 @@ atoms produces a population of energy levels that is distinct from the
 thermal equilibrium Boltzmann distribution \cite{bernheim}. In a
 three-state system, with a ground state $|g\rangle$, excited state
 $|e\rangle$, and intermediate metastable state $|m\rangle$
-(Fig. \ref{pumping}), it is possible to selective populate the metastable
+(Fig. \ref{fig:pumping}), it is possible to selectively populate the metastable
 state if the natural decay time $\gamma_{rel}$ is sufficiently long in
 comparison to the pumping time. If laser light is applied on resonance
 with the $|e\rangle$ to $|g\rangle$ transition, it drives the atom
@@ -52,21 +52,21 @@ are presented in Fig.~\ref{fig:8587levels}.
 \vspace{-2mm}
 \subfigure[$^{85}$Rb energy spectrum]{\label{fig:edge-a}\includegraphics[height=3.5in]{figures/85levels.eps}}
 \vspace{-2mm}
-\caption{\small{CAPTION GOES HERE}}
+\caption{\small{The energy spectra of both isotopes of rubidium. Note the higher levels of degeneracy in the $^{85}$Rb system.}}
 \label{fig:8587levels}
 \end{center}
 \end{figure}
 
-There are several levels of splitting which occur in the Rb atom. The
+There are several levels of splitting which occur in the rubidium atom. The
 splitting of the $5^2P$ state into $5^2P_{1/2}$ and $5^2P_{3/2}$ is
-due to spin-orbit coupling, that is, the addition of the spin and
+due to spin-orbit coupling, \emph{i.e.}, the addition of the spin and
 orbital angular momenta ($S$ and $L$, respectively) of the electrion
-to comprise the total angular momentum $J$. As mentioned above, the
+to create the total angular momentum $J$. As mentioned above, the
 laser has been tuned to the $D_1$ line because of its better optical
 pumping properties (Fig.~\ref{fig:8587levels}).
 
 In addition, each total electron angular momentum level is further
-split by the coupling of spins of the electron to the nucleus, known
+split by the coupling of spins of the electron to the nucleus, a process known
 as hyperfine splitting. This results in the distinct $F$ levels, where
 $F = I + J$; $I$ is the spin of the nucleus and $J$ as above is the
 total electron angluar momentum. Each pair of $F$ states in these
@@ -75,7 +75,7 @@ hundreds or thousands of MHz, allowing the tuning of the laser to a
 particular transition (Fig.~\ref{fig:fluor}). For instance, we
 chose to focus on the $^{85}$Rb $5^2S_{1/2}, F = 3$ to $5^2P_{1/2}, F
 = 3$ transition for most of the experiment, because the density of the
-$^{85}$Rb isotope is over twice as high, and the $3$ to $3$ line is
+$^{85}$Rb isotope is over twice as high, and the $3\rightarrow3$ line is
 more easily separated from the neighboring transitions.
 
 \begin{figure}[h]
@@ -86,7 +86,7 @@ more easily separated from the neighboring transitions.
 \end{center}
 \end{figure}
 
-Further splitting occurs in the Zeeman effect, where the degenerate
+Further splitting occurs due to the Zeeman effect, where the degenerate
 magnetic sublevels are split via an application of a uniform magnetic
 field. For weak fields, the splitting is directly proportional to $B$,
 the magnetic field amplitude and the magnetic dipole moment. The
@@ -100,22 +100,22 @@ change in the energy is given by
 where $\mu_B = \frac{e\hbar}{2m_e}$ is the Bohr magneton, $B$ is the
 $z$-projection of the magnetic field, and $m_F$ is the spin projection
 in the $z$ direction of the total angluar momentum of the atom
-\cite{budker }. The qualitative dependence of these splittings on
+\cite{budker}. The qualitative dependence of these splittings on
 magnetic field amplitude can be seen in Fig.~\ref{fig:8587levels},
 where the energy split between initally degenerate levels increases
 with magnetic field.
 
 In our experiment, the different splittings of the rubidium levels are
 used as an effective 3-level system, as described in
-section\ref{opticalpumping}. Although there are many levels in a
+section~\ref{opticalpumping}. Although there are many levels in a
 rubidium atom, it is valid to approximate the system as composed of
 only the $5^2S_{1/2}$ and $5^2P_{1/2}$ sublevels if the laser is on
-the $D_1$ line, and does not interact with the states which are not on
+the $D_1$ line, as it does not interact with the states which are not on
 resonance. We treat the set of $5^2S_{1/2}$ levels as the ground
-states, and $5^2S_{1/2}$ as the excited states. 
+states, and $5^2P_{1/2}$ as the excited states. 
 
 By applying a uniform magnetic field, the magnetic sublevels are
-split, and one can act as the metastable ``dark''state $|m\rangle$
+split, and one can act as the metastable `dark' state $|m\rangle$
 necessary for optical pumping as follows: if $\sigma_+$-polarized
 laser light is applied to the atom, then the only allowed transitions
 to an excited state are those with $\Delta m_F = +1$.
@@ -125,7 +125,7 @@ transition, for instance, the ground state with $m_F = 1$ is the
 do get excited from the $m_F = -1, 0$ states, and then spontaneously
 decay into all three ground states. Therefore, there is an overall
 positive rate of atoms going into the `dark' state, increasing
-transmission and creating the conditions of optical pumping, as desired. 
+transmission of laser light and creating the conditions of optical pumping, as desired. 
 
 \begin{figure}[h]
 \begin{center}
@@ -133,8 +133,8 @@ transmission and creating the conditions of optical pumping, as desired.
 \caption{\small{Effects of optical pumping on the $1\rightarrow 1$
     transition with $\sigma_+$ light on the populations of the ground
     state Zeeman levels. Due to quantum exclusion rules, the ground
-    $m_F = +1$ state is `dark' to the laser, and so atoms get
-    preferentially pumped into this state.q}}
+    $m_F = +1$ state is `dark' to the laser, and atoms get
+    preferentially pumped into this state.}}
 \label{fig:fluor}
 \end{center}
 \end{figure}
@@ -145,10 +145,10 @@ transmission and creating the conditions of optical pumping, as desired.
 In order to study the properties of the rubidium atoms, such as the
 g-factor, we introduce a magnetic field transverse to the $z$
 direction established by the laser and uniform magnetic field. This
-field is introduced at a RF on the order of the Zeeman splittings,
+field is introduced at a radiofrequency on the order of the Zeeman splittings,
 coupling the dark state with the ground states. 
 
-\subsubsection{Rabi Oscillations}
+\subsubsection{Rabi Oscillations}\label{rabioscillations}
 
 For a two-level system with ground state energy $E_2$ and excited
 state energy $E_1$, the application of a periodic perturbation of the
@@ -157,7 +157,7 @@ proportional to a constant $\Gamma$, the time dependence of the
 population of the upper state is given by
 
 \begin{equation}
-P(t) = \frac{(2V_0)^2e^{-\Gamma t/2}}{(2V_0)^2 +\Delta^2 + \Gamma^2/4}\sin^2(\frac{t}{2}\sqrt{(\Delta + \Gamma/2)^2 + (2V_0)^2})
+P(t) = \frac{(2V_0)^2e^{-\Gamma t/2}}{(2V_0)^2 +\Delta^2 + \Gamma^2/4}\sin^2(\frac{t}{2}\sqrt{(\Delta + \Gamma/2)^2 + (2V_0)^2}) \label{eqn:rabi}
 \end{equation}
 
 Here, $\Delta = \omega - \omega_0$ is the detuning, with $\omega_0 =
@@ -169,7 +169,7 @@ the excited state \cite{budker}.
 This gives the general behavior of a driven, damped optical system. In
 the case of a three level system, it is useful to make the
 approximation of a small RF perturbation on top of the pumping
-system. in that case the logic of the above discussion applies
+system. In that case the logic of the above discussion applies.
 
 
 \subsection{Rate Equations}\label{rateequations}
@@ -204,12 +204,9 @@ $\rho_{ij}$:
 \label{eqn:gamma2}
 \end{equation} 
 
-\subsection{Spin Exchange}
+\subsection{Spin Exchange}\label{spinexchange}
 
-
-Spin exchange is the ability of two particles to transfer their spin
-orientation to one another upon making a collision (needs to be
-paraphrased) \cite{bernheim}. Let $A$ and $B$ be two $^2S_{1/2}$
+A spin exchange process occurs when two particles transfer their spin orientations in a collision. \cite{bernheim}. Let $A$ and $B$ be two $^2S_{1/2}$
 alkali atoms. Then a spin-exchange collision between the two atoms
 can be represented by the equation
 
@@ -228,10 +225,10 @@ a direct optical particle procedure is much more difficult.
 
 In this experiment, we use the spin exchange mechanisms between
 $^{85}$Rb and $^{87}$Rb in order to study the contribution of spin
-exchange collisions to the inherent RF linewidth of the two isotopes
+exchange collisions to the inherent radiofrequency linewidth of the two isotopes
 (Eqn.~\ref{eqn:gamma2}).
 
-\subsection{Inhomogeneous Broadening}
+\subsection{Inhomogeneous Broadening}\label{inhomogeneousbroadening}
 
 In Section~\ref{rateequations} above, the homogeneous broadening
 mechanisms contributing to the line width of $\gamma_2$ and
@@ -263,17 +260,17 @@ The effect of magnetic field inhomogeneity is much more difficult to
 express analytically, because it depends on the nature of the
 inhomogeneities. Generally, the overall line shape can be expressed as
 a sum of individual homogeneously broaded lines, $i.e.$ Lorentzians,
-with a range of cneter frequencies
+with a range of center frequencies
 (Fig~\ref{inhomo})\cite{vanier}. The broadening occurs because
 different samples of atoms will effectively experience different
-amplitudes of the magnetic field due to the inhomogeneity, thus
+amplitudes of the magnetic field due to the inhomogeneity,
 resulting in a range of Zeeman splittings and a range of center
 frequencies for the ensemble's resonance.
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[height=3in]{figures/inhomogeneous.eps}
-\caption{\small{In the event of inhomogeneities in the system ($e.g.$ in the uniform magnetic field), the overall linewidth of the RF resonance becomes broadened. The general form of the broadening is shown above, where each portion of the population of atoms is experiences a different B field amplitude and has a different center frequency.}}
+\caption{\small{In the event of inhomogeneities in the system (\emph{e.g.} in the uniform magnetic field), the overall linewidth of the radiofrequency resonance becomes broadened. The general form of the broadening is shown above, where each portion of the population of atoms experiences a different B field amplitude and has a different center frequency.}}
 \label{fig:inhomo}
 \end{center}
 \end{figure}
