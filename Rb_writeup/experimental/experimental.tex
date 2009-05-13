@@ -7,7 +7,16 @@
 
 The goal of the experimental apparatus is to create a robust system in which atoms can interact with electromagnetic fields in a controlled fashion. A glass cell containing rubidium metal, a chosen buffer gas, and an exchange gas is placed into a cylindrical mu-metal shell with openings at the ends, which serves to shield the experiment from the earth's magnetic field. Inside the cylinder, a resistive element is used as a heater; combined with a high-current power supply and a Hewlett Packard platinum film thermometer inserted into the cell area, the temperature of the apparatus is able to be regulated with a fair degree of accuracy. \footnote{As the thermometer is slightly magnetic, it is important to remove it before taking measurements.} A $12$'' diameter, $27.75$'' long aluminum cylinder inside the shield is wound with $1064\pm4$ turns of enameled wire, creating a uniform magnetic field inside the solenoid. The electromagnet is supplied with current from a set of $6$ C cell batteries, for a combined $9$ V, while a potentiometer allows for control of the current in the range of $5$ to $50$ mA and a $1 \Omega$ series resistor allows for accurate monitoring of the solenoid current. \footnote{Note that the current from the batteries drifts downwards over time, and while great care was taken to ensure a constant magnetic field, ultimately the measurement of the current may vary by as much as $0.03$ mA.} Finally, the shield also houses a set of Helmholtz coils which, when driven by a function generator, will provide the radiofrequency fields for the atoms. The glass cell is placed directly in the center of the Helmholtz coil, allowing for a rather uniform distribution of the field through the pumping region.
 
-The optics of the experiment are set up as in the diagram below: 
+The optics of the experiment are set up as in Fig.~\ref{fig:optics1} below: 
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[height=50mm]{./figures/optics1.eps}
+\caption{\small{The generic optics arrangement used in this experiment.}}
+\label{fig:optics1}
+\end{center}
+\end{figure}
+
 
 The laser used in the experiment is a Sharp LT025MD tunable laser diode with grating feedback. Because wavelength increases as a function of temperature and the free-running wavelength of the laser is only $790$ nm and the D1 wavelength is $794$ nm, the laser is operated at approximately $50^{\circ}$ C. A system of thermoelectric coolers and a more fine-tuned temperature control circuit keep the temperature of the laser steady, so as to keep the wavelength of the laser stable.   Adjusting the current supplied to the laser allows for fine control of the wavelength and power of the laser. Note that there is no independent power and wavelength control; furthermore, the laser current drifts down over time. However, as the laser did not drift out of the sensitive region of the rubidium during any of the experiments, this had little effect upon the measurements. Upon leaving the laser housing, the beam is both collimated and linearly polarized.
 
@@ -31,7 +40,17 @@ To study the Rabi oscillations, the function generator was set to create a radio
 
 To measure $T_{1}$ more accurately, it would be ideal to turn off the optical pumping laser instantaneously, let the atoms evolve in the dark for a chosen time period, and then measure the transmission of the laser through the atoms. As the atom spins decay to a thermal distribution, more atoms will be able to absorb the circularly polarized light, and transmission of the laser will decrease. As the laser optically pumps the atoms, the transmission will once again increase, but at the instant that the laser is applied, the transmission level provides accurate information about the distribution of the ``dark'' state of the atoms. Furthermore, the rise of the transmission will provide an accurate measurement of the optical pumping rate of the atoms. The question, then, is how to instantaneously turn off the laser for variable lengths of time.
 
-The solution is a SOMETHING SOMETHING mechanical chopper. By placing the chopper in the middle of the beam as in Figure SOMETHING it is possible to regularly turn on/off the beam at a chosen frequency. However, as the beam is rather wide when it leaves the laser, it is necessary to use a series of lenses to focus the beam at the chopper and then expand it back to size. \footnote{The beam is re-expanded so as to be able to interact with a larger cross-section of atoms in the glass cell.} The signal from the photodetector is monitored on an oscilloscope and analyzed as discussed above. At higher chopping frequencies, it is possible to trigger and time average on the oscilloscope, reducing signal to noise. \footnote{The averaging is not possible to perform at lower frequencies, as the chopper is very slightly damaged and does not spin perfectly evenly. This effect is only visible at lower frequencies, as at higher frequencies the chopper spins so quickly that the effect is not noticeable.}
+The solution is a Stanford Research Systems SR540 optical chopper. By placing the chopper in the middle of the beam as in Figure SOMETHING it is possible to regularly turn on/off the beam at a chosen frequency. However, as the beam is rather wide when it leaves the laser, it is necessary to use a series of $16$ mm focal length lenses to focus the beam at the chopper and then expand it back to size: otherwise, the chopping time would be finite, as the beam was slowly covered by the surface of the chopper. The modified optics diagram is displayed in Fig. \ref{fig:optics2}. \footnote{The beam is re-expanded so as to be able to interact with a larger cross-section of atoms in the glass cell.} The signal from the photodetector is monitored on an oscilloscope and analyzed as discussed above. At higher chopping frequencies, it is possible to trigger and time average on the oscilloscope, reducing signal to noise. \footnote{The averaging is not possible to perform at lower frequencies, as the chopper is very slightly damaged and does not spin perfectly evenly. This effect is only visible at lower frequencies, as at higher frequencies the chopper spins so quickly that the effect is not noticeable.}
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[height=50mm]{./figures/optics2.eps}
+\caption{\small{The modified optics arrangement used to measure $T_{1}$.}}
+\label{fig:optics2}
+\end{center}
+\end{figure}
+
 
 Note that at higher frequencies, the signal will be chopped before the atoms have reached the completely pumped state, and so the transmission level they start from will be lower than the equilibrium at lower frequencies. To normalize, for each frequency the measurement performed is of the ratio of the transmission after the dark period to before. The measurements were all performed on the $3\rightarrow3$ $^{85}$Rb transition, as the $^{87}$Rb value is much more difficult to measure because of the lower concentration of this isotope in the cells we used.
 
