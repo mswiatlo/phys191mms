@@ -23,7 +23,7 @@ the state $|m\rangle$, resulting in optical pumping.
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=2in]{figures/pumping.eps}
+\includegraphics[width=4in]{figures/pumping.eps}
 \caption{\small{Three level system with optical pumping rate $\Gamma_{pump}$}}
 \label{fig:pumping}
 \end{center}
@@ -44,8 +44,6 @@ consists of $72\%$ $^{85}$Rb and $28\%$ $^{87}$Rb, so we are able to
 investigate the properties of both isotopes. The energy level diagrams
 are presented in Fig.~\ref{fig:8587levels}.
 
-
-The general system of optical pumping that we observe works as follows: circularly polarized light interacts with the rubidium atoms, and some of them absorb the photons and enter the excited state with $l_{e}=l_{g}+1$ (the sign depending on the polarization direction of the light, but chosen here to be positive for simplicity). The excited atom will spontaneously decay down to any allowed ground state, \emph{i.e.} $l_{g} = l_{e} \pm 1$. However, the atoms in the most extreme $+l$ state will not be able to be transferred to the excited state, as there is no way for them to increase their $l$. As atoms decay from the excited state into allowed ground states equally, the ones that fall into $l=l-1$ will be moved back to the excited state until they decay again. Each time this decay occurs, half the atoms move into the extreme state, and so eventually all the atoms will be in this state. Experimentally, this is observable as an increase in the transmission of the laser through the atoms, as the light is not absorbed when the atoms are in the extreme, ``dark'' state. 
 
 \begin{figure}[h]
 \begin{center}
@@ -91,23 +89,71 @@ more easily separated from the neighboring transitions.
 Further splitting occurs in the Zeeman effect, where the degenerate
 magnetic sublevels are split via an application of a uniform magnetic
 field. For weak fields, the splitting is directly proportional to $B$,
-the magnetic field amplitude and the magnetic dipole moment. The 
+the magnetic field amplitude and the magnetic dipole moment. The
+change in the energy is given by
 
 \begin{equation}
+\Delta E = g_F\mu_B B m_F
+\label{eqn:zeeman}
 \end{equation}
-\cite{griffiths}. 
+
+where $\mu_B = \frac{e\hbar}{2m_e}$ is the Bohr magneton, $B$ is the
+$z$-projection of the magnetic field, and $m_F$ is the spin projection
+in the $z$ direction of the total angluar momentum of the atom
+\cite{budker }. The qualitative dependence of these splittings on
+magnetic field amplitude can be seen in Fig.~\ref{fig:8587levels},
+where the energy split between initally degenerate levels increases
+with magnetic field.
+
+The general system of optical pumping that we observe works as
+follows: circularly polarized light interacts with the rubidium atoms,
+and some of them absorb the photons and enter the excited state with
+$l_{e}=l_{g}+1$ (the sign depending on the polarization direction of
+the light, but chosen here to be positive for simplicity). The excited
+atom will spontaneously decay down to any allowed ground state,
+\emph{i.e.} $l_{g} = l_{e} \pm 1$. However, the atoms in the most
+extreme $+l$ state will not be able to be transferred to the excited
+state, as there is no way for them to increase their $l$. As atoms
+decay from the excited state into allowed ground states equally, the
+ones that fall into $l=l-1$ will be moved back to the excited state
+until they decay again. Each time this decay occurs, half the atoms
+move into the extreme state, and so eventually all the atoms will be
+in this state. Experimentally, this is observable as an increase in
+the transmission of the laser through the atoms, as the light is not
+absorbed when the atoms are in the extreme, ``dark'' state.
+
 
 \subsection{Magnetic Interactions}
 
-\subsubsection{Zeeman Splitting}
-
-
+In order to study the properties of the rubidium atoms, such as the
+g-factor, we introduce a magnetic field transverse to the $z$
+direction established by the laser and uniform magnetic field. This
+field is introduced at a RF on the order of the Zeeman splittings,
+coupling the dark state with the ground states. 
 
 \subsubsection{Rabi Oscillations}
 
-For a two-level system, 
+For a two-level system with ground state energy $E_2$ and excited
+state energy $E_1$, the application of a periodic perturbation of the
+form $V(t) = V_0e^{i\omega t}$ with a relaxation (damping) term
+proportional to a constant $\Gamma$, the time dependence of the
+population of the upper state is given by
 
-$\omega_0$ is the separation between the upper and lower state of the system, $\omega$ is the frequency of periodic perturbation, and $\Gamma$ is the natural decay rate of the population in the excited state.
+\begin{equation}
+P(t) = \frac{(2V_0)^2e^{-\Gamma t/2}}{(2V_0)^2 +\Delta^2 + \Gamma^2/4}\sin^2(\frac{t}{2}sqrt{(\Delta + \Gamma/2)^2 + (2V_0)^2}
+\end{equation}
+
+Here, $\Delta = \omega - \omega_0$ is the detuning, with $\omega_0 =
+(E_1 - E_2)/hbar$ the separation between the upper and lower state of
+the system, and $\omega$ the frequency of the periodic
+perturbation. $\Gamma$ is the natural decay rate of the population in
+the excited state.
+
+This gives the general behavior of a driven, damped optical system. In
+the case of a three level system, it is useful to make the
+approximation of a small RF perturbation on top of the pumping
+system. in that case the logic of the above discussion applies
+
 
 \subsection{Rate Equations}
 
@@ -121,9 +167,9 @@ equilibrium value with the presence of an external electromagnetic
 field.
 
 $T_1 = 1/\gamma_1$ is time constant of longitudinal relaxation,
-i.e. the time that the diagonal elements of the density matrix $\rho_{jj}$
-return to the equilibrium in the absence of other perturbations
-\cite{vanier} p79.
+i.e. the time that the diagonal elements of the density matrix
+$\rho_{jj}$ return to the equilibrium in the absence of other
+perturbations \cite{vanier} p79.
 
 \begin{equation}
 \gamma_1 = \gamma_1^{se} + \gamma_1^{w} + \gamma_1^{bg} 
@@ -177,4 +223,16 @@ $^{85}$Rb and $^{87}$Rb in order to study the contribution of spin
 exchange collisions to the inherent RF linewidth of the two isotopes
 (Eqn.~\ref{eqn:gamma2}), as well as study the spin exchange cross
 section $\sigma_{se}$.
+
+\subsection{Inhomogeneous Broadening}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[height=3in]{figures/inhomogeneous.tif}
+\caption{\small{In the event of inhomogeneities in the system ($e.g.$ in the uniform magnetic field), the overall linewidth of the RF resonance becomes broadened. The general form of the broadening is shown above, where each portion of the population of atoms is experiences a different B field amplitude and has a different center frequency.}}
+\label{fig:inhomo}
+\end{center}
+\end{figure}
+
 
