@@ -11,27 +11,26 @@ Using Equation \ref{eq:BLAH} and our calculated values for $g_F$, we can calcula
 
 Error Analysis
 
-\subsection{Time Evolution Analysis}
+\subsection{Determination of $T_{1}$, $T_{2}$, and the Optical Pumping Time}
 
-\subsubsection{Determination of $T_{2}$ Relaxation Time}
-
-By measuring the natural linewidth of $^{85}$Rb , we can calculate the $T_2$ relaxation time.  In Section \ref{linewidthmeas}, we found that the natural linewidth of $^{85}$Rb was $370$ kHz.  Using Equation \ref{eq:T2}, we calculate $T2$ to be 
-
-
-\subsubsection{Determination of the $T_{1}$ Relaxation Time}
-
+To calculate the $T1$ relaxation time, we use the data produced in Section \ref{Blah}.  To reconstruct the hidden exponential decay due to $T1$ relaxation, we take several measurements similar to the sample data shown in Figure \ref{fig:chop} for several different optical chopping frequencies.  We developed an algorithm in \emph{Mathematica} that would first measure the amount of dark time indicative of the chopping frequency used.  Following this measurement, the relative decrease in signal over the dark time was calculated by first fitting the subsequent rise due to optical pumping to an exponential curve.  This curve was then used to extrapolate the signal height at the end of the dark time (the time at which the laser light becomes unblocked and optical pumping begins).  This signal is then divided by the signal height immediately preceding the beginning of said dark time.  This relative signal height is then paired with the length of the dark time.  This process was repeated for over $40$ different chopping frequencies.  
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/T1.eps}
 \caption{\small{}}
-\label{fig:}
+\label{fig:T1}
 \end{center}
 \end{figure}
+Figure \ref{fig:T1} shows the compiled data fit to an exponential decay.  This decay represents the hidden decay which we were unable to observe due to the blocking of laser light.  Using nonlinear regression analysis we calculate $T1$ to be $1.1 \pm BLAH$ ms.  By fitting the exponential rise in signal due to optical pumping, we are also able use this algorithm to determine the optical pumping time $\tau$. We calculate $\tau$ to be  $5.9 \pm 1.5$ ms.  
 
-\subsubsection{Determination of the Optical Pumping Time}
+By measuring the natural linewidth of $^{85}$Rb , we can calculate the $T_2$ relaxation time.  In Section \ref{linewidthmeas}, we found that the natural linewidth of $^{85}$Rb was $3.70$ kHz.  Using Equation \ref{eq:T2}, we calculate $T2$ to be $0.860 \pm BLAH$ ms. 
+
+Error Analysis
+
 
 \subsection{Spin Exchange Analysis}
 
-\subsubsection{Determination of $T_{\mathrm{SE}}$}
+By measuring the natural spin exchange linewidths of $^{85}$Rb and $^{87}$Rb while optically pumping $^{87}$Rb and $^{85}$Rb, we are able to calculate the spin exchange time constant $T_{\mathrm{SE}}$.  In Section\ref{Blah}, we found the spin exchange linewidths of $^{85}$Rb and $^{87}$Rb to be $2.80 \pm BLAH$ kHz and $3.92 \pm BLAH$ kHz respectively.  Using Equation \ref{eq:Blah}, we determine $T_{SE}$ to be $1.14 \pm BLAH$ ms for  $^{85}$Rb and $0.812 \pm BLAH$ ms for  $^{85}$Rb. 
 
-\subsubsection{Determination of $\sigma_{\mathrm{SE}}$}
+
+Error Analysis
