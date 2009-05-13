@@ -89,11 +89,11 @@ more easily separated from the neighboring transitions.
 
 
 \subsubsection{Zeeman Effect}
-Further splitting occurs due to the Zeeman effect, where the degenerate
-magnetic sublevels are split via an application of a uniform magnetic
-field. For weak fields, the splitting is directly proportional to $B$,
-the magnetic field amplitude and the magnetic dipole moment. The
-change in the energy is given by
+Further splitting occurs due to the Zeeman effect, where the
+degenerate magnetic sublevels are split via an application of a
+uniform magnetic field. For weak fields, the splitting is directly
+proportional to $B$, the magnetic field amplitude. The change in the
+energy is given by
 
 \begin{equation}
 \Delta E = g_F\mu_B B m_F
@@ -139,7 +139,7 @@ transmission of laser light and creating the conditions of optical pumping, as d
     transition with $\sigma_+$ light on the populations of the ground
     state Zeeman levels. Due to quantum exclusion rules, the ground
     $m_F = +1$ state is `dark' to the laser, and atoms get
-    preferentially pumped into this state.}}
+    preferentially pumped into this state \cite{budker}.}}
 \label{fig:rbpump}
 \end{center}
 \end{figure}
@@ -218,23 +218,24 @@ which a Lorentzian profile with width
 
 \begin{equation}
 \gamma_m = \gamma_0\sqrt{1+\kappa} = \gamma_0\sqrt{1+\kappa_l\mathcal{E}_0^2}
+\label{kappal}
 \end{equation}
 
 where $\kappa_l = d^2/(\gamma_0\gamma_{rel})$ is a constant that
 characterizes the broadening of the natural linewidth $\gamma_0$ with
-increased light intensity $\mathcal{E}_0^2$.
-
+increased light intensity $\mathcal{E}_0^2$ \cite{budker}.
 
 
 As we are assuming that the coupling between states $|e\rangle$ and
 $|m\rangle$ is minimal, this derivation holds only in the limit of
-very weak radiofrequency perturbations. In order to understand the behavior of the
-radiofrequency system, we make the two level approximation of the the three level
-system. Following the derivation in Yariv, we can consider the two
-level system with energies $E_1$ and $E_2$ and perturbing Hamiltonian
-$\mathcal{H}'$.
+very weak radiofrequency perturbations. In order to understand the
+behavior of the radiofrequency system, we make the two level
+approximation of the the three level system. Following the derivation
+in Yariv, we can consider the two level system with energies $E_1$ and
+$E_2$ and perturbing Hamiltonian $\mathcal{H}'$.
 
-Then the rate equations governing the time evolution of the density matrix $\rho$ are 
+Then the rate equations governing the time evolution of the density
+matrix $\rho$ are
 
 \begin{eqnarray}
 \frac{d\rho_{12}}{dt} &=& -\frac{i}{\hbar}(\mathcal{H}'_{21}(\rho_{11} - \rho_{22}) + (E_2 - E_1)\rho_{21}) \\
@@ -282,15 +283,14 @@ g(\nu) = \frac{(\Delta\nu/2\pi)}{(\nu-\nu_0)^2 +(\Delta\nu/2)^2}
 \label{eqn:gamma1}
 \end{equation}
 
-
 where $g(\nu)$ is the normalized lineshape corresponding to the power. again, the lineshape is Lorentzian, with natural linewidth $\Delta\nu = (\pi T_2)^{-1}$. Taking into account the saturation phenomena, we can rewrite the observed linewidth as a function of powerbroadening:
 
 \begin{equation}
 \Delta\nu_m = \Delta\nu\sqrt{1+\frac{\mu^2V_0^2T_2T_1}{\hbar^2}} = \Delta\nu\sqrt{1+\kappa_{rf}V_0^2}
-\label{eqn:gamma1}
+\label{eqn:kapparf}
 \end{equation}
 
-where $\kappa_{rf}$ is now a measure of line broadening as a function of RF. 
+where $\kappa_{rf}$ is now a measure of line broadening as a function of RF power\cite{yariv}.
 
 
 \subsubsection{Time Constants}\label{timeconstants}
@@ -341,9 +341,9 @@ As seen in section \ref{rateequations}, $T_2$ can be reconstructed
 from calculating the natural linewidth of the RF resonance. This can
 be done either by measuring a dependence of the broadened linewidth on
 light intensity at low RF amplitude, or its dependence on RF amplitude
-at low light intensity, in order to stay in one of the two
-appoximation regimes treated above, and thus extrapolate to the
-natural linewidth at $V_0 = \mathcal{E}_0 = 0$.
+at low light intensity. This process ensures that we remain in one of
+the two appoximation regimes treated above, and are able to accurately
+extrapolate to the natural linewidth at $V_0 = \mathcal{E}_0 = 0$ using the analytic expressions in Eqns \ref{kapparf} and \ref{kappal}.
 
 \subsection{Spin Exchange}\label{spinexchange}
 
@@ -411,7 +411,7 @@ frequencies for the ensemble's resonance.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[height=3in]{figures/inhomogeneous.eps}
-\caption{\small{In the event of inhomogeneities in the system (\emph{e.g.} in the uniform magnetic field), the overall linewidth of the radiofrequency resonance becomes broadened. The general form of the broadening is shown above, where each portion of the population of atoms experiences a different B field amplitude and has a different center frequency.}}
+\caption{\small{In the event of inhomogeneities in the system (\emph{e.g.} in the uniform magnetic field), the overall linewidth of the radiofrequency resonance becomes broadened. The general form of the broadening is shown above, where each portion of the population of atoms experiences a different B field amplitude and has a different center frequency \cite{vanier}.}}
 \label{fig:inhomo}
 \end{center}
 \end{figure}
