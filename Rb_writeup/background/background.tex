@@ -10,8 +10,8 @@ atoms produces a population of energy levels that is distinct from the
 thermal equilibrium Boltzmann distribution \cite{bernheim}. In a
 three-state system, with a ground state $|g\rangle$, excited state
 $|e\rangle$, and intermediate metastable state $|m\rangle$
-(Fig. \ref{blah}), it is possible to selective populate the metastable
-state if the natural decay time $\gamma$ is sufficiently long in
+(Fig. \ref{pumping}), it is possible to selective populate the metastable
+state if the natural decay time $\gamma_{rel}$ is sufficiently long in
 comparison to the pumping time. If laser light is applied on resonance
 with the $|e\rangle$ to $|g\rangle$ transition, it drives the atom
 population to the excited state, and then the atoms decay to the lower
@@ -19,6 +19,15 @@ energy levels with some time constant. If the laser light cannot
 excite atoms from the metastable state to the excited state (for
 example, due to selection rules), the process preferentially populates
 the state $|m\rangle$, resulting in optical pumping.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=2in]{figures/pumping.eps}
+\caption{\small{Three level system with optical pumping rate $\Gamma_{pump}$}}
+\label{fig:pumping}
+\end{center}
+\end{figure}
 
 
 \subsection{Rubidium System}
@@ -104,22 +113,43 @@ $\omega_0$ is the separation between the upper and lower state of the system, $\
 
 \subsubsection{Time Constants}
 
-$T_1, T_2, \tau$, different rates (collision, spin exchange, leaving the beam, etc.)
+$\tau$ is the optical pumping time, which is the time it takes to
+change the total magnetization from thermal equilibrium to the maximal
+equilibrium value with the presence of an external electromagnetic
+field.
 
 $T_1 = 1/\gamma_1$ is time constant of longitudinal relaxation,
 i.e. the time that the diagonal elements of the density matrix $\rho_{jj}$
 return to the equilibrium in the absence of other perturbations
 \cite{vanier} p79.
 
-$\gamma_1 = \gamma_1^{se} + \gamma_1^{w} + \gamma_1^{bg} $
-where se is the spin exchange rate, w is the wall collision rate due to leaving the beam, and bg is the rate due to buffer gas collisions.
+\begin{equation}
+\gamma_1 = \gamma_1^{se} + \gamma_1^{w} + \gamma_1^{bg} 
+\label{eqn:gamma1}
+\end{equation}
 
+where $\gamma_1^{se}$ is the spin exchange rate, $\gamma_1^{w}$ is the
+wall collision rate due to leaving the beam, and $\gamma_1^{bg}$ is
+the rate due to buffer gas collisions \cite{vanier}.
 
-$\gamma_2$ is the coherence relaxation rate; the offdiagonal elements $\rho_{ij}$
+$\gamma_2$ is the coherence relaxation rate; the off-diagonal elements
+$\rho_{ij}$:
 
-$\gamma_2 = \gamma_2^{se} + \gamma_2^{w} + \gamma_2^{bg}$
+\begin{equation}
+\gamma_2 = \gamma_2^{se} + \gamma_2^{w} + \gamma_2^{bg}
+\label{eqn:gamma2}
+\end{equation}
 
 \subsection{Spin Exchange}
+
+
+Spin exchange is the ability of two particles to transfer their spin
+orientation to one another upon making a collision (needs to be
+paraphrased)\cite {bernheim}. The mechanism of spin exchange is one of
+the largest factors contributing to the natural linewidth of the RF
+resonance. In addition, spin exchange is a valuable technique of
+studying the properties of an atom or particle for which a direct
+optical particle procedure is much more difficult.
 
 The time between spin exchange collisions is given by
 
@@ -140,5 +170,9 @@ at $T = 325$ K, $n = 1.545\times 10^{11}$ cm$^{-3}$. At our operating
 temperature of $322.75$ K, we can extrapolate the number density to be
 approximately  $n = 1.297\times 10^{11}$ cm$^{-3}$. 
 
-
+In this experiment, we use the spin exchange mechanisms between
+$^{85}$Rb and $^{87}$Rb in order to study the contribution of spin
+exchange collisions to the inherent RF linewidth of the two isotopes
+(Eqn.~\ref{eqn:gamma2}), as well as study the spin exchange cross
+section $\sigma_{se}$.
 
