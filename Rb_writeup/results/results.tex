@@ -46,15 +46,11 @@ Further measurements are taken using the $^{85}$Rb $F=3$ to $F=3$ transition to 
 \end{center}
 \end{figure}
 The variable being held constant was held constant in a regime in which it would not have a confounding effect on the linewidth (\emph{i.e.} while varying light intensity, RF amplitude was minimized and \emph{vice versa}).  We expect the linewidth to be given by 
-\begin{center}
-\begin{equation}\label{linewidth}
-\gamma=\gamma_0\sqrt{1+\kappa}
-\end{equation}
-\end{center}
-where $\gamma_0$ is the natural linewidth and $\kappa \propto \mathcal E_0^{2}$ where $\mathcal E_0$ is the amplitude of the light electric field.  Accordingly, the data for varying RF amplitude (proportional to $\mathcal E_0$) is fit to a $\alpha \sqrt{1+\beta x^2}$ model whereas the data for varying light intensity (proportional to $\mathcal E_0^{2}$) is fit to a $\alpha \sqrt{1+\beta x}$ model.  Both fits are done using nonlinear regression analysis (See Appendix \ref{nonlinearregressionanalysis}).  We would expect the natural linewidths for each measurement process to be the same.  From our fitting analysis we find the natural linewidths to be $3.78 \pm BLAH$ Hz and $3.63 \pm BLAH$ Hz for varying RF amplitude and light intensity respectively.  Given the error for this measurement, the two values are in good agreement. 
+Equations \ref{eq:} and \ref{eq:}. Accordingly, the data for varying RF amplitude is fit to a $\alpha \sqrt{1+\beta x^2}$ model whereas the data for varying light intensity is fit to a $\alpha \sqrt{1+\beta x}$ model.  Both fits are done using nonlinear regression analysis (See Appendix \ref{nonlinearregressionanalysis}).  We would expect the natural linewidths for each measurement process to be the same.  From our fitting analysis we find the natural linewidths to be $3.78 \pm BLAH$ Hz and $3.63 \pm BLAH$ Hz for varying RF amplitude and light intensity respectively.  Given the error for this measurement, the two values are in good agreement. 
 
-\subsection{Measuring}
+\subsection{Measuring $T_1$ Relaxation and Optical Pumping Time}
 
+Using an optical chopper as described in Section \ref{}, we observe transient optical pumping without RF interference and without turning off the external magnetic field.  In doing so we can indirectly observe $T1$ relaxation (described in Section \ref{}) of $^{85}$Rb for the $3 \rightarrow 3$ transistion.  For this indirect measurement we observe the decrease in the fluorescence signal over a certain amount of time during which the laser light is blocked.  By measuring the relative decrease in signal height for different dark times, we can determine the $T1$ relaxation time. Upon being unblocked, the laser light again begins to optically pump the atoms before being once again blocked.  Sample data of this procedure is shown in Figure \ref{fig:chop}.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[height=70mm]{./figures/raw_chop.eps}
@@ -62,5 +58,17 @@ where $\gamma_0$ is the natural linewidth and $\kappa \propto \mathcal E_0^{2}$ 
 \label{fig:chop}
 \end{center}
 \end{figure}
+By setting the optical chopper to different frequencies, we can measure measure the relative decrease in signal for different dark times and thus construct the hidden exponential decay.  Moreover, by fitting the subsequent rise in signal following the unblocking of laser light, we can calculate the optical pumping time constant by fitting to an exponential rise.  Further calculation and analysis of this data is done in Section \ref{Blah}.
 
 \subsection{Measuring Spin Exchange Between $^{85}$Rb and $^{87}$Rb}
+By optically pumping $^{85}$Rb and coupling the $m_F$ states of $^{87}$Rb we observe spin exchange between the isotopes. Due to inelastic collisions, pumped $^{85}$Rb atoms effectively pump $^{87}$Rb atoms to their excited $m_F$ states.  To measure the spin exchange process, we use the lock-in amplifier to measure the amplitude of the Rabi oscillations of $^{87}$Rb atoms which have been excited by pumped $^{85}$Rb atoms.  This data is similar to the lorentzian resonances shown in Figure \ref{fig:rawcurve}.  This process is repeated while pumping $^{85}$Rb atoms and observing the spin exchange resulting in subsequent Rabi oscilliation of $^{87}$Rb atoms.
+
+In order to determine the natural linewidth of both spin exchange processes we measure the linewidths while varying RF amplitude (this procedure is identical to the one used in Section \ref{linewidthmeas}).  This data is fit to $\alpha \sqrt{1+\beta x^2}$ again using nonlinear regression analysis (shown in Figure \ref{fig: spinexchange}).
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[height=70mm]{./figures/spin_exchange.eps}
+\caption{\small{}}
+\label{fig:spinexchange}
+\end{center}
+\end{figure}
+We find the natural linewidths for the spin exchange processes to be $BLAH$ and $BLAH$ for $^{85}$Rb and $^{87}$Rb respectively.
