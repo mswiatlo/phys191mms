@@ -107,7 +107,38 @@ with magnetic field.
 
 In our experiment, the different splittings of the rubidium levels are
 used as an effective 3-level system, as described in
-section\ref{optical pumping}. 
+section\ref{opticalpumping}. Although there are many levels in a
+rubidium atom, it is valid to approximate the system as composed of
+only the $5^2S_{1/2}$ and $5^2P_{1/2}$ sublevels if the laser is on
+the $D_1$ line, and does not interact with the states which are not on
+resonance. We treat the set of $5^2S_{1/2}$ levels as the ground
+states, and $5^2S_{1/2}$ as the excited states. 
+
+By applying a uniform magnetic field, the magnetic sublevels are
+split, and one can act as the metastable ``dark''state $|m\rangle$
+necessary for optical pumping as follows: if $\sigma_+$-polarized
+laser light is applied to the atom, then the only allowed transitions
+to an excited state are those with $\Delta m_F = +1$.
+(Fig.~\ref{fig:rbpump}). In the case of a $F = 1$ to $F = 1$
+transition, for instance, the ground state with $m_F = 1$ is the
+`dark' state because it cannot absorb $\sigma_+$ light. However, atoms
+do get excited from the $m_F = -1, 0$ states, and then spontaneously
+decay into all three ground states. Therefore, there is an overall
+positive rate of atoms going into the `dark' state, increasing
+transmission and creating the conditions of optical pumping, as desired. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[height=2.5in]{figures/rbpump.eps}
+\caption{\small{Effects of optical pumping on the $1\rightarrow 1$
+    transition with $\sigma_+$ light on the populations of the ground
+    state Zeeman levels. Due to quantum exclusion rules, the ground
+    $m_F = +1$ state is `dark' to the laser, and so atoms get
+    preferentially pumped into this state.q}}
+\label{fig:fluor}
+\end{center}
+\end{figure}
+
 
 \subsection{Magnetic Interactions}
 
@@ -126,14 +157,14 @@ proportional to a constant $\Gamma$, the time dependence of the
 population of the upper state is given by
 
 \begin{equation}
-P(t) = \frac{(2V_0)^2e^{-\Gamma t/2}}{(2V_0)^2 +\Delta^2 + \Gamma^2/4}\sin^2(\frac{t}{2}\sqrt{(\Delta + \Gamma/2)^2 + (2V_0)^2}
+P(t) = \frac{(2V_0)^2e^{-\Gamma t/2}}{(2V_0)^2 +\Delta^2 + \Gamma^2/4}\sin^2(\frac{t}{2}\sqrt{(\Delta + \Gamma/2)^2 + (2V_0)^2})
 \end{equation}
 
 Here, $\Delta = \omega - \omega_0$ is the detuning, with $\omega_0 =
 (E_1 - E_2)/\hbar$ the separation between the upper and lower state of
 the system, and $\omega$ the frequency of the periodic
 perturbation. $\Gamma$ is the natural decay rate of the population in
-the excited state.
+the excited state \cite{budker}.
 
 This gives the general behavior of a driven, damped optical system. In
 the case of a three level system, it is useful to make the
@@ -141,11 +172,11 @@ approximation of a small RF perturbation on top of the pumping
 system. in that case the logic of the above discussion applies
 
 
-\subsection{Rate Equations}
+\subsection{Rate Equations}\label{rateequations}
 
 \subsubsection{Power Broadening}
 
-\subsubsection{Time Constants}\label{timeconstants}
+\subsubsection{Time Constants}
 
 $\tau$ is the optical pumping time, which is the time it takes to
 change the total magnetization from thermal equilibrium to the maximal
@@ -169,49 +200,76 @@ the rate due to buffer gas collisions \cite{vanier}.
 $\gamma_2$ is the coherence relaxation rate; the off-diagonal elements
 $\rho_{ij}$:
 
-\begin{equation}
-\gamma_2 = \gamma_2^{se} + \gamma_2^{w} + \gamma_2^{bg}
+\begin{equation}\gamma_2 = \gamma_2^{se} + \gamma_2^{w} + \gamma_2^{bg}
 \label{eqn:gamma2}
-\end{equation}
+\end{equation} 
 
 \subsection{Spin Exchange}
 
 
 Spin exchange is the ability of two particles to transfer their spin
 orientation to one another upon making a collision (needs to be
-paraphrased) \cite{bernheim}. The mechanism of spin exchange is one of
-the largest factors contributing to the natural linewidth of the RF
-resonance. In addition, spin exchange is a valuable technique of
-studying the properties of an atom or particle for which a direct
-optical particle procedure is much more difficult.
-
-The time between spin exchange collisions is given by
+paraphrased) \cite{bernheim}. Let $A$ and $B$ be two $^2S_{1/2}$
+alkali atoms. Then a spin-exchange collision between the two atoms
+can be represented by the equation
 
 \begin{equation}
-T_{se} = 1/\gamma_{se} = (n\overline{v}\sigma_{se})^{-1}
+A(\uparrow) + B(\downarrow) \rightarrow A(\downarrow) + B(\uparrow)
 \end{equation}
 
-where $n$ is the vapor density and $\overline{v}$ is the average velocity, given by
+so the spin orientations of the two atoms are exchanged, while the
+total spin is conserved \cite{happer}.  
 
-\begin{equation}
-\overline{v} = \sqrt{\frac{8RT}{\pi m}}
-\end{equation}
-
-where $R$ is the ideal gas constant, $T$ is the temperature, and $m$
-is the molar mass of the atoms \cite{vanier}. According to Vanier
-Table 7.1.1, at $T = 320$ K, $n = 9.935\times 10^{10}$ cm$^{-3}$ and
-at $T = 325$ K, $n = 1.545\times 10^{11}$ cm$^{-3}$. At our operating
-temperature of $322.75$ K, we can extrapolate the number density to be
-approximately  $n = 1.297\times 10^{11}$ cm$^{-3}$. 
+The mechanism of spin exchange is one of the largest factors
+contributing to the natural linewidth of the RF resonance ($T_2$ time) and
+the $T_1$ time \cite{vanier}. In addition, spin exchange is a valuable
+technique of studying the properties of an atom or particle for which
+a direct optical particle procedure is much more difficult.
 
 In this experiment, we use the spin exchange mechanisms between
 $^{85}$Rb and $^{87}$Rb in order to study the contribution of spin
 exchange collisions to the inherent RF linewidth of the two isotopes
-(Eqn.~\ref{eqn:gamma2}), as well as study the spin exchange cross
-section $\sigma_{se}$.
+(Eqn.~\ref{eqn:gamma2}).
 
 \subsection{Inhomogeneous Broadening}
 
+In Section~\ref{rateequations} above, the homogeneous broadening
+mechanisms contributing to the line width of $\gamma_2$ and
+$\gamma_1$. In the case of homogeneous broadening, the assumption is
+made that the interaction of the electromagnetic fields with the
+individual magnetic moments of the atoms that has the same features
+for every member of the atomic ensemble. In this case, every sample of
+atoms is representative of the average behaviour of the entire system
+\cite{venier}. 
+
+In the case of inhomogeneities in the system, further broadening can
+occur. The most common causes of inhomogeneous broadening relevant to
+our optical pumping experiment are Doppler effects and magnetic field
+inhomogeneities. The additional broadening $\nu_D$ due to the Doppler effect
+is given by
+
+\begin{equation}
+
+\nu_D = 2\nu_0\sqrt{\frac{2kT}{Mc^2}\ln 2}
+\end{equation}
+
+where $\nu_0$ is the unbroadened linewidth, $k$ is Boltzmann's
+constant, $T$ is temperature of the gas and $M$ is the atomic mass of
+the gas \cite{yariv}. For the quantities in our experiment, the
+Doppler linewidth addition is $6$ orders of magnitudes smaller than
+the natural width, so it is not a detectable effect for the present
+conditions.
+
+The effect of magnetic field inhomogeneity is much more difficult to
+express analytically, because it depends on the nature of the
+inhomogeneities. Generally, the overall line shape can be expressed as
+a sum of individual homogeneously broaded lines, $i.e.$ Lorentzians,
+with a range of cneter frequencies
+(Fig~\ref{inhomo})\cite{vanier}. The broadening occurs because
+different samples of atoms will effectively experience different
+amplitudes of the magnetic field due to the inhomogeneity, thus
+resulting in a range of Zeeman splittings and a range of center
+frequencies for the ensemble's resonance.
 
 \begin{figure}[h]
 \begin{center}
