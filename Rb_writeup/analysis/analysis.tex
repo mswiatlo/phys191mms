@@ -15,7 +15,7 @@ Error in this measurement mostly arises due to the uncertainty in the magnetic f
 
 \subsection{Determination of Characteristic Times}\label{DeterminationofTimes}
 
-\subsubsection{$T_{1} and $\tau$ calculations}
+\subsubsection{$T_{1}$ and $\tau$ calculations}
 To calculate the $T_1$ relaxation time, we use the data produced in Section \ref{MeasuringT1RelaxationandOpticalPumpingTime}.  To reconstruct the hidden exponential decay due to $T_1$ relaxation, we take measurements similar to the sample data shown in Fig. \ref{fig:chop} for several different optical chopping frequencies.  We developed an algorithm in \emph{Mathematica} that would first measure the amount of dark time indicative of the chopping frequency used.  Following this measurement, the relative decrease in signal over the dark time was calculated by first fitting the subsequent rise due to optical pumping to an exponential curve.  This curve was then used to extrapolate the signal height at the end of the dark time (the time at which the laser light becomes unblocked and optical pumping begins).  This signal is then divided by the signal height immediately preceding the beginning of the dark time.  This relative signal height is then paired with the length of the dark time.  This process was repeated for over $40$ different chopping frequencies.  
 \begin{figure}[htbp]
 \begin{center}
