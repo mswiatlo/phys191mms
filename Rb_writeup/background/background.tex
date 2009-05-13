@@ -3,7 +3,7 @@
 
 \section{Background}\label{background}
 
-\subsection{Optical Pumping}
+\subsection{Optical Pumping}\label{opticalpumping}
 
 Optical pumping is the process in which the interaction of light with
 atoms produces a population of energy levels that is distinct from the
@@ -105,23 +105,9 @@ magnetic field amplitude can be seen in Fig.~\ref{fig:8587levels},
 where the energy split between initally degenerate levels increases
 with magnetic field.
 
-The general system of optical pumping that we observe works as
-follows: circularly polarized light interacts with the rubidium atoms,
-and some of them absorb the photons and enter the excited state with
-$l_{e}=l_{g}+1$ (the sign depending on the polarization direction of
-the light, but chosen here to be positive for simplicity). The excited
-atom will spontaneously decay down to any allowed ground state,
-\emph{i.e.} $l_{g} = l_{e} \pm 1$. However, the atoms in the most
-extreme $+l$ state will not be able to be transferred to the excited
-state, as there is no way for them to increase their $l$. As atoms
-decay from the excited state into allowed ground states equally, the
-ones that fall into $l=l-1$ will be moved back to the excited state
-until they decay again. Each time this decay occurs, half the atoms
-move into the extreme state, and so eventually all the atoms will be
-in this state. Experimentally, this is observable as an increase in
-the transmission of the laser through the atoms, as the light is not
-absorbed when the atoms are in the extreme, ``dark'' state.
-
+In our experiment, the different splittings of the rubidium levels are
+used as an effective 3-level system, as described in
+section\ref{optical pumping}. 
 
 \subsection{Magnetic Interactions}
 
@@ -140,11 +126,11 @@ proportional to a constant $\Gamma$, the time dependence of the
 population of the upper state is given by
 
 \begin{equation}
-P(t) = \frac{(2V_0)^2e^{-\Gamma t/2}}{(2V_0)^2 +\Delta^2 + \Gamma^2/4}\sin^2(\frac{t}{2}sqrt{(\Delta + \Gamma/2)^2 + (2V_0)^2}
+P(t) = \frac{(2V_0)^2e^{-\Gamma t/2}}{(2V_0)^2 +\Delta^2 + \Gamma^2/4}\sin^2(\frac{t}{2}\sqrt{(\Delta + \Gamma/2)^2 + (2V_0)^2}
 \end{equation}
 
 Here, $\Delta = \omega - \omega_0$ is the detuning, with $\omega_0 =
-(E_1 - E_2)/hbar$ the separation between the upper and lower state of
+(E_1 - E_2)/\hbar$ the separation between the upper and lower state of
 the system, and $\omega$ the frequency of the periodic
 perturbation. $\Gamma$ is the natural decay rate of the population in
 the excited state.
